@@ -28,6 +28,11 @@ const futureConj34Passive = ["ar", "ēris", "ētur", "ēmur", "ēminī", "entur"
 const perfectConjActive = ["ī", "istī", "it", "imus", "istis", "ērunt"];
 const pluperfectConjActive = ["eram", "erās", "erat", "erāmus", "erātis", "erant"];
 const fpConjActive = ["erō", "eris", "erit", "erimus", "eritis", "erint"];
+// Perfect, pluperfect, and future perfect tense indicators (i.e., forms of "sum" in
+// present, imperfect, and future tenses
+const presentConjSum = ["sum", "es", "est", "sumus", "estis", "sunt"];
+const imperfectConjSum = ["eram", "erās", "erat", "erāmus", "erātis", "erant"];
+const futureConjSum = ["erō", "eris", "erit", "erimus", "eritis", "erunt"];
 
 // Attach an active or passive infinitive ending to a verb root depending on the verb's conjugation.
 // Deponent verbs will get the passive infinitive endings even when they are active.
@@ -273,11 +278,11 @@ function conjFutureTense(verb, conj, voice) {
         break;
       case "III-i":
         specialVowel = "i";
-        conjArray = futureConj34Active;
+        conjArray = futureConj34Passive;
         break;
       case "IV":
         specialVowel = "i";
-        conjArray = futureConj34Active;
+        conjArray = futureConj34Passive;
     }
   }
 
@@ -293,19 +298,128 @@ function conjPerfectSystemActive(thirdPart,tense) {
   var conjArray = [];
   var conjugation = [];
 
-  switch (tense) {
-    case "perfect":
-      conjArray = perfectConjActive;
-      break;
-    case "pluperfect":
-      conjArray = pluperfectConjActive;
-      break;
-    case "future perfect":
-      conjArray = fpConjActive;
+  if (thirdPart.substring(len - 1) == "ī") {
+    switch (tense) {
+      case "perfect":
+        conjArray = perfectConjActive;
+        break;
+      case "pluperfect":
+        conjArray = pluperfectConjActive;
+        break;
+      case "future perfect":
+        conjArray = fpConjActive;
+    }
+  } else {
+    return "Sorry, that won't work."
   }
   for (i=0; i<conjArray.length; i++) {
     conjugation.push(perfStem + conjArray[i]);
   }
   return conjugation;
 }
-console.log(conjPerfectSystemActive("potuī","perfect"));
+
+function conjPerfectSystemPassive(supine,tense,gender) {
+  var len = supine.length;
+  var supineStem = supine.substring(0,len - 2);
+  var singularEnding, pluralEnding;
+  var i = 0
+  var conjArray = [];
+  var conjugation = [];
+
+  switch (gender) {
+    case "m":
+      singularEnding = "us";
+      pluralEnding = "ī";
+      break;
+    case "f":
+      singularEnding = "a";
+      pluralEnding = "ae";
+      break;
+    case "n":
+      singularEnding = "um";
+      pluralEnding = "a";
+  }
+
+  switch (tense) {
+    case "perfect":
+      conjArray = presentConjSum;
+      break;
+    case "pluperfect":
+      conjArray = imperfectConjSum;
+      break;
+    case "future perfect":
+      conjArray = futureConjSum;
+  }
+  do {
+    conjugation.push(supineStem + singularEnding + " " + conjArray[i]);
+    i++;
+  }
+  while (i<3);
+
+  do {
+    conjugation.push(supineStem + pluralEnding + " " + conjArray[i]);
+    i++;
+  }
+  while (i<6);
+
+  return conjugation;
+}
+
+function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
+  var len = firstPart.length;
+  var isNotDeponent = firstPart.substring(len - 1) == "ō";
+  console.log("Active Infinitive = " + formInfinitive(firstPart,conj,"active"));
+  if (isNotDeponent) {
+    console.log("Passive Infinitive = " + formInfinitive(firstPart,conj,"passive"));
+  }
+  console.log("Present Active:")
+  console.log(conjPresentTense(firstPart, conj, "active"));
+  if (isNotDeponent) {
+    console.log("Present Passive:")
+    console.log(conjPresentTense(firstPart, conj, "passive"));
+  }
+  console.log("Imperfect Active:");
+  console.log(conjImperfectTense(firstPart, conj, "active"));
+  if (isNotDeponent) {
+    console.log("Imperfect Passive:");
+    console.log(conjImperfectTense(firstPart, conj, "passive"));
+  }
+  console.log("Future Active:");
+  console.log(conjFutureTense(firstPart, conj, "active"));
+  if (isNotDeponent) {
+    console.log("Future Passive:");
+    console.log(conjFutureTense(firstPart, conj, "passive"));
+  }
+  console.log("Perfect Active:");
+  if (thirdPart.substring(thirdPart.length - 1) == "ī") {
+    console.log(conjPerfectSystemActive(thirdPart, "perfect"));
+  } else {
+    console.log(conjPerfectSystemPassive(thirdPart, "perfect", gender));
+  }
+  if (supine !== null) {
+    console.log("Perfect Passive:");
+    console.log(conjPerfectSystemPassive(supine, "perfect", gender));
+  }
+  console.log("Pluperfect Active:");
+  if (thirdPart.substring(thirdPart.length - 1) == "ī") {
+    console.log(conjPerfectSystemActive(thirdPart, "pluperfect"));
+  } else {
+    console.log(conjPerfectSystemPassive(thirdPart, "pluperfect", gender));
+  }
+  if (supine !== null) {
+    console.log("Pluperfect Passive:");
+    console.log(conjPerfectSystemPassive(supine, "pluperfect", gender));
+  }
+  console.log("Future Perfect Active:");
+  if (thirdPart.substring(thirdPart.length - 1) == "ī") {
+    console.log(conjPerfectSystemActive(thirdPart, "future perfect"));
+  } else {
+    console.log(conjPerfectSystemPassive(thirdPart, "future perfect", gender));
+  }
+  if (supine !== null) {
+    console.log("Future Perfect Passive:");
+    console.log(conjPerfectSystemPassive(supine, "future perfect", gender));
+  }
+}
+
+completeConjugation("hortor", "hortātum", null, "I", "f")
