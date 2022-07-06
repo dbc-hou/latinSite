@@ -14,6 +14,17 @@ const presentConj3IActive = ["iō", "is", "it", "imus", "itis", "iunt"];
 const presentConj3IPassive = ["ior", "ieris", "itur", "imur", "iminī", "iuntur"];
 const presentConj4Active = ["iō", "īs", "it", "īmus", "ītis", "iunt"];
 const presentConj4Passive = ["ior", "īris", "ītur", "īmur", "īminī", "iuntur"];
+// Imperfect tense indicators and endings
+const imperfectConj12Active = ["bam", "bās", "bat", "bāmus", "bātis", "bant"];
+const imperfectConj12Passive = ["bar", "bāris", "bātur", "bāmur", "bāminī", "bantur"];
+const imperfectConj34Active = ["ēbam", "ēbās", "ēbat", "ēbāmus", "ēbātis", "ēbant"];
+const imperfectConj34Passive = ["ēbar", "ēbāris", "ēbātur", "ēbāmur", "ēbāminī", "ēbantur"];
+// Future tense indicators and endings
+const futureConj12Active = ["bō", "bis", "bit", "bimus", "bitis", "bunt"];
+const futureConj12Passive = ["bor", "beris", "bitur", "bimur", "biminī", "buntur"];
+const futureConj34Active = ["am", "ēs", "et", "ēmus", "ētis", "ent"];
+const futureConj34Passive = ["ar", "ēris", "ētur", "ēmur", "ēminī", "entur"];
+
 
 // Attach an active or passive infinitive ending to a verb root depending on the verb's conjugation.
 // Deponent verbs will get the passive infinitive endings even when they are active.
@@ -82,7 +93,7 @@ function formInfinitive (verb, conj, voice) {
 }
 
 // Attach the conjugational endings from the constants to a verb root depending on the verb's
-// conjugation and voice.
+// conjugation (I through IV) and voice (active or passive).
 function conjPresentTense(verb, conj, voice) {
   var conjArray = [];
   var conjugation = [];
@@ -137,4 +148,139 @@ function conjPresentTense(verb, conj, voice) {
   return conjugation;
 }
 
-console.log(conjPresentTense("misereor","II","active"));
+function conjImperfectTense(verb, conj, voice) {
+  var conjArray = [];
+  var conjugation = [];
+  var specialVowel;
+  var len = verb.length;
+
+  if (verb.substring(len - 1) == "t") {
+    if (conj == "II" || conj == "III") {
+      return formRoot(verb,conj) +  imperfectConj34Active[2];
+    }
+  }
+  if (voice == "active" && verb.substring(len - 1) == "ō") {
+    switch (conj) {
+      case "Irregular":
+        return;
+      case "I":
+        specialVowel = "ā";
+        conjArray = imperfectConj12Active;
+        break;
+      case "II":
+        specialVowel = "ē"
+        conjArray = imperfectConj12Active;
+        break;
+      case "III":
+        specialVowel = ""
+        conjArray = imperfectConj34Active;
+        break;
+      case "III-i":
+        specialVowel = "i"
+        conjArray = imperfectConj34Active;
+        break;
+      case "IV":
+        specialVowel = "i"
+        conjArray = imperfectConj34Active;
+    }
+  } else {
+    switch (conj) {
+      case "Irregular":
+        return;
+      case "I":
+        specialVowel = "ā";
+        conjArray = imperfectConj12Passive;
+        break;
+      case "II":
+        specialVowel = "ē";
+        conjArray = imperfectConj12Passive;
+        break;
+      case "III":
+        specialVowel = "";
+        conjArray = imperfectConj34Passive;
+        break;
+      case "III-i":
+        specialVowel = "i";
+        conjArray = imperfectConj34Passive;
+        break;
+      case "IV":
+        specialVowel = "i";
+        conjArray = imperfectConj34Passive;
+    }
+  }
+
+  for (i=0; i<=conjArray.length -1; i++) {
+    conjugation.push(formRoot(verb,conj) + specialVowel + conjArray[i]);
+  }
+  return conjugation;
+}
+
+function conjFutureTense(verb, conj, voice) {
+  var conjArray = [];
+  var conjugation = [];
+  var specialVowel;
+  var len = verb.length;
+
+  if (verb.substring(len - 1) == "t") {
+    if (conj == "II") {
+      return formRoot(verb,conj) + "ē" + futureConj12Active[2];
+    } else {
+      return formRoot(verb,conj) + futureConj34Active[2];
+    }
+  }
+  if (voice == "active" && verb.substring(len - 1) == "ō") {
+    switch (conj) {
+      case "Irregular":
+        return;
+      case "I":
+        specialVowel = "ā";
+        conjArray = futureConj12Active;
+        break;
+      case "II":
+        specialVowel = "ē"
+        conjArray = futureConj12Active;
+        break;
+      case "III":
+        specialVowel = ""
+        conjArray = futureConj34Active;
+        break;
+      case "III-i":
+        specialVowel = "i"
+        conjArray = futureConj34Active;
+        break;
+      case "IV":
+        specialVowel = "i"
+        conjArray = futureConj34Active;
+    }
+  } else {
+    switch (conj) {
+      case "Irregular":
+        return;
+      case "I":
+        specialVowel = "ā";
+        conjArray = futureConj12Passive;
+        break;
+      case "II":
+        specialVowel = "ē";
+        conjArray = futureConj12Passive;
+        break;
+      case "III":
+        specialVowel = "";
+        conjArray = futureConj34Passive;
+        break;
+      case "III-i":
+        specialVowel = "i";
+        conjArray = futureConj34Active;
+        break;
+      case "IV":
+        specialVowel = "i";
+        conjArray = futureConj34Active;
+    }
+  }
+
+  for (i=0; i<=conjArray.length -1; i++) {
+    conjugation.push(formRoot(verb,conj) + specialVowel + conjArray[i]);
+  }
+  return conjugation;
+}
+console.log(conjFutureTense("sequor","III","passive"));
