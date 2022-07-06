@@ -24,7 +24,10 @@ const futureConj12Active = ["bō", "bis", "bit", "bimus", "bitis", "bunt"];
 const futureConj12Passive = ["bor", "beris", "bitur", "bimur", "biminī", "buntur"];
 const futureConj34Active = ["am", "ēs", "et", "ēmus", "ētis", "ent"];
 const futureConj34Passive = ["ar", "ēris", "ētur", "ēmur", "ēminī", "entur"];
-
+// Perfect, pluperfect, and future perfect tense indicators and endings, active voice
+const perfectConjActive = ["ī", "istī", "it", "imus", "istis", "ērunt"];
+const pluperfectConjActive = ["eram", "erās", "erat", "erāmus", "erātis", "erant"];
+const fpConjActive = ["erō", "eris", "erit", "erimus", "eritis", "erint"];
 
 // Attach an active or passive infinitive ending to a verb root depending on the verb's conjugation.
 // Deponent verbs will get the passive infinitive endings even when they are active.
@@ -283,4 +286,26 @@ function conjFutureTense(verb, conj, voice) {
   }
   return conjugation;
 }
-console.log(conjFutureTense("sequor","III","passive"));
+
+function conjPerfectSystemActive(thirdPart,tense) {
+  var len = thirdPart.length;
+  var perfStem = thirdPart.substring(0,len - 1);
+  var conjArray = [];
+  var conjugation = [];
+
+  switch (tense) {
+    case "perfect":
+      conjArray = perfectConjActive;
+      break;
+    case "pluperfect":
+      conjArray = pluperfectConjActive;
+      break;
+    case "future perfect":
+      conjArray = fpConjActive;
+  }
+  for (i=0; i<conjArray.length; i++) {
+    conjugation.push(perfStem + conjArray[i]);
+  }
+  return conjugation;
+}
+console.log(conjPerfectSystemActive("potuī","perfect"));
