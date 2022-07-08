@@ -4,40 +4,64 @@
 // Notice that Conjugation III-i has similarities with both III and IV.
 // The conjugation must be specified because there are pairs of verbs that are identical in their
 // first-person singular (dictionary) forms but conjugate differently—e.g., volō (fly) and volō (want).
-const presentConj1Active = ["ō", "ās", "at", "āmus", "ātis", "ant"];
-const presentConj1Passive = ["or", "āris", "ātur", "āmur", "āminī", "antur"];
-const presentConj2Active = ["eō", "ēs", "et", "ēmus", "ētis", "ent"]
-const presentConj2Passive = ["eor", "ēris", "ētur", "ēmur", "ēminī", "entur"];
-const presentConj3Active = ["ō", "is", "it", "imus", "itis", "unt"];
-const presentConj3Passive = ["or", "eris", "itur", "imur", "iminī", "untur"];
-const presentConj3IActive = ["iō", "is", "it", "imus", "itis", "iunt"];
-const presentConj3IPassive = ["ior", "ieris", "itur", "imur", "iminī", "iuntur"];
-const presentConj4Active = ["iō", "īs", "it", "īmus", "ītis", "iunt"];
-const presentConj4Passive = ["ior", "īris", "ītur", "īmur", "īminī", "iuntur"];
+const personalEndingsSet1 = ["ō", "s", "t", "mus", "tis", "nt"];
+const personalEndingsSet2 = ["m", "s", "t", "mus", "tis", "nt"];
+const conj1PresActIndic = ["ō", "ās", "at", "āmus", "ātis", "ant"];
+const conj1PresActSubj = ["em", "ēs", "et", "ēmus", "ētis", "ent"];
+const conj1PresPassIndic = ["or", "āris", "ātur", "āmur", "āminī", "antur"];
+const conj1PresPassSubj = ["er", "ēris", "ētur", "ēmur", "ēminī", "entur"];
+const conj2PresActIndic = ["eō", "ēs", "et", "ēmus", "ētis", "ent"];
+const conj2PresActSubj = ["eam", "eās", "eat", "eāmus", "eātis", "eant"]
+const conj2PresPassIndic = ["eor", "ēris", "ētur", "ēmur", "ēminī", "entur"];
+const conj2PresPassSubj = ["ear", "eāris", "eātur", "eāmur", "eāminī", "eantur"];
+const conj3PresActIndic = ["ō", "is", "it", "imus", "itis", "unt"];
+const conj3PresActSubj = ["am", "ās", "at", "āmus", "ātis", "ant"];
+const conj3PresPassIndic = ["or", "eris", "itur", "imur", "iminī", "untur"];
+const conj3PresPassSubj = ["ar", "āris", "ātur", "āmur", "āminī", "antur"];
+const conj3IPresActIndic = ["iō", "is", "it", "imus", "itis", "iunt"];
+const conj3I4PresActSubj = ["iam", "iās", "iat", "iāmus", "iātis", "iant"];
+const conj3IPresPassIndic = ["ior", "ieris", "itur", "imur", "iminī", "iuntur"];
+const conj3I4PresPassSubj = ["iar", "iāris", "iātur", "iāmur", "iāminī", "iantur"];
+const conj4PresActIndic = ["iō", "īs", "it", "īmus", "ītis", "iunt"];
+const conj4PresPassIndic = ["ior", "īris", "ītur", "īmur", "īminī", "iuntur"];
 // Imperfect tense indicators and endings
-const imperfectConj12Active = ["bam", "bās", "bat", "bāmus", "bātis", "bant"];
-const imperfectConj12Passive = ["bar", "bāris", "bātur", "bāmur", "bāminī", "bantur"];
-const imperfectConj34Active = ["ēbam", "ēbās", "ēbat", "ēbāmus", "ēbātis", "ēbant"];
-const imperfectConj34Passive = ["ēbar", "ēbāris", "ēbātur", "ēbāmur", "ēbāminī", "ēbantur"];
+const conj12ImperfActIndic = ["bam", "bās", "bat", "bāmus", "bātis", "bant"];
+const conj1ImperfActSubj = ["ārem", "ārēs", "āret", "ārēmus", "ārētis", "ārent"];
+const conj1ImperfPassSubj = ["ārer", "ārēris", "ārētur", "ārēmur", "ārēminī", "ārentur"];
+const conj2ImperfActSubj = ["ērem", "ērēs", "ēret", "ērēmus", "ērētis", "ērent"];
+const conj2ImperfPassSubj = ["ērer", "ērēris", "ērētur", "ērēmur", "ērēminī", "ērentur"];
+const conj12ImperfPassIndic = ["bar", "bāris", "bātur", "bāmur", "bāminī", "bantur"];
+const conj34ImperfActIndic = ["ēbam", "ēbās", "ēbat", "ēbāmus", "ēbātis", "ēbant"];
+const conj3AllImperfActSubj = ["erem", "erēs", "eret", "erēmus", "erētis", "erent"];
+const conj3AllImperfPassSubj = ["erer", "erēris", "erētur", "erēmur", "erēminī", "erentur"];
+const conj34ImperfPassIndic = ["ēbar", "ēbāris", "ēbātur", "ēbāmur", "ēbāminī", "ēbantur"];
+const conj4ImperfActSubj = ["īrem", "īrēs", "īret", "īrēmus", "īrētis", "īrent"];
+const conj4ImperfPassSubj = ["īrer", "īrēris", "īrētur", "īrēmur", "īrēminī", "īrentur"];
 // Future tense indicators and endings
-const futureConj12Active = ["bō", "bis", "bit", "bimus", "bitis", "bunt"];
-const futureConj12Passive = ["bor", "beris", "bitur", "bimur", "biminī", "buntur"];
-const futureConj34Active = ["am", "ēs", "et", "ēmus", "ētis", "ent"];
-const futureConj34Passive = ["ar", "ēris", "ētur", "ēmur", "ēminī", "entur"];
+const conj12FutActIndic = ["bō", "bis", "bit", "bimus", "bitis", "bunt"];
+const conj12FutPassIndic = ["bor", "beris", "bitur", "bimur", "biminī", "buntur"];
+const conj34FutActIndic = ["am", "ēs", "et", "ēmus", "ētis", "ent"];
+const conj34FutPassIndic = ["ar", "ēris", "ētur", "ēmur", "ēminī", "entur"];
 // Perfect, pluperfect, and future perfect tense indicators and endings, active voice
-const perfectConjActive = ["ī", "istī", "it", "imus", "istis", "ērunt"];
-const pluperfectConjActive = ["eram", "erās", "erat", "erāmus", "erātis", "erant"];
-const fpConjActive = ["erō", "eris", "erit", "erimus", "eritis", "erint"];
+const allPerfActIndic = ["ī", "istī", "it", "imus", "istis", "ērunt"];
+const allPlupActIndic = ["eram", "erās", "erat", "erāmus", "erātis", "erant"];
+const allFPActIndic = ["erō", "eris", "erit", "erimus", "eritis", "erint"];
+const allperfSubjIndicator = "eri";
+const allPlupActSubj = ["issem", "issēs", "isset", "issēmus", "issētis", "issent"];
 // Perfect, pluperfect, and future perfect tense indicators (i.e., forms of "sum" in
-// present, imperfect, and future tenses
-const presentConjSum = ["sum", "es", "est", "sumus", "estis", "sunt"];
-const imperfectConjSum = ["eram", "erās", "erat", "erāmus", "erātis", "erant"];
-const futureConjSum = ["erō", "eris", "erit", "erimus", "eritis", "erunt"];
+// present, imperfect, and future tenses), passive voice
+const allPresIndicSum = ["sum", "es", "est", "sumus", "estis", "sunt"];
+const allPresSubjSum = ["sim", "sīs", "sit", "sīmus", "sītis", "sint"];
+const allImperfIndicSum = ["eram", "erās", "erat", "erāmus", "erātis", "erant"];
+const allImperfSubjSum = ["essem", "essēs", "esset", "essēmus", "essētis", "essent"];
+const allFutIndicSum = ["erō", "eris", "erit", "erimus", "eritis", "erunt"];
 
 // Attach an active or passive infinitive ending to a verb root depending on the verb's conjugation.
 // Deponent verbs will get the passive infinitive endings even when they are active.
-const presentActiveInfinitiveEndings = ["āre", "ēre", "ere", "īre"]
-const presentPassiveInfinitiveEndings = ["ārī", "ērī", "ī", "īrī"]
+const presentActiveInfinitiveEndings = ["āre", "ēre", "ere", "īre"];
+const presentPassiveInfinitiveEndings = ["ārī", "ērī", "ī", "īrī"];
+const perfectActiveInfinitiveEnding = "isse";
+const infinitiveSum = "esse";
 
 // Extract the root of a verb, not to be confused with the present stem.
 // The root as used here is the stem minus any thematic vowel particular to a conjugation.
@@ -68,7 +92,7 @@ function formRoot(verb, conj) {
 
 // Depending on the verbs conjugation and the specified voice (active or passive),
 // attach the appropriate infinitive ending to the verb root.
-function formInfinitive (verb, conj, voice) {
+function formPresentInfinitive (verb, conj, voice) {
   var infinitiveIndex;
   var myRoot = formRoot(verb,conj);
   var len = verb.length;
@@ -100,9 +124,24 @@ function formInfinitive (verb, conj, voice) {
   }
 }
 
+function formPerfectInfinitive(perfectPart) {
+  var len = perfectPart.length;
+  var perfectStem, supine, supineStem;
+  if (perfectPart.substring(len-1) == "ī") {
+    perfectStem = perfectPart.substring(0,len - 1);
+    return perfectStem + perfectActiveInfinitiveEnding;
+  } else if (perfectPart.substring(len - 3) == "sum") {
+    supine = perfectPart.substring(0, len - 6);
+    supineStem = supine + "um";
+    return supine + " " + infinitiveSum;
+  } else {
+    return perfectPart + " " + esse;
+  }
+}
+
 // Attach the conjugational endings from the constants to a verb root depending on the verb's
 // conjugation (I through IV) and voice (active or passive).
-function conjPresentTense(verb, conj, voice) {
+function conjPresentTenseIndicative(verb, conj, voice) {
   var conjArray = [];
   var conjugation = [];
   var len = verb.length;
@@ -115,38 +154,38 @@ function conjPresentTense(verb, conj, voice) {
       case "Irregular":
         return;
       case "I":
-        conjArray = presentConj1Active;
+        conjArray = conj1PresActIndic;
         break;
       case "II":
-        conjArray = presentConj2Active;
+        conjArray = conj2PresActIndic;
         break;
       case "III":
-        conjArray = presentConj3Active;
+        conjArray = conj3PresActIndic;
         break;
       case "III-i":
-        conjArray = presentConj3IActive;
+        conjArray = conj3IPresActIndic;
         break;
       case "IV":
-        conjArray = presentConj4Active;
+        conjArray = conj4PresActIndic;
     }
   } else {
     switch (conj) {
       case "Irregular":
         return;
       case "I":
-        conjArray = presentConj1Passive;
+        conjArray = conj1PresPassIndic;
         break;
       case "II":
-        conjArray = presentConj2Passive;
+        conjArray = conj2PresPassIndic;
         break;
       case "III":
-        conjArray = presentConj3Passive;
+        conjArray = conj3PresPassIndic;
         break;
       case "III-i":
-        conjArray = presentConj3IPassive;
+        conjArray = conj3IPresPassIndic;
         break;
       case "IV":
-        conjArray = presentConj4Passive;
+        conjArray = conj4PresPassIndic;
     }
   }
 
@@ -156,7 +195,67 @@ function conjPresentTense(verb, conj, voice) {
   return conjugation;
 }
 
-function conjImperfectTense(verb, conj, voice) {
+function conjPresentTenseSubjunctive(verb, conj, voice) {
+  var conjArray = [];
+  var conjugation = [];
+  var len = verb.length;
+
+  if (verb.substring(len - 1) == "t") {
+    if (conj == "II") {
+      return conj2PresPassSubj[2];
+    }
+    if (conj == "III") {
+      return conj3PresActSubj[2];
+    } 
+  }
+  
+  if (voice == "active" && verb.substring(len - 1) == "ō") {
+    switch (conj) {
+      case "Irregular":
+        return;
+      case "I":
+        conjArray = conj1PresActSubj;
+        break;
+      case "II":
+        conjArray = conj2PresActSubj;
+        break;
+      case "III":
+        conjArray = conj3PresActSubj;
+        break;
+      case "III-i":
+        conjArray = conj3I4PresActSubj;
+        break;
+      case "IV":
+        conjArray = conj3I4PresActSubj;
+    }
+  } else {
+    switch (conj) {
+      case "Irregular":
+        return;
+      case "I":
+        conjArray = conj1PresPassSubj;
+        break;
+      case "II":
+        conjArray = conj2PresPassSubj;
+        break;
+      case "III":
+        conjArray = conj3PresPassSubj;
+        break;
+      case "III-i":
+        conjArray = conj3I4PresPassSubj;
+        break;
+      case "IV":
+        conjArray = conj3I4PresPassSubj;
+    }
+  }
+
+  for (i=0; i<=conjArray.length -1; i++) {
+    conjugation.push(formRoot(verb,conj) + conjArray[i]);
+  }
+  return conjugation;
+}
+
+function conjImperfectTenseIndicative(verb, conj, voice) {
   var conjArray = [];
   var conjugation = [];
   var specialVowel;
@@ -164,7 +263,7 @@ function conjImperfectTense(verb, conj, voice) {
 
   if (verb.substring(len - 1) == "t") {
     if (conj == "II" || conj == "III") {
-      return formRoot(verb,conj) +  imperfectConj34Active[2];
+      return formRoot(verb,conj) +  conj34ImperfActIndic[2];
     }
   }
   if (voice == "active" && verb.substring(len - 1) == "ō") {
@@ -173,23 +272,23 @@ function conjImperfectTense(verb, conj, voice) {
         return;
       case "I":
         specialVowel = "ā";
-        conjArray = imperfectConj12Active;
+        conjArray = conj12ImperfActIndic;
         break;
       case "II":
         specialVowel = "ē"
-        conjArray = imperfectConj12Active;
+        conjArray = conj12ImperfActIndic;
         break;
       case "III":
         specialVowel = ""
-        conjArray = imperfectConj34Active;
+        conjArray = conj34ImperfActIndic;
         break;
       case "III-i":
         specialVowel = "i"
-        conjArray = imperfectConj34Active;
+        conjArray = conj34ImperfActIndic;
         break;
       case "IV":
         specialVowel = "i"
-        conjArray = imperfectConj34Active;
+        conjArray = conj34ImperfActIndic;
     }
   } else {
     switch (conj) {
@@ -197,28 +296,88 @@ function conjImperfectTense(verb, conj, voice) {
         return;
       case "I":
         specialVowel = "ā";
-        conjArray = imperfectConj12Passive;
+        conjArray = conj12ImperfPassIndic;
         break;
       case "II":
         specialVowel = "ē";
-        conjArray = imperfectConj12Passive;
+        conjArray = conj12ImperfPassIndic;
         break;
       case "III":
         specialVowel = "";
-        conjArray = imperfectConj34Passive;
+        conjArray = conj34ImperfPassIndic;
         break;
       case "III-i":
         specialVowel = "i";
-        conjArray = imperfectConj34Passive;
+        conjArray = conj34ImperfPassIndic;
         break;
       case "IV":
         specialVowel = "i";
-        conjArray = imperfectConj34Passive;
+        conjArray = conj34ImperfPassIndic;
     }
   }
 
-  for (i=0; i<=conjArray.length -1; i++) {
+  for (i = 0; i <= conjArray.length - 1; i++) {
     conjugation.push(formRoot(verb,conj) + specialVowel + conjArray[i]);
+  }
+  return conjugation;
+}
+
+function conjImperfectTenseSubjunctive(verb, conj, voice) {
+  var conjArray = [];
+  var conjugation = [];
+  var len = verb.length;
+
+  if (verb.substring(len - 1) == "t") {
+    if (conj == "II") {
+      return formRoot(verb,conj) + conj2PresActSubj;
+    }
+    if (conj == "III") {
+      return formRoot(verb,conj) + conj3AllImperfActSubj;
+    }
+  }
+  
+  if (voice == "active" && verb.substring(len - 1) == "ō") {
+    switch (conj) {
+      case "Irregular":
+        return;
+      case "I":
+        conjArray = conj1ImperfActSubj;
+        break;
+      case "II":
+        conjArray = conj2ImperfActSubj;
+        break;
+      case "III":
+        conjArray = conj3AllImperfActSubj;
+        break;
+      case "III-i":
+        conjArray = conj3AllImperfActSubj;
+        break;
+      case "IV":
+        conjArray = conj4ImperfActSubj;
+    }
+  } else {
+    switch (conj) {
+      case "Irregular":
+        return;
+      case "I":
+        conjArray = conj1ImperfPassSubj;
+        break;
+      case "II":
+        conjArray = conj2ImperfPassSubj;
+        break;
+      case "III":
+        conjArray = conj3AllImperfPassSubj;
+        break;
+      case "III-i":
+        conjArray = conj3AllImperfPassSubj;
+        break;
+      case "IV":
+        conjArray = conj4ImperfPassSubj;
+    }
+  }
+
+  for (i = 0; i <= conjArray.length - 1; i++) {
+    conjugation.push(formRoot(verb,conj) + conjArray[i]);
   }
   return conjugation;
 }
@@ -231,9 +390,9 @@ function conjFutureTense(verb, conj, voice) {
 
   if (verb.substring(len - 1) == "t") {
     if (conj == "II") {
-      return formRoot(verb,conj) + "ē" + futureConj12Active[2];
+      return formRoot(verb,conj) + "ē" + conj12FutActIndic[2];
     } else {
-      return formRoot(verb,conj) + futureConj34Active[2];
+      return formRoot(verb,conj) + conj34FutActIndic[2];
     }
   }
   if (voice == "active" && verb.substring(len - 1) == "ō") {
@@ -242,23 +401,23 @@ function conjFutureTense(verb, conj, voice) {
         return;
       case "I":
         specialVowel = "ā";
-        conjArray = futureConj12Active;
+        conjArray = conj12FutActIndic;
         break;
       case "II":
         specialVowel = "ē"
-        conjArray = futureConj12Active;
+        conjArray = conj12FutActIndic;
         break;
       case "III":
         specialVowel = ""
-        conjArray = futureConj34Active;
+        conjArray = conj34FutActIndic;
         break;
       case "III-i":
         specialVowel = "i"
-        conjArray = futureConj34Active;
+        conjArray = conj34FutActIndic;
         break;
       case "IV":
         specialVowel = "i"
-        conjArray = futureConj34Active;
+        conjArray = conj34FutActIndic;
     }
   } else {
     switch (conj) {
@@ -266,23 +425,23 @@ function conjFutureTense(verb, conj, voice) {
         return;
       case "I":
         specialVowel = "ā";
-        conjArray = futureConj12Passive;
+        conjArray = conj12FutPassIndic;
         break;
       case "II":
         specialVowel = "ē";
-        conjArray = futureConj12Passive;
+        conjArray = conj12FutPassIndic;
         break;
       case "III":
         specialVowel = "";
-        conjArray = futureConj34Passive;
+        conjArray = conj34FutPassIndic;
         break;
       case "III-i":
         specialVowel = "i";
-        conjArray = futureConj34Passive;
+        conjArray = conj34FutPassIndic;
         break;
       case "IV":
         specialVowel = "i";
-        conjArray = futureConj34Passive;
+        conjArray = conj34FutPassIndic;
     }
   }
 
@@ -292,7 +451,7 @@ function conjFutureTense(verb, conj, voice) {
   return conjugation;
 }
 
-function conjPerfectSystemActive(thirdPart,tense) {
+function conjPerfectSystemActiveIndicative(thirdPart,tense) {
   var len = thirdPart.length;
   var perfStem = thirdPart.substring(0,len - 1);
   var conjArray = [];
@@ -301,13 +460,13 @@ function conjPerfectSystemActive(thirdPart,tense) {
   if (thirdPart.substring(len - 1) == "ī") {
     switch (tense) {
       case "perfect":
-        conjArray = perfectConjActive;
+        conjArray = allPerfActIndic;
         break;
       case "pluperfect":
-        conjArray = pluperfectConjActive;
+        conjArray = allPlupActIndic;
         break;
       case "future perfect":
-        conjArray = fpConjActive;
+        conjArray = allFPActIndic;
     }
   } else {
     return "Sorry, that won't work."
@@ -342,13 +501,13 @@ function conjPerfectSystemPassive(supine,tense,gender) {
 
   switch (tense) {
     case "perfect":
-      conjArray = presentConjSum;
+      conjArray = allPresIndicSum;
       break;
     case "pluperfect":
-      conjArray = imperfectConjSum;
+      conjArray = allImperfIndicSum;
       break;
     case "future perfect":
-      conjArray = futureConjSum;
+      conjArray = allFutIndicSum;
   }
   do {
     conjugation.push(supineStem + singularEnding + " " + conjArray[i]);
@@ -368,21 +527,21 @@ function conjPerfectSystemPassive(supine,tense,gender) {
 function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
   var len = firstPart.length;
   var isNotDeponent = firstPart.substring(len - 1) == "ō";
-  console.log("Active Infinitive = " + formInfinitive(firstPart,conj,"active"));
+  console.log("Active Infinitive = " + formPresentInfinitive(firstPart,conj,"active"));
   if (isNotDeponent) {
-    console.log("Passive Infinitive = " + formInfinitive(firstPart,conj,"passive"));
+    console.log("Passive Infinitive = " + formPresentInfinitive(firstPart,conj,"passive"));
   }
   console.log("Present Active:")
-  console.log(conjPresentTense(firstPart, conj, "active"));
+  console.log(conjPresentTenseIndicative(firstPart, conj, "active"));
   if (isNotDeponent) {
     console.log("Present Passive:")
-    console.log(conjPresentTense(firstPart, conj, "passive"));
+    console.log(conjPresentTenseIndicative(firstPart, conj, "passive"));
   }
   console.log("Imperfect Active:");
-  console.log(conjImperfectTense(firstPart, conj, "active"));
+  console.log(conjImperfectTenseIndicative(firstPart, conj, "active"));
   if (isNotDeponent) {
     console.log("Imperfect Passive:");
-    console.log(conjImperfectTense(firstPart, conj, "passive"));
+    console.log(conjImperfectTenseIndicative(firstPart, conj, "passive"));
   }
   console.log("Future Active:");
   console.log(conjFutureTense(firstPart, conj, "active"));
@@ -392,7 +551,7 @@ function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
   }
   console.log("Perfect Active:");
   if (thirdPart.substring(thirdPart.length - 1) == "ī") {
-    console.log(conjPerfectSystemActive(thirdPart, "perfect"));
+    console.log(conjPerfectSystemActiveIndicative(thirdPart, "perfect"));
   } else {
     console.log(conjPerfectSystemPassive(thirdPart, "perfect", gender));
   }
@@ -402,7 +561,7 @@ function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
   }
   console.log("Pluperfect Active:");
   if (thirdPart.substring(thirdPart.length - 1) == "ī") {
-    console.log(conjPerfectSystemActive(thirdPart, "pluperfect"));
+    console.log(conjPerfectSystemActiveIndicative(thirdPart, "pluperfect"));
   } else {
     console.log(conjPerfectSystemPassive(thirdPart, "pluperfect", gender));
   }
@@ -412,7 +571,7 @@ function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
   }
   console.log("Future Perfect Active:");
   if (thirdPart.substring(thirdPart.length - 1) == "ī") {
-    console.log(conjPerfectSystemActive(thirdPart, "future perfect"));
+    console.log(conjPerfectSystemActiveIndicative(thirdPart, "future perfect"));
   } else {
     console.log(conjPerfectSystemPassive(thirdPart, "future perfect", gender));
   }
