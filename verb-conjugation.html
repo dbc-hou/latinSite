@@ -14,24 +14,24 @@
   <div class="row d-flex justify-content-center">
     <div id="mood-box" class="card col-3">
       <p><strong>Mood:</strong><br>
-      <input type="radio" name="mood" id="indicative" value="indicative">Indicative<br>
-      <input type="radio" name="mood" id="subjunctive" value="subjunctive">Subjunctive<br>
+      <input class="mood-option" type="radio" name="mood" id="indicative" value="indicative" checked>Indicative<br>
+      <input class="mood-option" type="radio" name="mood" id="subjunctive" value="subjunctive">Subjunctive<br>
       </p>
     </div>
     <div id="voice-box" class="card col-3">
       <p><strong>Voice:</strong><br>
-      <input type="radio" name="voice" id="active" value="active">Active<br>
-      <input type="radio" name="voice" id="passive" value="passive">Passive<br>
+      <input class="voice-option" type="radio" name="voice" id="active" value="active" checked>Active<br>
+      <input class="voice-option" type="radio" name="voice" id="passive" value="passive">Passive<br>
       </p>
     </div>
     <div id="tense-box" class="card col-3">
       <p><strong>Tense:</strong><br>
-      <input type="radio" name="tense" id="present" value="present">Present<br>
-      <input type="radio" name="tense" id="imperfect" value="imperfect">Imperfect<br>
-      <input type="radio" name="tense" id="future" value="future">Future<br>
-      <input type="radio" name="tense" id="perfect" value="perfect">Perfect<br>
-      <input type="radio" name="tense" id="pluperfect" value="plurperfect">Pluperfect<br>
-      <input type="radio" name="tense" id="future-perfect" value="future-perfect">Future Perfect<br>
+      <input class="tense-option" type="radio" name="tense" id="present" value="present" checked>Present<br>
+      <input class="tense-option" type="radio" name="tense" id="imperfect" value="imperfect">Imperfect<br>
+      <input class="tense-option" type="radio" name="tense" id="future" value="future">Future<br>
+      <input class="tense-option" type="radio" name="tense" id="perfect" value="perfect">Perfect<br>
+      <input class="tense-option" type="radio" name="tense" id="pluperfect" value="plurperfect">Pluperfect<br>
+      <input class="tense-option" type="radio" name="tense" id="future-perfect" value="future perfect">Future Perfect<br>
       </p>
     </div>
   </div>
@@ -39,12 +39,98 @@
     <button name="submit" id="submit">CONIUGATE!</button>
   </div>
 </div>
+<div id="conjugation-row" class="row d-flex justify-content-center">
+  <div id="conjugation-display" class="card col=6">
 
+  </div>
+</div>
 <script>
-  var currentMood;
-  var currentVoice;
-  var currentTense;
+  var currentMood = "indicative";
+  var currentVoice = "active";
+  var currentTense = "present";
+  var conjugationArray;
 
+  $(".mood-option").click(function () {
+    currentMood = this.value;
+    if (currentMood=="subjunctive") {
+      $("#future").attr("disabled",true);
+      $("#future-perfect").attr("disabled",true);
+    } else {
+      $("#future").attr("disabled",false);
+      $("#future-perfect").attr("disabled",false);
+    }
+  });
+  $(".voice-option").click(function () {
+    currentVoice = this.value;
+  });
+  $(".tense-option").click(function () {
+    currentTense = this.value;
+  });
+
+  $("#submit").click(function () {
+    var tableHTML = '<table><tr><td><strong>Singular</strong></td><td><strong>Plural</strong></td></tr>'
+    if (currentMood == "indicative") {
+      switch (currentTense) {
+        case "present":
+          conjugationArray = conjPresentTenseIndicative("amō","I",currentVoice);
+          break;
+        case "imperfect":
+          conjugationArray = conjImperfectTenseIndicative("amō","I",currentVoice);
+          break;
+        case "future":
+          conjugationArray = conjFutureTense("amō","I",currentVoice);
+          break;
+        case "perfect":
+          if (currentVoice == "active") {
+            conjugationArray = conjPerfectSystemActive("amāvī","perfect","indicative");
+          } else {
+            conjugationArray = conjPerfectSystemPassive("amātum", "perfect", "m", "indicative");
+          }
+          break;
+        case "pluperfect":
+          if (currentVoice == "active") {
+            conjugationArray = conjPerfectSystemActive("amāvī","pluperfect","indicative");
+          } else {
+            conjugationArray = conjPerfectSystemPassive("amātum", "pluperfect", "m", "indicative");
+          }
+          break;
+        case "future perfect":
+          if (currentVoice == "active") {
+            conjugationArray = conjPerfectSystemActive("amāvī","future perfect","indicative");
+          } else {
+            conjugationArray = conjPerfectSystemPassive("amātum", "future perfect", "m", "indicative");
+          }
+        }
+      } else {
+      switch (currentTense) {
+        case "present":
+          conjugationArray = conjPresentTenseSubjunctive("amō", "I", currentVoice);
+          break;
+        case "imperfect":
+          conjugationArray = conjImperfectTenseSubjunctive("amō", "I", currentVoice);
+          break;
+        case "perfect":
+          if (currentVoice == "active") {
+            conjugationArray = conjPerfectSystemActive("amāvī", "perfect", "subjunctive");
+          } else {
+            conjugationArray = conjPerfectSystemPassive("amātum", "perfect", "m", "subjunctive");
+          }
+          break;
+        case "pluperfect":
+          if (currentVoice == "active") {
+            conjugationArray = conjPerfectSystemActive("amāvī", "pluperfect", "subjunctive");
+          } else {
+            conjugationArray = conjPerfectSystemPassive("amātum", "pluperfect", "m", "subjunctive");
+          }
+        }
+      }
+    tableHTML += '<tr><td>' + conjugationArray[0] + '</td><td>' + conjugationArray[3] + '</td></tr>';
+    tableHTML += '<tr><td>' + conjugationArray[1] + '</td><td>' + conjugationArray[4] + '</td></tr>';
+    tableHTML += '<tr><td>' + conjugationArray[2] + '</td><td>' + conjugationArray[5] + '</td></tr>';
+    tableHTML += '</table>'
+    $("#conjugation-display").empty();
+    $("#conjugation-display").html(tableHTML);
+  });
 </script>
 </body>
 </html>

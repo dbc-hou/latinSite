@@ -459,7 +459,7 @@ function conjPerfectSystemActive(thirdPart, tense, mood) {
   var conjugation = [];
 
   if (thirdPart.substring(len - 1) == "ī") {
-    if (mood = "indicative") {
+    if (mood == "indicative") {
       switch (tense) {
         case "perfect":
           conjArray = allPerfActIndic;
