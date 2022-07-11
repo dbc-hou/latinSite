@@ -206,9 +206,9 @@ function conjPresentTenseSubjunctive(verb, conj, voice) {
     }
     if (conj == "III") {
       return conj3PresActSubj[2];
-    } 
+    }
   }
-  
+
   if (voice == "active" && verb.substring(len - 1) == "ō") {
     switch (conj) {
       case "Irregular":
@@ -335,7 +335,7 @@ function conjImperfectTenseSubjunctive(verb, conj, voice) {
       return formRoot(verb,conj) + conj3AllImperfActSubj;
     }
   }
-  
+
   if (voice == "active" && verb.substring(len - 1) == "ō") {
     switch (conj) {
       case "Irregular":
@@ -451,22 +451,39 @@ function conjFutureTense(verb, conj, voice) {
   return conjugation;
 }
 
-function conjPerfectSystemActiveIndicative(thirdPart,tense) {
+function conjPerfectSystemActive(thirdPart, tense, mood) {
   var len = thirdPart.length;
   var perfStem = thirdPart.substring(0,len - 1);
+  var tenseIndicator;
   var conjArray = [];
   var conjugation = [];
 
   if (thirdPart.substring(len - 1) == "ī") {
-    switch (tense) {
-      case "perfect":
-        conjArray = allPerfActIndic;
-        break;
-      case "pluperfect":
-        conjArray = allPlupActIndic;
-        break;
-      case "future perfect":
-        conjArray = allFPActIndic;
+    if (mood = "indicative") {
+      switch (tense) {
+        case "perfect":
+          conjArray = allPerfActIndic;
+          break;
+        case "pluperfect":
+          conjArray = allPlupActIndic;
+          break;
+        case "future perfect":
+          conjArray = allFPActIndic;
+      }
+    } else {
+      switch (tense) {
+        case "perfect":
+          tenseIndicator = allperfSubjIndicator;
+          for (i = 0; i < personalEndingsSet2.length; i++) {
+            conjArray.push(tenseIndicator + personalEndingsSet2[i]);
+          }
+          break;
+        case "pluperfect":
+          conjArray = allPlupActSubj;
+          break;
+        case "future perfect":
+          return "Sorry, the subjunctive mood has no future perfect tense."
+      }
     }
   } else {
     return "Sorry, that won't work."
@@ -477,7 +494,7 @@ function conjPerfectSystemActiveIndicative(thirdPart,tense) {
   return conjugation;
 }
 
-function conjPerfectSystemPassive(supine,tense,gender) {
+function conjPerfectSystemPassive(supine,tense,gender,mood) {
   var len = supine.length;
   var supineStem = supine.substring(0,len - 2);
   var singularEnding, pluralEnding;
@@ -498,29 +515,40 @@ function conjPerfectSystemPassive(supine,tense,gender) {
       singularEnding = "um";
       pluralEnding = "a";
   }
-
-  switch (tense) {
-    case "perfect":
-      conjArray = allPresIndicSum;
-      break;
-    case "pluperfect":
-      conjArray = allImperfIndicSum;
-      break;
-    case "future perfect":
-      conjArray = allFutIndicSum;
+  if (mood == "indicative") {
+    switch (tense) {
+      case "perfect":
+        conjArray = allPresIndicSum;
+        break;
+      case "pluperfect":
+        conjArray = allImperfIndicSum;
+        break;
+      case "future perfect":
+        conjArray = allFutIndicSum;
+    }
+  } else {
+    switch (tense) {
+      case "perfect":
+        conjArray = allPresSubjSum;
+        break;
+      case "pluperfect":
+        conjArray = allImperfSubjSum;
+        break;
+      case "future perfect":
+        return "Sorry, the subjunctive mood doesn't have a future perfect tense."
+    }
   }
   do {
     conjugation.push(supineStem + singularEnding + " " + conjArray[i]);
     i++;
   }
-  while (i<3);
+  while (i < 3);
 
   do {
     conjugation.push(supineStem + pluralEnding + " " + conjArray[i]);
     i++;
   }
-  while (i<6);
-
+  while (i < 6);
   return conjugation;
 }
 
@@ -551,7 +579,7 @@ function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
   }
   console.log("Perfect Active:");
   if (thirdPart.substring(thirdPart.length - 1) == "ī") {
-    console.log(conjPerfectSystemActiveIndicative(thirdPart, "perfect"));
+    console.log(conjPerfectSystemActive(thirdPart, "perfect"));
   } else {
     console.log(conjPerfectSystemPassive(thirdPart, "perfect", gender));
   }
@@ -561,7 +589,7 @@ function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
   }
   console.log("Pluperfect Active:");
   if (thirdPart.substring(thirdPart.length - 1) == "ī") {
-    console.log(conjPerfectSystemActiveIndicative(thirdPart, "pluperfect"));
+    console.log(conjPerfectSystemActive(thirdPart, "pluperfect"));
   } else {
     console.log(conjPerfectSystemPassive(thirdPart, "pluperfect", gender));
   }
@@ -571,7 +599,7 @@ function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
   }
   console.log("Future Perfect Active:");
   if (thirdPart.substring(thirdPart.length - 1) == "ī") {
-    console.log(conjPerfectSystemActiveIndicative(thirdPart, "future perfect"));
+    console.log(conjPerfectSystemActive(thirdPart, "future perfect"));
   } else {
     console.log(conjPerfectSystemPassive(thirdPart, "future perfect", gender));
   }
@@ -581,4 +609,4 @@ function completeConjugation(firstPart,thirdPart,supine,conj,gender) {
   }
 }
 
-completeConjugation("hortor", "hortātum", null, "I", "f")
+completeConjugation("pōnō", "pōsuī", "pōsitum", "III", "f")

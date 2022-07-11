@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verb Conjugation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="js/jquery.js"></script>
+  <script src="js/verbs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div id="conj-picker" class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div id="mood-box" class="card col-3">
+      <p><strong>Mood:</strong><br>
+      <input type="radio" name="mood" id="indicative" value="indicative">Indicative<br>
+      <input type="radio" name="mood" id="subjunctive" value="subjunctive">Subjunctive<br>
+      </p>
+    </div>
+    <div id="voice-box" class="card col-3">
+      <p><strong>Voice:</strong><br>
+      <input type="radio" name="voice" id="active" value="active">Active<br>
+      <input type="radio" name="voice" id="passive" value="passive">Passive<br>
+      </p>
+    </div>
+    <div id="tense-box" class="card col-3">
+      <p><strong>Tense:</strong><br>
+      <input type="radio" name="tense" id="present" value="present">Present<br>
+      <input type="radio" name="tense" id="imperfect" value="imperfect">Imperfect<br>
+      <input type="radio" name="tense" id="future" value="future">Future<br>
+      <input type="radio" name="tense" id="perfect" value="perfect">Perfect<br>
+      <input type="radio" name="tense" id="pluperfect" value="plurperfect">Pluperfect<br>
+      <input type="radio" name="tense" id="future-perfect" value="future-perfect">Future Perfect<br>
+      </p>
+    </div>
+  </div>
+  <div id="submit-row" class="row d-flex justify-content-center">
+    <button name="submit" id="submit">CONIUGATE!</button>
+  </div>
+</div>
+
+<script>
+  var currentMood;
+  var currentVoice;
+  var currentTense;
+
+</script>
+</body>
+</html>
