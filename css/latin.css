@@ -1,0 +1,28 @@
+body, html {
+  background-image: url("../img/columnae.jpg");
+}
+
+tr>td {
+  border: thin solid black;
+}
+
+.form-check {
+  margin: 3px;
+  background-color: whitesmoke;
+}
+
+.form-check:hover {
+  background-color: purple;
+  color: gold;
+}
+
+.form-check-input {
+  margin-left: 2em;
+}
+
+button:active {
+  background-color: purple;
+  color: gold;
+}
+
+
