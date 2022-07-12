@@ -9,9 +9,12 @@
   <script src="js/jquery.js"></script>
   <script src="js/verbs.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
+
 <body>
+<!--We begin with a row three cards that allow the user to specify the mood, voice, and tense,
+    in which a verb is to conjugated. Default options are indicative mood, active voice,
+    and present tense.-->
 <div id="conj-picker" class="container-fluid">
   <div class="row d-flex justify-content-center">
     <div id="mood-box" class="card col-3 form-check">
@@ -47,21 +50,50 @@
       </p>
     </div>
   </div>
+
+<!--This row stays hidden unless the user specifies one of the perfect-system tenses
+    (perfect, pluperfect, future perfect). Those tenses are the only ones for which the gender
+    of the subject is important: in the passive voice for regular verbs, active voice for
+    deponent verbs.-->
+  <div id="gender-row" class="row justify-content-center">
+    <div id="gender-box" class="card col-9 form-check">
+    <p><strong>Gender:</strong><br>
+      <label for="masculine" class="radio-inline">
+        <input class="form-check-input gender-option" type="radio" name="gender" id="masculine" value="m" checked>Masculine
+      </label>
+      <label for="feminine"  class="radio-inline">
+        <input class="form-check-input gender-option" type="radio" name="gender" id="feminine" value="f">Feminine
+      </label>
+      <label for="neuter" class="radio-inline">
+        <input class="form-check-input gender-option" type="radio" name="gender" id="neuter" value="n">Neuter
+      </label>
+    </p>
+    </div>
+  </div>
+
+<!--When a user has finished picking mood, voice, tense, and optional gender, they can click
+    the CONJUGATE! button.-->
   <div id="submit-row" class="row d-flex justify-content-center">
-    <button name="submit" id="submit">CONIUGATE!</button>
+    <button name="submit" id="submit">CONJUGATE!</button>
   </div>
 </div>
+
+<!--This div stays hidden until the user clicks CONJUGATE! Every click of the button refreshes the table
+    with the six forms for the specified mood, voice, tense, and (optionally) gender.-->
 <div id="conjugation-row" class="row d-flex justify-content-center">
   <div id="conjugation-display" class="card col=6">
-
+<!--The table goes right here.-->
   </div>
 </div>
+
 <script>
   var currentMood = "indicative";
   var currentVoice = "active";
   var currentTense = "present";
+  var currentGender = "m";
   var conjugationArray;
 
+  //Event handlers for the sets of radio buttons:
   $(".mood-option").click(function () {
     currentMood = this.value;
     if (currentMood === "subjunctive") {
@@ -72,67 +104,83 @@
       $("#future-perfect").attr("hidden",false);
     }
   });
+
   $(".voice-option").click(function () {
     currentVoice = this.value;
+    if (currentTense === "perfect" || currentTense === "pluperfect" || currentTense ==="future perfect") {
+      $("#gender-box").css("display","inline-flex");
+    } else {
+      $("#gender-box").css("display","none");
+    }
   });
+
   $(".tense-option").click(function () {
     currentTense = this.value;
+    if (currentTense === "perfect" || currentTense === "pluperfect" || currentTense ==="future-perfect") {
+      $("#gender-box").css("display","inline-flex");
+    } else {
+      $("#gender-box").css("display","none");
+    }
   });
+
+  $(".gender-option").click(function () {
+    currentGender = this.value;
+  })
 
   $("#submit").click(function () {
     var tableHTML = '<table><thead><td></td></td><td><strong>Singular</strong></td><td><strong>Plural</strong></td></thead>'
     if (currentMood === "indicative") {
       switch (currentTense) {
         case "present":
-          conjugationArray = conjPresentTenseIndicative("amō","I",currentVoice);
+          conjugationArray = conjPresentTenseIndicative("teneō","II",currentVoice);
           break;
         case "imperfect":
-          conjugationArray = conjImperfectTenseIndicative("amō","I",currentVoice);
+          conjugationArray = conjImperfectTenseIndicative("teneō","II",currentVoice);
           break;
         case "future":
-          conjugationArray = conjFutureTense("amō","I",currentVoice);
+          conjugationArray = conjFutureTense("teneō","II",currentVoice);
           break;
         case "perfect":
           if (currentVoice === "active") {
-            conjugationArray = conjPerfectSystemActive("amāvī","perfect","indicative");
+            conjugationArray = conjPerfectSystemActive("tenuī","perfect","indicative");
           } else {
-            conjugationArray = conjPerfectSystemPassive("amātum", "perfect", "m", "indicative");
+            conjugationArray = conjPerfectSystemPassive("tentum", "perfect", currentGender, "indicative");
           }
           break;
         case "pluperfect":
           if (currentVoice === "active") {
-            conjugationArray = conjPerfectSystemActive("amāvī","pluperfect","indicative");
+            conjugationArray = conjPerfectSystemActive("tenuī","pluperfect","indicative");
           } else {
-            conjugationArray = conjPerfectSystemPassive("amātum", "pluperfect", "m", "indicative");
+            conjugationArray = conjPerfectSystemPassive("tentum", "pluperfect", currentGender, "indicative");
           }
           break;
         case "future perfect":
           if (currentVoice === "active") {
-            conjugationArray = conjPerfectSystemActive("amāvī","future perfect","indicative");
+            conjugationArray = conjPerfectSystemActive("tenuī","future perfect","indicative");
           } else {
-            conjugationArray = conjPerfectSystemPassive("amātum", "future perfect", "m", "indicative");
+            conjugationArray = conjPerfectSystemPassive("tentum", "future perfect", currentGender, "indicative");
           }
         }
       } else {
       switch (currentTense) {
         case "present":
-          conjugationArray = conjPresentTenseSubjunctive("amō", "I", currentVoice);
+          conjugationArray = conjPresentTenseSubjunctive("teneō", "II", currentVoice);
           break;
         case "imperfect":
-          conjugationArray = conjImperfectTenseSubjunctive("amō", "I", currentVoice);
+          conjugationArray = conjImperfectTenseSubjunctive("teneō", "II", currentVoice);
           break;
         case "perfect":
           if (currentVoice === "active") {
-            conjugationArray = conjPerfectSystemActive("amāvī", "perfect", "subjunctive");
+            conjugationArray = conjPerfectSystemActive("tenuī", "perfect", "subjunctive");
           } else {
-            conjugationArray = conjPerfectSystemPassive("amātum", "perfect", "m", "subjunctive");
+            conjugationArray = conjPerfectSystemPassive("tentum", "perfect", currentGender, "subjunctive");
           }
           break;
         case "pluperfect":
           if (currentVoice === "active") {
-            conjugationArray = conjPerfectSystemActive("amāvī", "pluperfect", "subjunctive");
+            conjugationArray = conjPerfectSystemActive("tenuī", "pluperfect", "subjunctive");
           } else {
-            conjugationArray = conjPerfectSystemPassive("amātum", "pluperfect", "m", "subjunctive");
+            conjugationArray = conjPerfectSystemPassive("tentum", "pluperfect", currentGender, "subjunctive");
           }
         }
       }

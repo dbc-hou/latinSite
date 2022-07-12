@@ -6,6 +6,7 @@ body, html {
 
 tr>td {
   border: thin solid black;
+  padding: .5em;
 }
 
 thead {
@@ -38,6 +39,10 @@ button:active {
 
 #submit-row {
   margin: 1em 0;
+}
+
+#gender-box {
+  display: none
 }
 
 
