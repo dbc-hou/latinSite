@@ -58,15 +58,14 @@
   <div id="gender-row" class="row justify-content-center">
     <div id="gender-box" class="card col-9 form-check">
     <p><strong>Gender:</strong><br>
-      <label for="masculine" class="radio-inline">
-        <input class="form-check-input gender-option" type="radio" name="gender" id="masculine" value="m" checked>Masculine
-      </label>
-      <label for="feminine"  class="radio-inline">
-        <input class="form-check-input gender-option" type="radio" name="gender" id="feminine" value="f">Feminine
-      </label>
-      <label for="neuter" class="radio-inline">
-        <input class="form-check-input gender-option" type="radio" name="gender" id="neuter" value="n">Neuter
-      </label>
+    <ul class="list-group list-group-horizontal justify-content-start">
+      <li class="list-group-item col-3 form-check"><input class="form-check-input gender-option" type="radio" name="gender" id="masculine" value="m" checked>
+      <label for="masculine" class="radio-inline">Masculine</label></li>
+      <li class="list-group-item col-3 form-check"><input class="form-check-input gender-option" type="radio" name="gender" id="feminine" value="f">
+      <label for="feminine" class="radio-inline">Feminine</label></li>
+      <li class="list-group-item col-3 form-check"><input class="form-check-input gender-option" type="radio" name="gender" id="neuter" value="n">
+      <label for="neuter" class="radio-inline">Neuter</label></li>
+    </ul>
     </p>
     </div>
   </div>
