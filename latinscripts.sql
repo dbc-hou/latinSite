@@ -1,1 +1,1 @@
-delete from verbs where FirstPart = "FirstPart";
+drop database whatever;
