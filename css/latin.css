@@ -9,6 +9,23 @@ tr>td {
   padding: .5em;
 }
 
+h1 {
+  font-size: larger;
+  font-weight: bolder;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: large;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+p, li {
+  font-size: medium;
+  font-family: Tahoma, sans-serif;
+}
+
 thead {
   background-color: purple;
   color: gold;
