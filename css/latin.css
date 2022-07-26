@@ -9,14 +9,22 @@ tr>td {
   padding: .5em;
 }
 
-h1 {
-  font-size: larger;
+#site-title {
+  font-size: xxx-large;
   font-weight: bolder;
-  font-family: Arial, sans-serif;
+  font-family: Chalkboard;
+  color: gold;
+  background-color: purple;
 }
 
 h2 {
-  font-size: large;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  font-size: 1.5em;
   font-weight: bold;
   font-family: Arial, sans-serif;
 }
@@ -54,13 +62,30 @@ button:active {
   left: 3em;
 }
 
+.chapter {
+  display: none;
+}
+
 #submit-row {
   margin: 1em 0;
 }
 
 #gender-box {
-  display: none
+  display: none;
+}
 
+#table-of-contents {
+  position: relative;
+  left: 1em;
+}
+
+#main-text {
+  position: relative;
+  left: 1em;
+}
+
+#site-title {
+  font-size: larger;
 }
 
 
