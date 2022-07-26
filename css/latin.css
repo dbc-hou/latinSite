@@ -9,13 +9,6 @@ tr>td {
   padding: .5em;
 }
 
-#site-title {
-  font-size: xxx-large;
-  font-weight: bolder;
-  font-family: Chalkboard;
-  color: gold;
-  background-color: purple;
-}
 
 h2 {
   font-size: 2em;
@@ -29,13 +22,27 @@ h3 {
   font-family: Arial, sans-serif;
 }
 
-p, li {
+p {
   font-size: medium;
   font-family: Tahoma, sans-serif;
 }
 
+li {
+  font-size: small;
+  font-family: Tahoma, sans-serif;
+  padding: 0;
+}
+
 thead {
   background-color: purple;
+  color: gold;
+}
+
+a {
+  color: black;
+}
+
+a:hover, a:active {
   color: gold;
 }
 
@@ -53,7 +60,7 @@ button:active {
   background-color: whitesmoke;
 }
 
-.form-check:hover {
+.form-check:hover, .volume:hover {
   background-color: purple;
   color: gold;
 }
@@ -63,8 +70,14 @@ button:active {
   left: 3em;
 }
 
-.chapter {
+.volume:hover {
+  background-color: purple;
+  color: gold;
+}
+
+#intro-parts {
   display: none;
+  /*padding-left: 2em;*/
 }
 
 .border-1 {
@@ -82,15 +95,23 @@ button:active {
 #table-of-contents {
   position: relative;
   left: 1em;
+  top: 5em;
+  right: 5em;
 }
 
 #main-text {
   position: relative;
+  top: 5em;
   left: 1em;
 }
 
 #site-title {
-  font-size: larger;
+  font-size: xxx-large;
+  font-weight: bolder;
+  font-family: Chalkboard;
+  color: gold;
+  background-color: purple;
+  position: fixed;
+  z-index: 3;
+  margin-bottom: 30px;
 }
-
-

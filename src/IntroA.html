@@ -11,24 +11,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<div id="site-title" class="d-flex justify-content-center">
+<div id="site-title" class="text-center col-12">
   <h1>LATIN FOR THE END OF THE WORLD</h1>
 </div>
 <div id="main-container" class="container">
-  <div id="content-row" class="row d-flex align-items-start">
+  <div id="content-row" class="row d-flex justify-items-center">
     <div id="table-of-contents" class="col-3">
       <ul id="content-links" class="list-group">
-        <li class="list-group-item volume">Introduction</li>
-        <ul id="intro-parts" class="list-group">
-          <li id="intro-a" class="list-group-item chapter">A. Why Latin?</li>
-          <li id="intro-b" class="list-group-item chapter">B. Evolution of Latin</li>
-          <li id="intro-c" class="list-group-item chapter">C. Pronunciation</li>
-          <li id="intro-d" class="list-group-item chapter">D. Important Facts</li>
-          <li id="intro-e" class="list-group-item chapter">E. Numbers/Numerals</li>
-          <li id="intro-f" class="list-group-item chapter">F. Conversation</li>
-          <li id="intro-g" class="list-group-item chapter">G. Months of the Year</li>
-          <li id="intro-h" class="list-group-item chapter">H. Days of the Week</li>
-          <li id="intro-i" class="list-group-item chapter">I. Easy Nouns</li>
+        <li class="list-group-item volume"><a id="intro" href="#" onclick="$('#intro-parts').slideToggle('slow')" style="color: black">Introduction</a></li>
+        <ul id="intro-parts" class="list-group sublist">
+          <li id="intro-a" class="list-group-item pl-5 chapter">A. Why Latin?</li>
+          <li id="intro-b" class="list-group-item pl-5 chapter">B. Evolution of Latin</li>
+          <li id="intro-c" class="list-group-item pl-5 chapter">C. Pronunciation</li>
+          <li id="intro-d" class="list-group-item pl-5 chapter">D. Important Facts</li>
+          <li id="intro-e" class="list-group-item pl-5 chapter">E. Numbers/Numerals</li>
+          <li id="intro-f" class="list-group-item pl-5 chapter">F. Conversation</li>
+          <li id="intro-g" class="list-group-item pl-5 chapter">G. Months of the Year</li>
+          <li id="intro-h" class="list-group-item pl-5 chapter">H. Days of the Week</li>
+          <li id="intro-i" class="list-group-item pl-5 chapter">I. Easy Nouns</li>
         </ul>
         <li class="list-group-item volume">Volūmen I</li>
         <li class="list-group-item volume">Volūmen II</li>
@@ -57,8 +57,8 @@
     <h3>Inflection Also Happens in Modern Languages</h3>
     <p>Beyond strengthening one's vocabulary, a bit of Latin can go a long way toward learning non- Romantic languages from Europe and elsewhere. As we shall explore later in this introduction, Latin is an inflected language. This means not only that verbs have conjugations that follow certain rules (most of the time), but that nouns, pronouns, and adjectives have declensions.</p>
     <p>In Latin, a noun doesn't have just one singular and one plural form as in English, French, Italian, Portuguese, or Spanish; it can take any of several forms depending on its role in a sentence. In the sample sentence below, each noun plays a different role:</p>
-    <blockquote class="border border-1 border-dark p-1 m-1"><em>Hey Publius, the emperor's son is showing my daughter his palace on the mountain.<br/>
-    Hey [direct address], the [possessor]'s [subject] is showing my [indirect object] his [direct object] on the [place where].</em></blockquote>
+    <blockquote class="border border-1 border-dark p-1 m-1"><em><strong>Hey Publius, the general's son sold my nephew his palace in Gaul.</strong><br/>
+    Hey [direct address], the [possessor]'s [subject] sold my [indirect object] his [direct object] in [place where].</em></blockquote>
     <p>Each of the six roles would appear in a different case in Latin. The endings attached to the nouns indicate their cases, and the cases indicate the nouns' functions (or at least provide clues).</p>
     <p></p>German, Hungarian, Finnish, and the various Slavic languages are just a few modern examples of languages that attach various endings to their nouns and adjectives. Romanian is the only major Romantic language with vestiges of declension passed down from its linguistic ancestor.</p>
     <h3>Lastly, Why Not?</h3>
@@ -67,5 +67,10 @@
     </div>
   </div>
 </div>
+<script>
+  $(".volume").click(function () {
+    this.next("ul").slideToggle("fast");
+  });
+</script>
 </body>
 </html>
