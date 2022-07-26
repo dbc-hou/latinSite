@@ -11,13 +11,13 @@ tr>td {
 
 
 h2 {
-  font-size: 2em;
+  font-size: x-large;
   font-weight: bolder;
   font-family: Arial, sans-serif;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: large;
   font-weight: bold;
   font-family: Arial, sans-serif;
 }
@@ -28,9 +28,13 @@ p {
 }
 
 li {
-  font-size: small;
+  font-size: medium;
   font-family: Tahoma, sans-serif;
   padding: 0;
+}
+
+li.chapter {
+  font-size: small;
 }
 
 thead {
@@ -40,10 +44,6 @@ thead {
 
 a {
   color: black;
-}
-
-a:hover, a:active {
-  color: gold;
 }
 
 label {
@@ -65,13 +65,17 @@ button:active {
   color: gold;
 }
 
+.list-group-item:hover, a:hover {
+  background-color: purple;
+  color: gold;
+}
+
 .form-check-input {
   position: relative;
   left: 3em;
 }
 
-.volume:hover {
-  background-color: purple;
+.volumelink {
   color: gold;
 }
 

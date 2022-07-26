@@ -11,15 +11,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<div id="site-title" class="text-center col-12">
+<header id="site-title" class="text-center col-12">
   <h1>LATIN FOR THE END OF THE WORLD</h1>
-</div>
+</header>
 <div id="main-container" class="container">
   <div id="content-row" class="row d-flex justify-items-center">
     <div id="table-of-contents" class="col-3">
       <ul id="content-links" class="list-group">
-        <li class="list-group-item volume"><a id="intro" href="#" onclick="$('#intro-parts').slideToggle('slow')" style="color: black">Introduction</a></li>
+        <li class="list-group-item volume"><a id="intro" class="volume-link" href="#" onclick="$('#intro-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Introduction</a></li>
         <ul id="intro-parts" class="list-group sublist">
+          <li id="intro-prae" class="list-group-item pl-5 chapter">Praelūdium</li>
           <li id="intro-a" class="list-group-item pl-5 chapter">A. Why Latin?</li>
           <li id="intro-b" class="list-group-item pl-5 chapter">B. Evolution of Latin</li>
           <li id="intro-c" class="list-group-item pl-5 chapter">C. Pronunciation</li>
@@ -48,29 +49,74 @@
         <li>to make it easier to learn the Romantic languages that evolved from Latin; these include French, Italian, Portuguese, Romanian, Romansch, Spanish, and dozens of local variants of these languages.</li>
     </ol>
     <h3>The Treasures and Pleasures of Latin Literature</h3>
-    <p>An auxiliary goal, if you discover that you have a passion for the language, is the ability to read ancient Roman or more recent Roman Catholic writings in the original language. Certainly, you can derive great pleasure from reading translations of the poetry of Ovid (Publius Ovidius Nāsō), for example. But there are many different English translations because there are so many ways certain words and phrases can be translated. If you can read the original text—or, more accurately, what the Medieval monastic transcribers determined to be the original—you can choose (or even create) the translation that works best for you!</p>
+    <p>An auxiliary goal, if you discover that you have a passion for the language,
+      is the ability to read ancient Roman or more recent Roman Catholic writings
+      in the original language. Certainly, you can derive great pleasure from reading
+      translations of the poetry of Ovid (Publius Ovidius Nāsō), for example.
+      But there are many different English translations because there are so many ways
+      certain words and phrases can be translated.
+      If you can read the original text—or, more accurately, what the Medieval monastic
+      transcribers determined to be the original—you can choose (or even create)
+      the translation that works best for you!</p>
     <h3>Those College Aptitude Tests</h3>
-    <p>Bulking up one's English vocabulary with a dose of Latin is an excellent strategy for secondary school students preparing to take their college entrance exams, as well as anyone who aspires to a career in law, medicine, or any of the sciences. Future physicians and research scientists would also benefit from learning the Greek root words relevant to their disciplines.</p>
+    <p>Bulking up one's English vocabulary with a dose of Latin is an excellent
+      strategy for secondary school students preparing to take their
+      college entrance exams, as well as anyone who aspires to a career in law,
+      medicine, or any of the sciences. Future physicians and research scientists
+      would also benefit from learning the Greek root words relevant to their
+      disciplines.</p>
     <h3>Humanities Majors Need Latin Too</h3>
-    <p>Even if you just plan to major in literature, however, Latin can help you in reading and understanding the writings of centuries past. European poets, novelists, and essayists of the 18th and 19th centuries were mostly well-educated men and women, and being well-educated included being immersed in Latin; this immersion comes through in their writings—not only in their choice of words, but also in the structure of their sentences, which could be quite different from the way people speak in real life. The language is intentionally artificial because, as American novelist Charles Bukowski said, fiction is meant to be an improvement on real life.</p>
-    <p>Those studying the history of Europe in depth might also want to add some Latin to their scholarly tool chests. When a major historical figures like Martin Luther, for example, wrote anything important, they might write it in Latin (even though Luther was a big advocate of getting Bibles printed in "modern" languages for the masses to read more easily). The Magna Charta (Latin for the Great Charter) was written in—you guessed it—Latin, not the not-yet-standardized English of the 13th century.</p>
-    <h3>Inflection Also Happens in Modern Languages</h3>
-    <p>Beyond strengthening one's vocabulary, a bit of Latin can go a long way toward learning non- Romantic languages from Europe and elsewhere. As we shall explore later in this introduction, Latin is an inflected language. This means not only that verbs have conjugations that follow certain rules (most of the time), but that nouns, pronouns, and adjectives have declensions.</p>
-    <p>In Latin, a noun doesn't have just one singular and one plural form as in English, French, Italian, Portuguese, or Spanish; it can take any of several forms depending on its role in a sentence. In the sample sentence below, each noun plays a different role:</p>
-    <blockquote class="border border-1 border-dark p-1 m-1"><em><strong>Hey Publius, the general's son sold my nephew his palace in Gaul.</strong><br/>
-    Hey [direct address], the [possessor]'s [subject] sold my [indirect object] his [direct object] in [place where].</em></blockquote>
-    <p>Each of the six roles would appear in a different case in Latin. The endings attached to the nouns indicate their cases, and the cases indicate the nouns' functions (or at least provide clues).</p>
-    <p></p>German, Hungarian, Finnish, and the various Slavic languages are just a few modern examples of languages that attach various endings to their nouns and adjectives. Romanian is the only major Romantic language with vestiges of declension passed down from its linguistic ancestor.</p>
+    <p>Even if you just plan to major in literature, however, Latin can help you
+      in reading and understanding the writings of centuries past.
+      European poets, novelists, and essayists of the 18th and 19th centuries
+      were mostly well-educated men and women, and being well-educated included
+      being immersed in Latin; this immersion comes through in their writings—not
+      only in their choice of words, but also in the structure of their
+      sentences, which could be quite different from the way people speak
+      in real life. The language is intentionally artificial because, as American
+      novelist Charles Bukowski said, fiction is meant to be an <em>improvement</em>
+      on real life.</p>
+    <p>Those studying the history of Europe in depth might also want to add
+      some Latin to their scholarly tool chests. When a major historical figures
+      like Martin Luther, for example, wrote anything important, they might
+      write it in Latin (even though Luther was a big advocate of getting Bibles
+      printed in "modern" languages for the masses to read more easily).
+      <strong>Magna Charta</strong> (Latin for <em>the Great Sheet of Papyrus</em>) was written
+      in—you guessed it—Latin, rather than the not-yet-standardized English
+      of the 13th century.</p>
+    <h3>Inflection in Modern Languages</h3>
+    <p>Beyond strengthening one's vocabulary, a bit of Latin can go a long way
+      toward learning non-Romantic languages from Europe and elsewhere.
+      As we shall explore later in this introduction, Latin is an <em>inflected</em>
+      language. This means not only that verbs have <em>conjugations</em> that follow
+      certain rules (most of the time), but that nouns, pronouns, and adjectives
+      have <em>declensions</em>.</p>
+    <p>In Latin, a noun doesn't have just one singular and one plural form
+      as in English, French, Italian, Portuguese, or Spanish; it can take any of
+      several forms depending on its role in a sentence. In the sample sentence
+      below, each noun plays a different role:</p>
+    <blockquote class="border border-1 border-dark p-1 m-1">
+      <em><strong>Hey Publius, the general's son sold my nephew his farm in Gaul.</strong><br/>
+    Hey [direct address], the [possessor]'s [subject] sold my [indirect object]
+        his [direct object] in [place where].</em></blockquote>
+    <p>In Latin, each of the six roles would appear in a different <em>case</em>.
+      The endings attached to the nouns indicate their cases,
+      and the cases indicate the nouns' functions (or at least provide clues).</p>
+    <p>German, Hungarian, Finnish, and the various Slavic languages are just a few
+      modern examples of languages that attach various endings to their nouns
+      and adjectives. Romanian is the only major Romantic language with vestiges
+      of declension passed down from its linguistic ancestor.</p>
     <h3>Lastly, Why Not?</h3>
-    <p>There are worse hobbies one could take up than learning a semi-extinct language. You don't have to be a language nerd to plow through this text, but it couldn't hurt. There are bound to be a few dozen folks out there thinking, "The world is coming to an end, the people in charge of it aren't doing anything to stop it—in fact, they're hastening it—so I may as well learn some Latin."</p>
-    <p>If that is the case, let us hope that this do-it-yourself Latin course will keep you entertained while you wait for the Apocalypse.</p>
+    <p>There are worse hobbies one could take up than learning a semi-extinct
+      language. You don't have to be a language nerd to plow through this text,
+      but it couldn't hurt. There are bound to be a few dozen folks out there
+      thinking, "The world is coming to an end, the people in charge of it
+      aren't doing a great job preventing it—in fact, they're hastening it—so
+      I may as well learn some Latin."</p>
+    <p>If that is the case, let us hope that this do-it-yourself Latin course
+      will keep you entertained while you wait for the Apocalypse.</p>
     </div>
   </div>
 </div>
-<script>
-  $(".volume").click(function () {
-    this.next("ul").slideToggle("fast");
-  });
-</script>
 </body>
 </html>
