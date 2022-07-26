@@ -4,6 +4,9 @@ body, html {
   background-size: cover;
 }
 
+table {
+  margin-bottom: 30px;
+}
 tr>td {
   border: thin solid black;
   padding: .5em;
@@ -60,12 +63,7 @@ button:active {
   background-color: whitesmoke;
 }
 
-.form-check:hover, .volume:hover {
-  background-color: purple;
-  color: gold;
-}
-
-.list-group-item:hover, a:hover {
+.form-check:hover, .volume:hover, chapter:hover {
   background-color: purple;
   color: gold;
 }
