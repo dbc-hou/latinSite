@@ -19,7 +19,7 @@ tr>td {
 
 h2 {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: bolder;
   font-family: Arial, sans-serif;
 }
 
@@ -38,6 +38,7 @@ thead {
   background-color: purple;
   color: gold;
 }
+
 label {
   position: relative;
   left: 2em;
@@ -64,6 +65,10 @@ button:active {
 
 .chapter {
   display: none;
+}
+
+.border-1 {
+  background-color: lightyellow;
 }
 
 #submit-row {
