@@ -15,6 +15,7 @@ a:hover {
 table {
   margin-bottom: 30px;
 }
+
 tr>td {
   border: thin solid black;
   padding: .5em;
@@ -32,6 +33,13 @@ h3 {
   font-family: Arial, sans-serif;
 }
 
+h4 {
+  font-size: medium;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-decoration: underline;
+}
+
 p {
   font-size: medium;
   font-family: Tahoma, sans-serif;
@@ -45,9 +53,10 @@ li {
 
 li.chapter {
   font-size: small;
+  color: black;
 }
 
-li.chapter:hover {
+.chapter:hover {
   background-color: purple;
   color: gold;
 }
@@ -61,17 +70,23 @@ label {
   position: relative;
   left: 2em;
 }
-button:active {
-  background-color: purple;
-  color: gold;
-}
+
 
 [type=radio] {
   margin: 3px;
   background-color: whitesmoke;
 }
 
-.form-check:hover, .volume:hover, chapter:hover {
+.volume-link {
+  color: black;
+}
+
+.volume-link:hover {
+  background-color: purple;
+  color: gold;
+}
+
+.form-check:hover, .volume:hover, .chapter:hover {
   background-color: purple;
   color: gold;
 }
@@ -81,7 +96,17 @@ button:active {
   left: 3em;
 }
 
-.volume>a {
+.chapter-link {
+  color: black;
+}
+
+.chapter-link:hover {
+  background-color: purple;
+  color: gold;
+}
+
+.btn:active, .btn:hover {
+  background-color: purple;
   color: gold;
 }
 
