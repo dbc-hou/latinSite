@@ -81,7 +81,7 @@ button:active {
   left: 3em;
 }
 
-.volumelink {
+.volume>a {
   color: gold;
 }
 
