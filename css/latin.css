@@ -1,3 +1,5 @@
+/*HTML elements and some type attributes first*/
+
 body, html {
   background-image: url("../img/pantheon.jpg");
   background-repeat: no-repeat;
@@ -56,11 +58,6 @@ li.chapter {
   color: black;
 }
 
-.chapter:hover {
-  background-color: purple;
-  color: gold;
-}
-
 thead {
   background-color: purple;
   color: gold;
@@ -71,10 +68,15 @@ label {
   left: 2em;
 }
 
-
 [type=radio] {
   margin: 3px;
   background-color: whitesmoke;
+}
+
+/*CSS classes, including custom & Bootstrap classes*/
+.chapter:hover {
+  background-color: purple;
+  color: gold;
 }
 
 .volume-link {
@@ -110,21 +112,14 @@ label {
   color: gold;
 }
 
-#intro-parts {
-  display: none;
-  /*padding-left: 2em;*/
-}
-
 .border-1 {
   background-color: lightyellow;
 }
 
-#submit-row {
-  margin: 1em 0;
-}
-
-#gender-box {
+/*Elements by ID*/
+#intro-parts {
   display: none;
+  /*padding-left: 2em;*/
 }
 
 #table-of-contents {
@@ -158,3 +153,14 @@ label {
 #next {
   alignment: right;
 }
+
+/*These ID's are peculiar to the VerbConjugation page & potentially some others.*/
+#submit-row {
+  margin: 1em 0;
+}
+
+#gender-box {
+  display: none;
+}
+
+
