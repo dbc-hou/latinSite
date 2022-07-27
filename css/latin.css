@@ -58,6 +58,11 @@ li.chapter {
   color: black;
 }
 
+li.chapter:hover {
+  background-color: purple;
+  color: gold;
+}
+
 thead {
   background-color: purple;
   color: gold;
