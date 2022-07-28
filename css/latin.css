@@ -80,7 +80,9 @@ thead {
 thead>tr {
   font-weight: bold;
   font-style: italic;
+  text-align: center;
 }
+
 label {
   position: relative;
   left: 2em;
