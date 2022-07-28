@@ -138,6 +138,10 @@ label {
   text-align: center;
 }
 
+.reveal-answer {
+  margin-bottom: 1em;
+}
+
 /*Elements by ID*/
 #intro-parts {
   display: none;
