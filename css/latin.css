@@ -50,6 +50,8 @@ h4 {
   font-weight: bold;
   font-family: Arial, sans-serif;
   text-decoration: underline;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 p {
@@ -87,6 +89,10 @@ thead>tr {
 label {
   position: relative;
   left: 2em;
+}
+
+blockquote {
+  margin-bottom: 30px;
 }
 
 [type=radio] {
