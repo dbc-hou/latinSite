@@ -151,6 +151,10 @@ blockquote {
   margin-bottom: 1em;
 }
 
+.vocab-span {
+  display: none;
+  margin-left: 20px;
+}
 /*Elements by ID*/
 #intro-parts {
   display: none;
