@@ -1047,7 +1047,6 @@
 
   function checkMatching(start) {
     var j = 0;
-    var theButton = $(this);
     for (i = start;i <= start + 14; i++) {
       if ($("#match" + i).val().toUpperCase() !== $("#check" + i).text()) {
         $("#match" + i).css("background-color","red");
@@ -1056,7 +1055,6 @@
         $("#match" + i).css("background-color","white");
       }
     }
-    console.log (j);
     if (j === 0) {
       document.getElementById("check-matching-" + start).innerText = "All Correct!"
       // $("#check-matching-" + start).innerText("All Correct!")
