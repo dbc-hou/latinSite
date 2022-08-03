@@ -151,10 +151,15 @@ blockquote {
   margin-bottom: 1em;
 }
 
-.vocab-span {
+.vocab-span, .grammar-span {
   display: none;
   margin-left: 20px;
 }
+
+.declension, .conjugation, .matching {
+  display: none;
+}
+
 /*Elements by ID*/
 #intro-parts {
   display: none;
