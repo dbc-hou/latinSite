@@ -161,7 +161,7 @@ blockquote {
 }
 
 /*Elements by ID*/
-#intro-parts {
+#intro-parts, #vol-i-parts {
   display: none;
   /*padding-left: 2em;*/
 }
