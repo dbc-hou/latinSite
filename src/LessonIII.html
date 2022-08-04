@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Introduction Part A: Why Latin?</title>
-    <link rel="stylesheet" href="../css/latin.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="../js/jquery.js"></script>
-    <script src="../js/verbs.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Lesson III: Conjugating Irregular Verbs</title>
+  <link rel="stylesheet" href="../css/latin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="../js/jquery.js"></script>
+  <script src="../js/toc.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <header id="site-title" class="text-center col-12">
@@ -18,27 +18,7 @@
   <div id="content-row" class="row d-flex justify-items-center">
     <div id="table-of-contents" class="col-3">
       <ul id="content-links" class="list-group">
-        <li class="list-group-item volume"><a id="intro" class="volume-link" href="#" onclick="$('#intro-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Introduction</a>
-        <ul id="intro-parts" class="list-group sublist">
-          <li id="intro-prae" class="list-group-item pl-2 chapter"><a id="intro-prae-link" class="chapter-link" href="IntroPrae.html">Praelūdium</a></li>
-          <li id="intro-a" class="list-group-item pl-2 chapter"><strong>Why Latin?</strong></li>
-          <li id="intro-b" class="list-group-item pl-2 chapter"><a id="intro-b-link" class="chapter-link" href="IntroB.html">B. Evolution of Latin</a></li>
-          <li id="intro-c" class="list-group-item pl-2 chapter"><a id="intro-c-link" class="chapter-link" href="IntroC.html">C. Pronunciation</a></li>
-          <li id="intro-d" class="list-group-item pl-2 chapter"><a id="intro-d-link" class="chapter-link" href="IntroD.html">D. Important Facts</a></li>
-          <li id="intro-e" class="list-group-item pl-2 chapter"><a id="intro-e-link" class="chapter-link" href="IntroE.html">E. Numbers/Numerals</a></li>
-          <li id="intro-f" class="list-group-item pl-2 chapter"><a id="intro-f-link" class="chapter-link" href="IntroF.html">F. Conversation</a></li>
-          <li id="intro-g" class="list-group-item pl-2 chapter"><a id="intro-g-link" class="chapter-link" href="IntroG.html">G. Months of the Year</a></li>
-          <li id="intro-h" class="list-group-item pl-2 chapter"><a id="intro-h-link" class="chapter-link" href="IntroH.html">H. Days of the Week</a></li>
-          <li id="intro-i" class="list-group-item pl-2 chapter"><a id="intro-i-link" class="chapter-link" href="IntroI.html">I. Easy Nouns</a></li>
-          </li>
-        </ul>
-        <li class="list-group-item volume">Volūmen I</li>
-        <li class="list-group-item volume">Volūmen II</li>
-        <li class="list-group-item volume">Volūmen III</li>
-        <li class="list-group-item volume">Volūmen IV</li>
-        <li class="list-group-item volume">Volūmen V</li>
-        <li class="list-group-item volume">Volūmen VI</li>
-        <li class="list-group-item volume">Volūmen VII</li>
+        <script>document.getElementById("content-links").innerHTML = tableOfContents();</script>
       </ul>
     </div>
     <div id="main-text" class="col-8" style="background-color: beige; color: purple">
