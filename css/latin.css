@@ -110,11 +110,6 @@ blockquote {
   color: black;
 }
 
-.volume-link:hover {
-  background-color: purple;
-  color: gold;
-}
-
 .form-check:hover, .volume:hover, .chapter:hover {
   background-color: purple;
   color: gold;
@@ -161,7 +156,7 @@ blockquote {
 }
 
 /*Elements by ID*/
-#intro-parts, #vol-i-parts {
+#intro-parts, #vol-i-parts, #vol-ii-parts {
   display: none;
   /*padding-left: 2em;*/
 }
