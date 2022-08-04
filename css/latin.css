@@ -151,10 +151,14 @@ blockquote {
   margin-left: 20px;
 }
 
-.declension, .conjugation, .matching {
+.declension, .conjugation, .matching, .hidden-declension-table {
   display: none;
 }
 
+
+.review-fill-in {
+  width: 150px;
+}
 /*Elements by ID*/
 #intro-parts, #vol-i-parts, #vol-ii-parts, #vol-iii-parts, #vol-iv-parts, #vol-v-parts, #vol-vi-parts {
   display: none;
