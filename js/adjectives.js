@@ -89,4 +89,4 @@ function declensionArray (mascNom, femNom, neutNom, decl) {
   return forms;
 }
 
-console.log(declensionArray("acer", "acris", "acre", "III"));
+// console.log(declensionArray("acer", "acris", "acre", "III"));

@@ -53,8 +53,8 @@ function volIILinks() {
       <li id="ii-prae" class="list-group-item pl-2 chapter"><a id="vol-ii-prae-link" class="chapter-link" href="PraeludiumII.html">Praelūdium II</a></li>
       <li id="lesson13" class="list-group-item pl-2 chapter"><a id="lesson-xiii-link" class="chapter-link" href="LessonXIII.html">XIII. Accompaniment</a></li>
       <li id="lesson14" class="list-group-item pl-2 chapter"><a id="lesson-xiv-link" class="chapter-link" href="LessonXIV.html">XIV. Ego et Tū, Brūte</a></li>
-      <li id="lesson15" class="list-group-item pl-2 chapter"><a id="lesson-xv-link" class="chapter-link" href="LessonXV.html">XV. It Takes a Dative</a></li>
-      <li id="lesson16" class="list-group-item pl-2 chapter"><a id="lesson-xvi-link" class="chapter-link" href="LessonXVI.html">XVI. Dative with Verbs</a></li>
+      <li id="lesson15" class="list-group-item pl-2 chapter"><a id="lesson-xv-link" class="chapter-link" href="LessonXV.html">XV. Dative Objects</a></li>
+      <li id="lesson16" class="list-group-item pl-2 chapter"><a id="lesson-xvi-link" class="chapter-link" href="LessonXVI.html">XVI. Imperative Verb Forms</a></li>
       <li id="lesson17" class="list-group-item pl-2 chapter"><a id="lesson-xvii-link" class="chapter-link" href="LessonXVII.html">XVII. Preposition Power</a></li>
       <li id="lesson18" class="list-group-item pl-2 chapter"><a id="lesson-xviii-link" class="chapter-link" href="LessonXVII.html">XVIII. Dative with Adjectives</a></li>
       <li id="lesson19" class="list-group-item pl-2 chapter"><a id="lesson-xix-link" class="chapter-link" href="LessonXIX.html">XIX. Fun with Infinitives</a></li>
