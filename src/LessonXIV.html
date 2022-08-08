@@ -245,20 +245,74 @@
         The Romans like to say a lot in as few words as possible, which their language made easy for them.</p>
 
       <h3>Exercise XIV: Sentence Mutation</h3>
-      <p>Modify the Latin sample sentences on the previous page by translating the italicized English phrases into Latin. If the change requires additional changes to any other portion of a sentence, make that modification as well.</p>
+      <p>Modify the Latin sample sentences on the previous page by translating the italicized English phrases into Latin.
+        If the change requires additional changes to any other portion of a sentence, make that modification as well.</p>
 
       <ol>
-        <li><em>The mistress</em> hīc sum.</li>
-        <li><em><u>You</u> are</em> the master there.</li>
-        <li>Amāsne <em>yourself</em>?</li>
-        <li><em>The Germans</em> amō.</li>
-        <li><em>A Sardinian woman</em> amō.</li>
-        <li><em>You</em> <em>and I are going</em> ad Galliam.</li>
-        <li>Propertia <em>with you</em> ad Hispāniam it.</li>
-        <li>Māria <em>into Switzerland</em> sine tē nōn it.</li>
-        <li>Ovidia <em>you</em> Siciliam mōnstrāre vult.</li>
-        <li>Cassia Graecam stātuam <em>of me</em> habet.</li>
+        <li><em>The mistress</em> hīc sum.<br/>
+          <input type="text" size="30">
+          <span id="answer1" style="display: none"><strong>Domina</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer1').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><em><u>You</u> are</em> the master there.<br/>
+          <input type="text" size="30">
+          <span id="answer2" style="display: none"><strong>Tū es</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer2').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li>Amāsne <em>yourself</em>?<br/>
+          <input type="text" size="30">
+          <span id="answer3" style="display: none"><strong>tē</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer3').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><em>The Germans</em> amō.<br/>
+          <input type="text" size="30">
+          <span id="answer4" style="display: none"><strong>Germānōs</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer4').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><em>A Sardinian woman</em> amō.<br/>
+          <input type="text" size="30">
+          <span id="answer5" style="display: none"><strong>Sardam (fēminam)*</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer5').css('display','inline');
+            $('#footnote1').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><em>You</em> <em>and I are going</em> ad Galliam.<br/>
+          <input type="text" size="30">
+          <span id="answer6" style="display: none"><strong>Ego et tū īmus</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer6').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li>Propertia <em>with you</em> (pl.) ad Hispāniam it.<br/>
+          <input type="text" size="30">
+          <span id="answer7" style="display: none"><strong>vōbīscum</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer7').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li>Māria <em>into Switzerland</em> sine tē nōn it.<br/>
+          <input type="text" size="30">
+          <span id="answer8" style="display: none"><strong>in Helvētiam</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer8').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li>Ovidia <em>you</em> (s.) Siciliam mōnstrāre vult.<br/>
+          <input type="text" size="30">
+          <span id="answer9" style="display: none"><strong>tibi</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer9').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li>Cassia Graecam stātuam <em>of me</em> habet.<br/>
+          <input type="text" size="30">
+          <span id="answer10" style="display: none"><strong>meī</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer10').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
       </ol>
+      <p id="footnote1" style="display: none">* <strong>Sardam</strong> alone is sufficient to convey a female person, so
+        <strong>fēminam</strong> is not required.</p>
 
       <div id="previous-next-bottom" class="row justify-content-between mt-4 mb-4">
       <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXIII.html"><<-Previous</a></button>
