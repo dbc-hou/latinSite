@@ -1,6 +1,6 @@
 /*HTML elements and some type attributes first*/
 
-body, html {
+body, html, #main-container {
   background-image: url("../img/pantheon.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -143,6 +143,17 @@ blockquote {
 
 .reveal-answer {
   margin-bottom: 1em;
+}
+
+.reveal-vocab {
+  height: 30px;
+  width: 50px;
+  align-content: center;
+  justify-content: center;
+}
+
+.vocab-list-item {
+  height: 30px;
 }
 
 .vocab-span, .grammar-span {
