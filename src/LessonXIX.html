@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <title>Lesson XVIII: Sibi Sunt Benīgnī</title>
+  <title>Lesson XIX: Fun with Infinitives</title>
   <link rel="stylesheet" href="../css/latin.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -24,7 +24,7 @@
     <div id="main-text" class="col-8" style="background-color: beige; color: purple">
       <div id="previous-next-top" class="row justify-content-between mb-4">
         <button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXVIII.html"><<-Previous</a></button>
-        <button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXX.html">Next->></a></button>
+        <button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXXI.html">Next->></a></button>
       </div>
 
       <h2>XIX. Fun with Infinitives</h2>
@@ -165,22 +165,72 @@
         <li><strong>Licet:</strong> translate the sentences in their entirety if you are feeling brave, but they contain some words we have not introduced. (The numbers in parentheses indicate the number of underlined portions in each sentence, lest you miss any.)</li>
       </ul>
       <ol type="1">
-        <li>Aurelia <u>rejoices</u> that <u>her son</u> <u>lives</u> in a nearby village. (3)</li>
-        <li>We <u>hope</u> that <u>Propertius</u> <u>is granting</u> his land to his nephew. (3)</li>
-        <li><u>Is it permitted</u> <u>for Vergilia</u> <u>to form</u> a new political party? (3)</li>
-        <li><u>Do you think</u> that <u>our friends</u> <u>obey</u> their parents? (3)</li>
-        <li>Sometimes <u>it is necessary</u> <u>for a woman</u> <u>to dare</u> to be kind. (3)</li>
-        <li><u>Y’all are not accustomed</u> <u>to dining</u>* with the senator’s friends. (2)</li>
-        <li><u>It is not right</u> for <u>Titus Aemilius</u> <u>to place</u> his books on the table. (3)</li>
-        <li>In his response, Horatius <u>denies</u> that <u>he</u> <u>is nominating</u> Cornelius to be consul. (3)</li>
-        <li><u>I am trying</u> <u>to persuade</u> Valerius, but <u>he does not want</u> <u>to attack</u> the Germans. (4)</li>
-        <li><u>It hurts</u> us greatly that <u>we</u> <u>cannot</u> <u>care for</u> your cattle. (4)</li>
+        <li>Aurelia <u>rejoices</u> that <u>her son</u> <u>lives</u> in a nearby village. (3)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer1" style="display: none"><strong>gaudet, fīlium (suum), habitāre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer1').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li>We <u>hope</u> that <u>Propertius</u> <u>is granting</u> his land to his nephew. (3)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer2" style="display: none"><strong>spērāmus, Propertium, dōnāre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer2').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><u>Is it permitted</u> <u>for Vergilia</u> <u>to form</u> a new political party? (3)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer3" style="display: none"><strong>licetne, Vergiliae, formāre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer3').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><u>Do you think</u> that <u>our friends</u> <u>obey</u> their parents? (3)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer4" style="display: none"><strong>cōgitāsne, amīcōs nostrōs, parēre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer4').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li>Sometimes <u>it is necessary</u> <u>for a woman</u> <u>to dare</u> to be kind. (3)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer5" style="display: none"><strong>oportet, fēminae, audēre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer5').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><u>Y’all are not accustomed</u> <u>to dining</u>* with the senator’s friends. (2)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer6" style="display: none"><strong>nōn solētis, cēnāre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer6').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><u>It is not right</u> for <u>Titus Aemilius</u> <u>to place</u> his books on the table. (3)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer7" style="display: none"><strong>nōn decet, Tītō Aemiliō, locāre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer7').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li>In his response, Horatius <u>denies</u> that <u>he</u> <u>is nominating</u> Cornelius to be consul. (3)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer8" style="display: none"><strong>negat, sē, nōmināre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer8').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><u>I am trying</u> <u>to persuade</u> Valerius, but <u>he does not want</u> <u>to attack</u> the Germans. (4)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer9" style="display: none"><strong>temptō, (per)suadēre, nōn vult, oppugnāre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer9').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
+        <li><u>It hurts</u> us greatly that <u>we</u> <u>cannot</u> <u>care for</u> your cattle. (4)<br/>
+          <input type="text" size="30"><br/>
+          <span id="answer10" style="display: none"><strong>dolet, nōs, nōn posse, cūrāre</strong></span><br/>
+          <button class="reveal-answer btn btn-outline-dark col-2" onclick="$('#answer10').css('display','inline');">
+            <strong>Answer</strong></button><br/>
+        </li>
       </ol>
 
 
       <div id="previous-next-bottom" class="row justify-content-between mt-4 mb-4">
       <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXVIII.html"><<-Previous</a></button>
-      <button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXX.html">Next->></a></button>
+      <button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXXI.html">Next->></a></button>
     </div>
     </div>
   </div>
