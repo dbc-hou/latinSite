@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson XII: Recēnsus XII</title>
+    <link rel="stylesheet" href="../css/latin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/toc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header id="site-title" class="text-center col-12">
+  <h1>LATIN FOR THE END OF THE WORLD</h1>
+</header>
+<div id="main-container" class="container">
+  <div id="content-row" class="row d-flex justify-items-center">
+    <div id="table-of-contents" class="col-3">
+      <ul id="content-links" class="list-group">
+        <script>document.getElementById("content-links").innerHTML = tableOfContents();</script>
+      </ul>
+    </div>
+    <div id="main-text" class="col-9" style="background-color: beige; color: purple">
+      <div id="previous-next-top" class="row justify-content-between mb-4">
+        <button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXIIb.html"><<-Previous</a></button>
+        <button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXIId.html">Next->></a></button>
+      </div>
+
+      <h3>Vocabulary—Adjectives</h3>
+      <p>Give the basic meanings of each. The list includes some of the numeric adjectives from the Introduction.</p>
+
+      <ol>
+        <li>bonus/-a/-um <button id="reveala1" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba1" class="vocab-span"><strong>good</strong></span></li>
+        <li>centēsimus/-a/-um <button id="reveala2" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba2" class="vocab-span"><strong>hundredth</strong></span></li>
+        <li>centum <button id="reveala3" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba3" class="vocab-span"><strong>one hundred</strong></span></li>
+        <li>decem <button id="reveala4" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba4" class="vocab-span"><strong>ten</strong></span></li>
+        <li>decimus/-a/-um <button id="reveala5" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba5" class="vocab-span"><strong>tenth</strong></span></li>
+        <li>duo/duae/duo <button id="reveala6" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba6" class="vocab-span"><strong>two</strong></span></li>
+        <li>Ītālus/-a/-um <button id="reveala7" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba7" class="vocab-span"><strong>Italian, of Italy</strong></span></li>
+        <li>laetus/-a/-um <button id="reveala8" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba8" class="vocab-span"><strong>happy</strong></span></li>
+        <li>Lātīnus/-a/-um <button id="reveala9" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba9" class="vocab-span"><strong>Latin, of Latium (Lazio)</strong></span></li>
+        <li>magnus/-a/-um <button id="reveala10" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba10" class="vocab-span"><strong>great, large</strong></span></li>
+        <li>malus/-a/-um <button id="reveala11" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba11" class="vocab-span"><strong>bad, evil, wicked</strong></span></li>
+        <li>meus/-a/-um <button id="reveala12" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba12" class="vocab-span"><strong>my, mine</strong></span></li>
+        <li>miser/-er/-erum <button id="reveala13" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba13" class="vocab-span"><strong>sad, wretched, unfortunate</strong></span></li>
+        <li>multī/-ae/-a <button id="reveala14" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba14" class="vocab-span"><strong>many</strong></span></li>
+        <li>multus/-a/-um <button id="reveala15" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba15" class="vocab-span"><strong>much</strong></span></li>
+        <li>noster/-tra/-trum <button id="reveala16" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba16" class="vocab-span"><strong>our, ours</strong></span></li>
+        <li>nōnus/-a/-um <button id="reveala17" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba17" class="vocab-span"><strong>ninth</strong></span></li>
+        <li>novem <button id="reveala18" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba18" class="vocab-span"><strong>nine</strong></span></li>
+        <li>octāvus/-a/-um <button id="reveala19" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba19" class="vocab-span"><strong>eighth</strong></span></li>
+        <li>octō <button id="reveala20" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba20" class="vocab-span"><strong>eight</strong></span></li>
+        <li>parvus/-a/-um <button id="reveala21" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba21" class="vocab-span"><strong>small</strong></span></li>
+        <li>paucī/-ae/-a <button id="reveala22" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba22" class="vocab-span"><strong>few, a few</strong></span></li>
+        <li>prīmus/-a/-um <button id="reveala23" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba23" class="vocab-span"><strong>first</strong></span></li>
+        <li>quartus/-a/-um <button id="reveala24" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba24" class="vocab-span"><strong>fourth</strong></span></li>
+        <li>quattuor <button id="reveala25" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba25" class="vocab-span"><strong>four</strong></span></li>
+        <li>quīntus/-a/-um <button id="reveala26" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba26" class="vocab-span"><strong>fifth</strong></span></li>
+        <li>quīnque <button id="reveala27" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba27" class="vocab-span"><strong>five</strong></span></li>
+        <li>Rōmānus/-a/-um <button id="reveala28" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba28" class="vocab-span"><strong>Roman, of Rome</strong></span></li>
+        <li>secundus/-a/-um <button id="reveala29" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba29" class="vocab-span"><strong>second</strong></span></li>
+        <li>septem <button id="reveala30" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba30" class="vocab-span"><strong>seven</strong></span></li>
+        <li>septimus/-a/-um <button id="reveala31" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba31" class="vocab-span"><strong>seventh</strong></span></li>
+        <li>sex <button id="reveala32" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba32" class="vocab-span"><strong>six</strong></span></li>
+        <li>sextus/-a/-um< <button id="reveala33" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba33" class="vocab-span"><strong>sixth</strong></span>/li>
+        <li>tertius/-a/-um <button id="reveala34" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba34" class="vocab-span"><strong>third</strong></span></li>
+        <li>trēs/trēs/tria <button id="reveala35" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba35" class="vocab-span"><strong>three</strong></span></li>
+        <li>tuus/-a/-um <button id="reveala36" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba36" class="vocab-span"><strong>your, yours (s.); thy, thine</strong></span></li>
+        <li>ūnus/-a/-um <button id="reveala37" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba37" class="vocab-span"><strong>one</strong></span></li>
+        <li>vester/-tra/-trum <button id="reveala38" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba38" class="vocab-span"><strong>your, yours (pl.); y'all's</strong></span></li>
+        <li>vīcēsimus/-a/-um <button id="reveala39" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba39" class="vocab-span"><strong>twentieth</strong></span></li>
+        <li>vīgintī <button id="reveala40" class="reveal-vocab btn btn-outline-dark col-1"><strong>></strong></button>
+          <span id="vocaba40" class="vocab-span"><strong>twenty</strong></span></li>
+      </ol>
+      <div id="previous-next-bottom" class="row justify-content-between mb-4">
+        <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXIIb.html"><<-Previous</a></button>
+        <button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXIId.html">Next->></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(".reveal-vocab").click(function () {
+    var buttonId = $(this).attr("id");
+    var revealNum = buttonId.substring(6);
+    var vocabNum = "vocab" + revealNum;
+    console.log(vocabNum);
+    $("#" + vocabNum).toggle();
+  });
+
+  $(".reveal-grammar").click(function () {
+    var buttonId = $(this).attr("id");
+    var revealNum = buttonId.substring(7);
+    var grammarNum = "grammar" + revealNum;
+    console.log(grammarNum);
+    $("#" + grammarNum).toggle();
+  });
+
+  function showFullDeclension(divToShow) {
+    document.getElementById(divToShow).toggle();
+  }
+
+  function checkMatching(start) {
+    var j = 0;
+    for (i = start;i <= start + 14; i++) {
+      if ($("#match" + i).val().toUpperCase() !== $("#check" + i).text()) {
+        $("#match" + i).css("background-color","red");
+        j++;
+      } else {
+        $("#match" + i).css("background-color","white");
+      }
+    }
+    if (j === 0) {
+      document.getElementById("check-matching-" + start).innerText = "All Correct!"
+      // $("#check-matching-" + start).innerText("All Correct!")
+    }
+  }
+</script>
+</body>
+</html>

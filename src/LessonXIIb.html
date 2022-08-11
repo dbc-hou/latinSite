@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson XII: Recēnsus XII</title>
+    <link rel="stylesheet" href="../css/latin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/toc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header id="site-title" class="text-center col-12">
+  <h1>LATIN FOR THE END OF THE WORLD</h1>
+</header>
+<div id="main-container" class="container">
+  <div id="content-row" class="row d-flex justify-items-center">
+    <div id="table-of-contents" class="col-3">
+      <ul id="content-links" class="list-group">
+        <script>document.getElementById("content-links").innerHTML = tableOfContents();</script>
+      </ul>
+    </div>
+    <div id="main-text" class="col-9" style="background-color: beige; color: purple">
+      <div id="previous-next-top" class="row justify-content-between mb-4">
+        <button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXIIa.html"><<-Previous</a></button>
+        <button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXIIc.html">Next->></a></button>
+      </div>
+
+      <h3>Vocabulary—Verbs (Infinitive Forms)</h3>
+      <p>Give the basic meaning (or meanings) of each infinitive.</p>
+      <ol>
+        <table class="table-borderless">
+        <tr><td><li>adōrāre </td>
+          <td><button id="revealv1" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv1" class="vocab-span"><strong>to worship, to pray to</strong></span></td></tr></li>
+        <tr><td><li>amāre </td>
+          <td><button id="revealv2" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv2" class="vocab-span"><strong>to love</strong></span></td></tr></li>
+        <tr><td><li>ambulāre </td>
+          <td><button id="revealv3" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv3" class="vocab-span"><strong>to walk</strong></span></td></tr></li>
+        <tr><td><li>clāmāre </td>
+          <td><button id="revealv4" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv4" class="vocab-span"><strong>to shout</strong></span></td></tr></li>
+        <tr><td><li>dare </td>
+          <td><button id="revealv5" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv5" class="vocab-span"><strong>to give</strong></span></td></tr></li>
+        <tr><td><li>dēbēre </td>
+          <td><button id="revealv6" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv6" class="vocab-span"><strong>to owe, to be obligated (ought)</strong></span></td></tr></li>
+        <tr><td><li>docēre </td>
+          <td><button id="revealv7" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv7" class="vocab-span"><strong>to teach</strong></span></td></tr></li>
+        <tr><td><li>equitāre </td>
+          <td><button id="revealv8" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv8" class="vocab-span"><strong>to ride (a horse)</strong></span></td></tr></li>
+        <tr><td><li>errāre </td>
+          <td><button id="revealv9" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv9" class="vocab-span"><strong>to wander, to stray, to err</strong></span></td></tr></li>
+        <tr><td><li>esse </td>
+          <td><button id="revealv10" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv10" class="vocab-span"><strong>to be</strong></span></td></tr></li>
+        <tr><td><li>fierī </td>
+          <td><button id="revealv11" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv11" class="vocab-span"><strong>to become, to be made</strong></span></td></tr></li>
+        <tr><td><li>habēre </td>
+          <td><button id="revealv12" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv12" class="vocab-span"><strong>to have, to hold</strong></span></td></tr></li>
+        <tr><td><li>habitāre </td>
+          <td><button id="revealv13" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv13" class="vocab-span"><strong>to inhabit, to dwell</strong></span></td></tr></li>
+        <tr><td><li>iacēre </td>
+          <td><button id="revealv14" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv14" class="vocab-span"><strong>to lie (in place)</strong></span></td></tr></li>
+        <tr><td><li>īre </td>
+          <td><button id="revealv15" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv15" class="vocab-span"><strong>to go</strong></span></td></tr></li>
+        <tr><td><li>iuvāre </td>
+          <td><button id="revealv16" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv16" class="vocab-span"><strong>to help</strong></span></td></tr></li>
+        <tr><td><li>lābōrāre </td>
+          <td><button id="revealv17" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv17" class="vocab-span"><strong>to work, to suffer</strong></span></td></tr></li>
+        <tr><td><li>laudāre </td>
+          <td><button id="revealv18" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv18" class="vocab-span"><strong>to praise</strong></span></td></tr></li>
+        <tr><td><li>līberāre </td>
+          <td><button id="revealv19" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv19" class="vocab-span"><strong>to liberate, to set free</strong></span></td></tr></li>
+        <tr><td><li>manēre </td>
+          <td><button id="revealv20" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv20" class="vocab-span"><strong>to stay</strong></span></td></tr></li>
+        <tr><td><li>monēre </td>
+          <td><button id="revealv21" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv21" class="vocab-span"><strong>to warn, to advise</strong></span></td></tr></li>
+        <tr><td><li>mōnstrāre </td>
+          <td><button id="revealv22" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv22" class="vocab-span"><strong>to show, to point out</strong></span></td></tr></li>
+        <tr><td><li>movēre </td>
+          <td><button id="revealv23" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv23" class="vocab-span"><strong>to move</strong></span></td></tr></li>
+        <tr><td><li>narrāre </td>
+          <td><button id="revealv24" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv24" class="vocab-span"><strong>to tell, to relate</strong></span></td></tr></li>
+        <tr><td><li>nātāre </td>
+          <td><button id="revealv25" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv25" class="vocab-span"><strong>to swim, to float</strong></span></td></tr></li>
+        <tr><td><li>nāvigāre </td>
+          <td><button id="revealv26" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv26" class="vocab-span"><strong>to sail</strong></span></td></tr></li>
+        <tr><td><li>nōlle </td>
+          <td><button id="revealv27" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv27" class="vocab-span"><strong>to not want</strong></span></td></tr></li>
+        <tr><td><li>nūntiāre </td>
+          <td><button id="revealv28" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv28" class="vocab-span"><strong>to announce, to report</strong></span></td></tr></li>
+        <tr><td><li>occupāre </td>
+          <td><button id="revealv29" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv29" class="vocab-span"><strong>to seize</strong></span></td></tr></li>
+        <tr><td><li>orāre </td>
+          <td><button id="revealv30" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv30" class="vocab-span"><strong>to pray, to plead, to speak persuasively</strong></span></td></tr></li>
+        <tr><td><li>parāre </td>
+          <td><button id="revealv31" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv31" class="vocab-span"><strong>to prepare</strong></span></td></tr></li>
+        <tr><td><li>portāre </td>
+          <td><button id="revealv32" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv32" class="vocab-span"><strong>to carry</strong></span></td></tr></li>
+        <tr><td><li>posse </td>
+          <td><button id="revealv33" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv33" class="vocab-span"><strong>to be able</strong></span></td></tr></li>
+        <tr><td><li>prohibēre </td>
+          <td><button id="revealv34" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv34" class="vocab-span"><strong>to prevent, to stop</strong></span></td></tr></li>
+        <tr><td><li>pugnāre </td>
+          <td><button id="revealv35" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv35" class="vocab-span"><strong>to fight</strong></span></td></tr></li>
+        <tr><td><li>ridēre </td>
+          <td><button id="revealv36" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv36" class="vocab-span"><strong>to laugh, to laugh at</strong></span></td></tr></li>
+        <tr><td><li>saltāre </td>
+          <td><button id="revealv37" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv37" class="vocab-span"><strong>to leap, to dance</strong></span></td></tr></li>
+        <tr><td><li>salūtāre </td>
+          <td><button id="revealv38" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv38" class="vocab-span"><strong>to greet</strong></span></td></tr></li>
+        <tr><td><li>sedēre </td>
+          <td><button id="revealv39" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv39" class="vocab-span"><strong>to sit</strong></span></td></tr></li>
+        <tr><td><li>servāre </td>
+          <td><button id="revealv40" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv40" class="vocab-span"><strong>to keep, to guard</strong></span></td></tr></li>
+        <tr><td><li>spectāre </td>
+          <td><button id="revealv41" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv41" class="vocab-span"><strong>to look at, to watch</strong></span></td></tr></li>
+        <tr><td><li>stāre </td>
+          <td><button id="revealv42" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv42" class="vocab-span"><strong>to stand (in place)</strong></span></td></tr></li>
+        <tr><td><li>tenēre </td>
+          <td><button id="revealv43" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv43" class="vocab-span"><strong>to hold, to have</strong></span></td></tr></li>
+        <tr><td><li>terrēre </td>
+          <td><button id="revealv44" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv44" class="vocab-span"><strong>to frighten</strong></span></td></tr></li>
+        <tr><td><li>timēre </td>
+          <td><button id="revealv45" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv45" class="vocab-span"><strong>to fear, to be afraid of</strong></span></td></tr></li>
+        <tr><td><li>velle </td>
+          <td><button id="revealv46" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv46" class="vocab-span"><strong>to want</strong></span></td></tr></li>
+        <tr><td><li>vidēre </td>
+          <td><button id="revealv47" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv47" class="vocab-span"><strong>to see</strong></span></td></tr></li>
+        <tr><td><li>vocāre </td>
+          <td><button id="revealv48" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv48" class="vocab-span"><strong>to call, to summon</strong></span></td></tr></li>
+        <tr><td><li>volāre </td>
+          <td><button id="revealv49" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button></td>
+          <td><span id="vocabv49" class="vocab-span"><strong>to fly</strong></span></td></tr></li>
+        </table>
+      </ol>
+      <div id="previous-next-bottom" class="row justify-content-between mb-4">
+        <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXIIa.html"><<-Previous</a></button>
+        <button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXIIc.html">Next->></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(".reveal-vocab").click(function () {
+    var buttonId = $(this).attr("id");
+    var revealNum = buttonId.substring(6);
+    var vocabNum = "vocab" + revealNum;
+    console.log(vocabNum);
+    $("#" + vocabNum).toggle();
+  });
+
+  $(".reveal-grammar").click(function () {
+    var buttonId = $(this).attr("id");
+    var revealNum = buttonId.substring(7);
+    var grammarNum = "grammar" + revealNum;
+    console.log(grammarNum);
+    $("#" + grammarNum).toggle();
+  });
+
+  function showFullDeclension(divToShow) {
+    document.getElementById(divToShow).toggle();
+  }
+
+  function checkMatching(start) {
+    var j = 0;
+    for (i = start;i <= start + 14; i++) {
+      if ($("#match" + i).val().toUpperCase() !== $("#check" + i).text()) {
+        $("#match" + i).css("background-color","red");
+        j++;
+      } else {
+        $("#match" + i).css("background-color","white");
+      }
+    }
+    if (j === 0) {
+      document.getElementById("check-matching-" + start).innerText = "All Correct!"
+      // $("#check-matching-" + start).innerText("All Correct!")
+    }
+  }
+</script>
+</body>
+</html>
