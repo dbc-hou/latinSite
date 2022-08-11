@@ -31,26 +31,38 @@
       <h4>Cases and Functions</h4>
       <p>Which case does Latin use to express each of these functions for nouns?</p>
       <ol type="1">
-        <li>direct object <button id="revealg1" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar1" class="grammar-span">Accusative</span></li>
-        <li>possessor <button id="revealg2" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar2" class="grammar-span">Genitive</span></li>
-        <li>direct address <button id="revealg3" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar3" class="grammar-span">Vocative</span></li>
-        <li>subject complement <button id="revealg4" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar4" class="grammar-span">Nominative</span></li>
-        <li>place where <button id="revealg5" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar5" class="grammar-span">Ablative</span></li>
-        <li>object of <em>of</em> <button id="revealg6" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar6" class="grammar-span">Genitive</span></li>
-        <li>place to which <button id="revealg7" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar7" class="grammar-span">Accusative</span></li>
-        <li>subject <button id="revealg8" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar8" class="grammar-span">Nominative</span></li>
-        <li>place from which <button id="revealg9" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar9" class="grammar-span">Ablative</span></li>
-        <li>indirect object <button id="revealg10" class="reveal-grammar btn btn-outline-dark col-1"><strong>></strong></button>
-          <span id="grammar10" class="grammar-span">Dative</span></li>
+        <table class="table-borderless">
+        <tr><td><li>direct object
+          <td><button id="revealg1" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar1" class="grammar-span">Accusative</span></li></td></tr>
+        <tr><td><li>possessor
+          <td><button id="revealg2" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar2" class="grammar-span">Genitive</span></li></td></tr>
+        <tr><td><li>direct address
+          <td><button id="revealg3" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar3" class="grammar-span">Vocative</span></li></td></tr>
+        <tr><td><li>subject complement
+          <td><button id="revealg4" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar4" class="grammar-span">Nominative</span></li></td></tr>
+        <tr><td><li>place where
+          <td><button id="revealg5" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar5" class="grammar-span">Ablative</span></li></td></tr>
+        <tr><td><li>object of <em>of</em>
+          <td><button id="revealg6" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar6" class="grammar-span">Genitive</span></li></td></tr>
+        <tr><td><li>place to which
+          <td><button id="revealg7" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar7" class="grammar-span">Accusative</span></li></td></tr>
+        <tr><td><li>subject
+          <td><button id="revealg8" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar8" class="grammar-span">Nominative</span></li></td></tr>
+        <tr><td><li>place from which
+          <td><button id="revealg9" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar9" class="grammar-span">Ablative</span></li></td></tr>
+        <tr><td><li>indirect object
+          <td><button id="revealg10" class="reveal-grammar btn btn-outline-dark" style="width: 50px"><strong>></strong></button></td>
+          <td><span id="grammar10" class="grammar-span">Dative</span></li></td></tr>
+        </table>
       </ol>
 
       <h4>Declensions</h4>
@@ -82,6 +94,7 @@
           <td style="width: 35%" onclick="$(this).children().toggle();"><span id="grammar21" class="declension"><strong>terrīs Lātīnīs</strong></span></td></tr>
         </tbody></table>
       <button id="reveald1" class="reveal-declension btn btn-outline-dark col-3 mb-5" onclick="showFullDeclension(11);">Show Full Declension</button>
+      <button id="hided1" class="reveal-declension btn btn-outline-dark col-3 mb-5" onclick="hideFullDeclension(11);">Hide Full Declension</button>
 
       <table style="width: 100%"><thead>
       <tr><td style="width: 30%"><strong><em>II (m.)</em></strong></td>
@@ -109,6 +122,7 @@
           <td style="width: 35%" onclick="$(this).children().toggle();"><span id="grammar43" class="declension"><strong>equīs meīs</strong></span></td></tr>
         </tbody></table>
       <button id="reveald3" class="reveal-declension btn btn-outline-dark col-3 mb-5" onclick="showFullDeclension(33);">Show Full Declension</button>
+      <button id="hided3" class="reveal-declension btn btn-outline-dark col-3 mb-5" onclick="hideFullDeclension(33);">Hide Full Declension</button>
 
       <table style="width: 100%"><thead>
       <tr><td style="width: 30%"><strong><em>mixed (m.)</em></strong></td>
@@ -136,6 +150,7 @@
           <td style="width: 35%" onclick="$(this).children().toggle();"><span id="grammar32" class="declension"><strong>incolīs Rōmānīs</strong></span></td></tr>
         </tbody></table>
       <button id="reveald2" class="reveal-declension btn btn-outline-dark col-3 mb-5" onclick="showFullDeclension(22);">Show Full Declension</button>
+      <button id="hided2" class="reveal-declension btn btn-outline-dark col-3 mb-5" onclick="hideFullDeclension(22);">Hide Full Declension</button>
 
       <table style="width: 100%"><thead>
       <tr><td style="width: 30%"><strong><em>II (n.)</em></strong></td>
@@ -163,6 +178,7 @@
           <td style="width: 35%" onclick="$(this).children().toggle();"><span id="grammar54" class="declension"><strong>parvīs oppidīs</strong></span></td></tr>
         </tbody></table>
       <button id="reveald4" class="reveal-declension btn btn-outline-dark col-3 mb-5" onclick="showFullDeclension(44);">Show Full Declension</button>
+      <button id="hided4" class="reveal-declension btn btn-outline-dark col-3 mb-5" onclick="hideFullDeclension(44);">Hide Full Declension</button>
 
       <div id="previous-next-bottom" class="row justify-content-between mb-4">
         <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXIId.html"><<-Previous</a></button>
@@ -188,7 +204,15 @@
   });
 
   function showFullDeclension(divToShow) {
-    document.getElementById(divToShow).toggle();
+    for (i = divToShow;i <= divToShow + 10; i++) {
+      $("#grammar" + i).show();
+    }
+  }
+
+  function hideFullDeclension(divToShow) {
+    for (i = divToShow;i <= divToShow + 10; i++) {
+      $("#grammar" + i).hide();
+    }
   }
 
   function checkMatching(start) {
