@@ -1,7 +1,8 @@
-const peopleLatin = ["agricola", "alumnus", "alumna", "aurīga", "dea", "deus", "discipula", "discipulus",
+export const peopleLatin = ["agricola", "alumnus", "alumna", "aurīga", "dea", "deus", "discipula", "discipulus",
   "domina", "dominus", "famīlia", "fēmina", "fīlia", "fīlius", "incola", "magister", "magistra", "nauta",
   "philosophus", "pīrāta", "poēta", "politicus", "puella", "puer", "scrība", "vir"];
-const peopleAnswers = [
+
+export const peopleAnswers = [
   "agricolae, u.—farmer",
   "alumnae, f.—foster daughter",
   "alumnī, m.—foster son",
@@ -27,5 +28,6 @@ const peopleAnswers = [
   "puellae, f.—girl",
   "puer, m.—boy, child",
   "scrībae, u.—scribe, clerk",
-  "vir, m.—man"
+  "virī, m.—man"
 ]
+
