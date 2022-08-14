@@ -100,8 +100,8 @@ const foodDrinkAnswers = [
   "vīnī, n.—<em>wine</em>"
 ];
 
-const artScienceLatin = ["cultūra", "disciplīna", "doctrīna", "histōria", "liber", "lúdus",
-  "mathēmatica", "medicīna", "nātūra", "philosophia", "pictūra", "scrīptūra", "statua",];
+const artScienceLatin = ["cultūra", "disciplīna", "doctrīna", "histōria", "liber", "lūdus",
+  "mathēmatica", "medicīna", "mūscia", "nātūra", "philosophia", "pictūra", "scrīptūra", "sculptūra", "statua"];
 const artScienceAnswers = [
   "cultūrae, f.—<em>culture, cultivation</em>",
   "disciplīnae, f.—<em>discipline, learning, field of study</em>",
@@ -195,6 +195,70 @@ function displayPlaces() {
     iteration += `<span id="noun-span-${j}" class="col-2">${placesLatin[i]}</span>`;
     iteration += `<span id="button-span-${j}" class="col-1"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark">--></button></span>`;
     iteration += `<span id="vocab${j}" class="vocab-span col-5"><strong>${placesAnswers[i]}</strong></span></li>`;
+    j++;
+  }
+  html += iteration;
+  html += "</ol>";
+  return html;
+}
+
+function displayBuildings() {
+  let j = peopleLength + nhaLength + placesLength + 1;
+  let html = `<ol style="1" start="${j}">`;
+  let iteration = "";
+  for (let i = 0; i < buildingsLength; i++) {
+    iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
+    iteration += `<span id="noun-span-${j}" class="col-2">${buildingsLatin[i]}</span>`;
+    iteration += `<span id="button-span-${j}" class="col-1"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark">--></button></span>`;
+    iteration += `<span id="vocab${j}" class="vocab-span col-5"><strong>${buildingsAnswers[i]}</strong></span></li>`;
+    j++;
+  }
+  html += iteration;
+  html += "</ol>";
+  return html;
+}
+
+function displayFoodDrink() {
+  let j = peopleLength + nhaLength + placesLength + buildingsLength + 1;
+  let html = `<ol style="1" start="${j}">`;
+  let iteration = "";
+  for (let i = 0; i < foodLength; i++) {
+    iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
+    iteration += `<span id="noun-span-${j}" class="col-2">${foodDrinkLatin[i]}</span>`;
+    iteration += `<span id="button-span-${j}" class="col-1"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark">--></button></span>`;
+    iteration += `<span id="vocab${j}" class="vocab-span col-5"><strong>${foodDrinkAnswers[i]}</strong></span></li>`;
+    j++;
+  }
+  html += iteration;
+  html += "</ol>";
+  return html;
+}
+
+function displayLearning() {
+  let j = peopleLength + nhaLength + placesLength + buildingsLength + foodLength + 1;
+  let html = `<ol style="1" start="${j}">`;
+  let iteration = "";
+  for (let i = 0; i < learningLength; i++) {
+    iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
+    iteration += `<span id="noun-span-${j}" class="col-2">${artScienceLatin[i]}</span>`;
+    iteration += `<span id="button-span-${j}" class="col-1"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark">--></button></span>`;
+    iteration += `<span id="vocab${j}" class="vocab-span col-5"><strong>${artScienceAnswers[i]}</strong></span></li>`;
+    j++;
+  }
+  html += iteration;
+  html += "</ol>";
+  return html;
+}
+
+function displayMiscellany() {
+  let j = peopleLength + nhaLength + placesLength + buildingsLength + foodLength + learningLength + 1;
+  let html = `<ol style="1" start="${j}">`;
+  let iteration = "";
+  for (let i = 0; i < miscLength; i++) {
+    iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
+    iteration += `<span id="noun-span-${j}" class="col-2">${miscellaneousLatin[i]}</span>`;
+    iteration += `<span id="button-span-${j}" class="col-1"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark">--></button></span>`;
+    iteration += `<span id="vocab${j}" class="vocab-span col-5"><strong>${miscellaneousAnswers[i]}</strong></span></li>`;
     j++;
   }
   html += iteration;

@@ -8,7 +8,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="../js/jquery.js"></script>
     <script src="../js/toc.js"></script>
-    <script src="../js/review1.js"></script>
+    <script src="../js/review1nouns.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -59,202 +59,25 @@
       </div>
 
       <h4>Buildings and Rooms</h4>
-      <ol start="51">
-        <table class="table-borderless">
-          <tr><td><li>aedificium
-          <td><button id="reveal51" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab51" class="vocab-span"><strong>aedificiī, </strong>n.—<em>building, structure</em></span></li></td></tr>
-        <tr><td><li>ātrium
-          <td><button id="reveal52" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab52" class="vocab-span"><strong>ātriī, </strong>n.—<em>atrium, open-air living room</em></span></li></td></tr>
-        <tr><td><li>casa
-          <td><button id="reveal53" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab53" class="vocab-span"><strong>casae, </strong>f.—<em>cottage, hut, house</em></span></li></td></tr>
-        <tr><td><li>circus
-          <td><button id="reveal54" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab54" class="vocab-span"><strong>circī, </strong>m.—<em>race track, circus</em></span></li></td></tr>
-        <tr><td><li>columna
-          <td><button id="reveal55" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab55" class="vocab-span"><strong>columnae, </strong>f.—<em>column</em></span></li></td></tr>
-        <tr><td><li>cubiculum
-          <td><button id="reveal56" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab56" class="vocab-span"><strong>cubiculī, </strong>n.—<em>bedroom</em></span></li></td></tr>
-        <tr><td><li>culīna
-          <td><button id="reveal57" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab57" class="vocab-span"><strong>cubiculī, </strong>n.—<em>bedroom</em></span></li></td></tr>
-        <tr><td><li>dormītōrium
-          <td><button id="reveal58" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab58" class="vocab-span"><strong>dormītōriī, </strong>n.—<em>sleep chamber</em></span></li></td></tr>
-        <tr><td><li>librārium
-          <td><button id="reveal59" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab59" class="vocab-span"><strong>librāriī, </strong>n.—<em>library, book room</em></span></li></td></tr>
-        <tr><td><li>stadium
-          <td><button id="reveal60" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab60" class="vocab-span"><strong>stadiī, </strong>n.—<em>stadium, race course</em></span></li></td></tr>
-        <tr><td><li>templum
-          <td><button id="reveal61" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab61" class="vocab-span"><strong>templī, </strong>n.—<em>temple</em></span></li></td></tr>
-        <tr><td><li>theātrum
-          <td><button id="reveal62" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab62" class="vocab-span"><strong>theātrī, </strong>n.—<em>theatre</em></span></li></td></tr>
-        <tr><td><li>trīclīnium
-          <td><button id="reveal63" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab63" class="vocab-span"><strong>trīcliniī, </strong>n.—<em>dining room</em></span></li></td></tr>
-        <tr><td><li>vīlla
-          <td><button id="reveal64" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab64" class="vocab-span"><strong>vīllae, </strong>f.—<em>farmhouse</em></span></li></td></tr>
-        </table>
-      </ol>
+      <div id="nouns-buildings" style="width: 100%">
+        <script>document.getElementById("nouns-buildings").innerHTML = displayBuildings();</script>
+      </div>
+
       <h4>Food and Drink</h4>
-      <ol start="65">
-        <table class="table-borderless">
-          <tr><td><li>aqua
-          <td><button id="reveal65" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab65" class="vocab-span"><strong>aquae, </strong>f.—<em>water</em></span></li></td></tr>
-        <tr><td><li>asaparagus
-          <td><button id="reveal66" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab66" class="vocab-span"><strong>asparagī, </strong>m.—<em>asparagus</em></span></li></td></tr>
-        <tr><td><li>cēna
-          <td><button id="reveal67" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab67" class="vocab-span"><strong>cēnae, </strong>f.—<em>supper, meal</em></span></li></td></tr>
-        <tr><td><li>cibus
-          <td><button id="reveal68" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab68" class="vocab-span"><strong>cibī, </strong>m.—<em>food</em></span></li></td></tr>
-        <tr><td><li>frūmentum
-          <td><button id="reveal69" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab69" class="vocab-span"><strong>frūmentī, </strong>n.—<em>grain</em></span></li></td></tr>
-        <tr><td><li>ientāculum
-          <td><button id="reveal70" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab70" class="vocab-span"><strong>ientāculī, </strong>n.—<em>breakfast</em></span></li></td></tr>
-        <tr><td><li>olīva
-          <td><button id="reveal71" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab71" class="vocab-span"><strong>olīvae, </strong>f.—<em>olive, olive tree</em></span></li></td></tr>
-        <tr><td><li>ovum
-          <td><button id="reveal72" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab72" class="vocab-span"><strong>ovī, </strong>n.—<em>egg</em></span></li></td></tr>
-        <tr><td><li>prandium
-          <td><button id="reveal73" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab73" class="vocab-span"><strong>prandiī, </strong>n.—<em>lunch</em></span></li></td></tr>
-        <tr><td><li>vīnum
-          <td><button id="reveal74" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab74" class="vocab-span"><strong>vīnī, </strong>n.—<em>wine</em></span></li></td></tr>
-        </table>
-      </ol>
+      <div id="nouns-food-drink" style="width: 100%">
+        <script>document.getElementById("nouns-food-drink").innerHTML = displayFoodDrink();</script>
+      </div>
+
       <h4>Arts, Sciences, and Learning</h4>
-      <ol start="75">
-        <table class="table-borderless">
-          <tr><td><li>cultūra
-          <td><button id="reveal75" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab75" class="vocab-span"><strong>cultūrae, </strong>f.—<em>culture, cultivation</em></span></li></td></tr>
-        <tr><td><li>disciplīna
-          <td><button id="reveal76" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab76" class="vocab-span"><strong>disciplīnae, </strong>f.—<em>study, learning</em></span></li></td></tr>
-        <tr><td><li>doctrīna
-          <td><button id="reveal77" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab77" class="vocab-span"><strong>doctrīnae, </strong>f.—<em>teaching</em></span></li></td></tr>
-        <tr><td><li>histōria
-          <td><button id="reveal78" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab78" class="vocab-span"><strong>histōriae, </strong>f.—<em>history, non-fiction story</em></span></li></td></tr>
-        <tr><td><li>liber
-          <td><button id="reveal79" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab79" class="vocab-span"><strong>librī, </strong>m.—<em>book</em></span></li></td></tr>
-        <tr><td><li>lūdus
-          <td><button id="reveal80" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab80" class="vocab-span"><strong>lūdī, </strong>m.—<em>game, school</em></span></li></td></tr>
-        <tr><td><li>mathēmatica
-          <td><button id="reveal81" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab81" class="vocab-span"><strong>mathēmaticae, </strong>f.—<em>mathematics</em></span></li></td></tr>
-        <tr><td><li>medicīna
-          <td><button id="reveal82" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab82" class="vocab-span"><strong>medicīnae, </strong>f.—<em>the science of medicine</em></span></li></td></tr>
-        <tr><td><li>mūsica
-          <td><button id="reveal83" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab83" class="vocab-span"><strong>mūsicae, </strong>f.—<em>music</em></span></li></td></tr>
-        <tr><td><li>nātūra
-          <td><button id="reveal84" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab84" class="vocab-span"><strong>nātūrae, </strong>f.—<em>nature, essence</em></span></li></td></tr>
-        <tr><td><li>philosophia
-          <td><button id="reveal85" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab85" class="vocab-span"><strong>philosophiae, </strong>f.—<em>philosophy</em></span></li></td></tr>
-        <tr><td><li>pictūra
-          <td><button id="reveal86" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab86" class="vocab-span"><strong>pictūrae, </strong>f.—<em>picture, painting</em></span></li></td></tr>
-        <tr><td><li>scrīptūra
-          <td><button id="reveal87" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab87" class="vocab-span"><strong>scrīptūrae, </strong>f.—<em>scripture, writing</em></span></li></td></tr>
-        <tr><td><li>sculptūra
-          <td><button id="reveal88" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab88" class="vocab-span"><strong>sculptūrae, </strong>f.—<em>sculpture, carving</em></span></li></td></tr>
-        <tr><td><li>statua
-          <td><button id="reveal89" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab89" class="vocab-span"><strong>stātuae, </strong>f.—<em>statue</em></span></li></td></tr>
-        </table>
-      </ol>
+      <div id="nouns-art-science" style="width: 100%">
+        <script>document.getElementById("nouns-art-science").innerHTML = displayLearning();</script>
+      </div>
+
       <h4>Miscellaneous</h4>
-      <ol start="90">
-        <table class="table-borderless">
-          <tr><td><li>autumnus
-          <td><button id="reveal90" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab90" class="vocab-span"><strong>autumnī, </strong>m.—<em>autumn</em></span></li></td></tr>
-        <tr><td><li>dōnum
-          <td><button id="reveal91" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab91" class="vocab-span"><strong>dōnī, </strong>n.—<em>gift, grant</em></span></li></td></tr>
-        <tr><td><li>fābula
-          <td><button id="reveal92" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab92" class="vocab-span"><strong>fābulae, </strong>f.—<em>fable, fictional story</em></span></li></td></tr>
-        <tr><td><li>fāma
-          <td><button id="reveal93" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab93" class="vocab-span"><strong>fāmae, </strong>f.—<em>fame, reputation</em></span></li></td></tr>
-        <tr><td><li>glōria
-          <td><button id="reveal94" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab94" class="vocab-span"><strong>glōriae, </strong>f.—<em>glory</em></span></li></td></tr>
-        <tr><td><li>lingua
-          <td><button id="reveal95" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab95" class="vocab-span"><strong>linguae</strong>f.—<em>language, tongue</em></span></li></td></tr>
-        <tr><td><li>mātrimōnium
-          <td><button id="reveal96" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab96" class="vocab-span"><strong>mātrimōniī, </strong>n.—<em>marriage, matrimony</em></span></li></td></tr>
-        <tr><td><li>memōria
-          <td><button id="reveal97" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab97" class="vocab-span"><strong>memōriae, </strong>f.—<em>memory</em></span></li></td></tr>
-        <tr><td><li>mīrāculum
-          <td><button id="reveal98" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab98" class="vocab-span"><strong>mīrāculī, </strong>n.—<em>miracle, wondrous sight</em></span></li></td></tr>
-        <tr><td><li>praemium
-          <td><button id="reveal99" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab99" class="vocab-span"><strong>praemiī, </strong>n.—<em>reward</em></span></li></td></tr>
-        <tr><td><li>responsum
-          <td><button id="reveal100" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab100" class="vocab-span"><strong>responsī, </strong>n.—<em>response, reply</em></span></li></td></tr>
-        <tr><td><li>spectāculum
-          <td><button id="reveal101" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab101" class="vocab-span"><strong>spectāculī, </strong>n.—<em>spectacle, big show, event</em></span></li></td></tr>
-        <tr><td><li>spīna
-          <td><button id="reveal102" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab102" class="vocab-span"><strong>spīnae, </strong>f.—<em>spine, thorn</em></span></li></td></tr>
-        <tr><td><li>tōga
-          <td><button id="reveal103" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab103" class="vocab-span"><strong>tōgae, </strong>f.—<em>toga, robe, gown</em></span></li></td></tr>
-        <tr><td><li>tūnica
-          <td><button id="reveal104" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab104" class="vocab-span"><strong>tūnicae, </strong>f.—<em>tunic, long shirt</em></span></li></td></tr>
-        <tr><td><li>vehiculum
-          <td><button id="reveal105" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab105" class="vocab-span"><strong>vehiculī, </strong>n.—<em>vehicle, cart, conveyance</em></span></li></td></tr>
-        <tr><td><li>verbum
-          <td><button id="reveal106" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab106" class="vocab-span"><strong>verbī, </strong>n.—<em>word</em></span></li></td></tr>
-        <tr><td><li>via
-          <td><button id="reveal107" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab107" class="vocab-span"><strong>viae, </strong>f.—<em>road, way</em></span></li></td></tr>
-        <tr><td><li>victōria
-          <td><button id="reveal108" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab108" class="vocab-span"><strong>victōriae, </strong>f.—<em>victory, conquest</em></span></li></td></tr>
-        <tr><td><li>vīta
-          <td><button id="reveal109" class="reveal-vocab btn btn-outline-dark" style="width: 50px"><strong>==></strong></button>
-          <td><span id="vocab109" class="vocab-span"><strong>vītae, </strong>f.—<em>life</em></span></li></td></tr>
-        </table>
-      </ol> -->
+      <div id="nouns-miscellany" style="width: 100%">
+        <script>document.getElementById("nouns-miscellany").innerHTML = displayMiscellany();</script>
+      </div>
+
       <div id="previous-next-bottom" class="row justify-content-between mb-4">
         <td><button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXII.html"><<-Previous</a></button>
         <td><button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXIIb.html">Next->></a></button>
@@ -271,33 +94,6 @@
     $("#" + vocabNum).toggle();
   });
 
-  $(".reveal-grammar").click(function () {
-    var buttonId = $(this).attr("id");
-    var revealNum = buttonId.substring(7);
-    var grammarNum = "grammar" + revealNum;
-    console.log(grammarNum);
-    $("#" + grammarNum).toggle();
-  });
-
-  function showFullDeclension(divToShow) {
-    document.getElementById(divToShow).toggle();
-  }
-
-  function checkMatching(start) {
-    var j = 0;
-    for (i = start;i <= start + 14; i++) {
-      if ($("#match" + i).val().toUpperCase() !== $("#check" + i).text()) {
-        $("#match" + i).css("background-color","red");
-        j++;
-      } else {
-        $("#match" + i).css("background-color","white");
-      }
-    }
-    if (j === 0) {
-      document.getElementById("check-matching-" + start).innerText = "All Correct!"
-      // $("#check-matching-" + start).innerText("All Correct!")
-    }
-  }
 </script>
 </body>
 </html>
