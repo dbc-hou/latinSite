@@ -101,7 +101,7 @@ const foodDrinkAnswers = [
 ];
 
 const artScienceLatin = ["cultūra", "disciplīna", "doctrīna", "histōria", "liber", "lūdus",
-  "mathēmatica", "medicīna", "mūscia", "nātūra", "philosophia", "pictūra", "scrīptūra", "sculptūra", "statua"];
+  "mathēmatica", "medicīna", "mūsica", "nātūra", "philosophia", "pictūra", "scrīptūra", "sculptūra", "statua"];
 const artScienceAnswers = [
   "cultūrae, f.—<em>culture, cultivation</em>",
   "disciplīnae, f.—<em>discipline, learning, field of study</em>",
