@@ -37,7 +37,7 @@ const adjectivesAnswers = [
   "<em>pig-like</em>—<strong>porcīnōs</strong>",
   "<em>nearby, close (to)</em>—<strong>propinquae</strong>",
   "<em>beautiful, handsome</em>—<strong>pulchrōs</strong>",
-  "<em>Sardinian (V)</em>—<strong>Sardā</strong>",
+  "<em>Sardinian</em>—<strong>Sardā</strong>",
   "<em>Sicilian</em>—<strong>Sicule</strong>",
   "<em>his/her/its/their own</em>—<strong>suārum</strong>",
   "<em>bull-like</em>—<strong>taurīnī/-ae, taurīnō/-ae</strong>",
@@ -54,7 +54,7 @@ function displayAdjectives() {
   let j = 1;
   for (let i = 0; i < adjectivesLength; i++) {
     iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
-    iteration += `<span id="noun-span-${j}" class="col-3">${adjectivesLatin[i]}</span>`;
+    iteration += `<span id="adjective-span-${j}" class="col-3">${adjectivesLatin[i]}</span>`;
     iteration += `<span id="button-span-${j}" class="col-1"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark">--></button></span>`;
     iteration += `<span id="agrees-with-${j}" class="col-2" style="margin-left: 10px">${adjectivesAgreeWith[i]}</span>`;
     iteration += `<span id="vocab${j}" class="vocab-span col-4">${adjectivesAnswers[i]}</span></li>`;
