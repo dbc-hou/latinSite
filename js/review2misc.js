@@ -16,12 +16,12 @@ const miscAnswers = [
   "<em>among, admist</em>",
   "<em>and also</em>",
   "<em>both..and</em>",
-  "<em>however (postpositive)</em>",
+  "<em>however</em> (postpositive)",
   "<em>around</em>",
   "<em>against, facing</em>",
   "<em>I</em>",
-  "<em>therefore</em>",
-  "<em>therefore</em>",
+  "<em>therefore</em> (postpositive)",
+  "<em>therefore</em> (postpositive)",
   "<em>between, among</em>",
   "<em>meanwhile, for the time being</em>",
   "<em>meanwhile, for the time being</em>",
@@ -41,13 +41,13 @@ const miscAnswers = [
   "<em>for this/that/these/those reason(s)</em>",
   "<em>because</em>",
   "<em>how?</em>",
-  "<em>--self/selves (reflexive)</em>",
+  "<em>--self/selves</em> (reflexive)",
   "<em>if</em>",
-  "<em>nevertheless (postpositive)</em>",
+  "<em>nevertheless</em> (postpositive)",
   "<em>across, over</em>",
   "<em>you, thou</em>",
-  "<em>or (inclusive)</em>",
-  "<em>either..or (inclusive)</em>",
+  "<em>or</em> (inclusive)",
+  "<em>either..or</em> (inclusive)",
   "<em>you, ye, y'all</em>",
 ];
 
@@ -61,7 +61,7 @@ function displayMisc() {
     iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
     iteration += `<span id="misc-span-${j}" class="col-3">${miscLatin[i]}</span>`;
     iteration += `<span id="button-span-${j}" class="col-1"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark">--></button></span>`;
-    iteration += `<span id="vocab${j}" class="col-6" style="margin-left: 10px; display: none">${miscType[i]}—<strong>${miscAnswers[i]}</strong></span>`;
+    iteration += `<span id="vocab${j}" class="col-6" style="margin-left: 10px; display: none">${miscType[i]}—${miscAnswers[i]}</span>`;
     j++;
   }
   html += iteration;
