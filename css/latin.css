@@ -165,6 +165,10 @@ blockquote {
   display: none;
 }
 
+.show-active-conj, .show-passive-conj {
+  margin-bottom: 1.5em;
+}
+
 .review-fill-in {
   width: 150px;
 }
