@@ -19,7 +19,7 @@ const peopleAnswers = [
   "fīliī, m.—<em>son</em>",
   "incolae, u.—<em>inhabitant</em>",
   "magistrī, m.—<em>teacher, schoolmaster</em>",
-  "magistrae, m.—<em>teacher, schoolmistress</em>",
+  "magistrae, f.—<em>teacher, schoolmistress</em>",
   "nautae, u.—<em>sailor</em>",
   "philosophī, u.—<em>philosopher</em>",
   "pīrātae, u.—<em>pirate</em>",
