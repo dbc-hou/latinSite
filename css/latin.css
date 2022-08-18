@@ -169,6 +169,10 @@ blockquote {
   margin-bottom: 1.5em;
 }
 
+.toc {
+  position: fixed;
+}
+
 .review-fill-in {
   width: 150px;
 }
