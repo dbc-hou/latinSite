@@ -169,10 +169,6 @@ blockquote {
   margin-bottom: 1.5em;
 }
 
-.toc {
-  position: fixed;
-}
-
 .review-fill-in {
   width: 150px;
 }
@@ -187,16 +183,16 @@ blockquote {
 }
 
 #table-of-contents {
-  position: relative;
+  position: fixed;
   left: 1em;
   top: 5em;
-  right: 5em;
+  width: 300px;
 }
 
 #main-text {
   position: relative;
   top: 5em;
-  left: 1em;
+  left: 20em;
 }
 
 #site-title {
