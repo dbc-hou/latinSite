@@ -182,17 +182,22 @@ blockquote {
   /*padding-left: 2em;*/
 }
 
+/*#content-row {*/
+/*  margin-top: 5em;*/
+/*}*/
+
 #table-of-contents {
   position: fixed;
-  left: 1em;
+  /*left: 1em;*/
   top: 5em;
-  width: 300px;
+  /*width: 300px; Don't use fixed width in conjunction with boostrap columns, silly boy!*/
 }
 
 #main-text {
-  position: relative;
-  top: 5em;
-  left: 20em;
+  /*position: relative;*/
+  /*top: 5em;*/
+  /*margin-top: 5em;*/
+  margin-left: 10em;
 }
 
 #site-title {
@@ -204,12 +209,16 @@ blockquote {
   position: fixed;
   z-index: 3;
   margin-bottom: 30px;
+  white-space: nowrap;
 }
 
 #site-title>h1 {
   horiz-align: center;
 }
 
+#header-row {
+  margin-bottom: 5em;
+}
 #previous {
   alignment: left;
 }
