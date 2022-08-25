@@ -147,6 +147,7 @@ const miscellaneousAnswers = [
 ];
 
 let peopleLength = peopleLatin.length;
+let divinitiesLength = divinitiesLatin.length;
 let nhaLength = nhaLatin.length;
 let placesLength = placesLatin.length;
 let buildingsLength = buildingsLatin.length;
