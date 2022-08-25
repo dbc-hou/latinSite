@@ -103,49 +103,94 @@ const placesAnswers = [
   "noctēs—<em>night</em>",
   "Numidiae—<em>Numidia (northwestern Africa)</em>",
   "regiōnum—<em>region</em>",
-  "rōsis—<em>rose</em>",
   "Syriā—<em>Syria</em>",
   "tempora—<em>time, weather</em>",
   "vallēs—<em>valley</em>",
 ];
 
-const buildingsLatin = ["camera—Abl. pl.", "iānua—Gen. s.", "porta—Nom. pl."];
+const buildingsLatin = ["crux—Acc. pl.", "piscīna—Gen. s.", "pōns—Voc. pl.", "urbs—Dat. pl."];
 const buildingsAnswers = [
-  "camerīs—<em>room, chamber</em>",
-  "iānuae—<em>door</em>",
-  "portae—<em>gate</em>"
+  "crucēs—<em>cross, crossroads</em>",
+  "piscīnae—<em>pool, fish pond</em>",
+  "pontēs—<em>bridge</em>",
+  "urbibus—<em>city</em>"
 ];
 
-const commonObjectsLatin = ["gladius—Gen. pl.", "lectus—Dat. s.", "pecūnia—Dat. s.", "sagitta—Abl. s.",
-  "scūtum—Nom. pl.", "sella—Voc. pl."];
+const commonObjectsLatin = ["clāvis—Abl. s.", "ignis—Acc. pl.", "lūmen—Abl. pl.", "<u>volūmen</u>—Voc. pl."];
 const commonObjectsAnswers = [
-  "gladiōrum—<em>sword</em>",
-  "lectō—<em>couch, bed</em>",
-  "pecūniae—<em>money</em>",
-  "sagittā—<em>arrow</em>",
-  "scūta—<em>shield</em>",
-  "sellae—<em>seat, chair</em>"
+  "clāve—<em>key</em>",
+  "ignēs—<em>fire</em>",
+  "lūminibus—<em>light</em> (usually natural)",
+  "volūmina—<em>volume, scroll</em>"
 ];
 
-const abstractLatin = ["amīcitia—Acc. pl.", "angustia—Gen. s.", "audācia—Dat. pl.", "auxilium—Nom. pl.", "beneficium—Gen. s.",
-  "cūra—Acc. pl.", "decentia—Acc. s.", "gaudium—Acc. pl.", "grātia—Gen. pl.", "imperium—Dat. s.", "laetitia—Nom pl.",
-  "licentia—Acc. s.", "miseria—Dat. pl.", "modus—Abl. s.", "studium—Abl. pl."];
+const bodyMindLatin = ["<u>abdōmen</u>—Voc. pl.", "auris—Nom. pl.", "caput—Acc. pl.", "cervīx—Dat. pl.", "cōr—Abl. s.",
+  "corpus—Dat. pl.", "crūs—Dat. s.", "dēns—Gen. pl.", "latus—Voc. s.", "mēns—Acc. s.", "ōs—Nom. pl.",
+  "pectus—Acc. s.", "vōx—Gen. s.", "vulnus—Abl. pl."];
+const bodyMindAnswers = [
+  "abdōmina—<em>abdomen, belly</em>",
+  "aurēs—<em>ear</em>",
+  "capita—<em>head</em>",
+  "cervīcibus—<em>neck</em>",
+  "corde—<em>heart</em>",
+  "corporibus—<em>body</em>",
+  "crūrī—<em>leg</em>",
+  "dentium—<em>tooth</em>",
+  "latus—<em>side</em>",
+  "mentem—<em>mind</em>",
+  "ōra—<em>mouth</em>",
+  "pectus—<em>chest, breast</em>",
+  "vocis—<em>voice</em>",
+  "vulneribus—<em>wound</em>"
+];
+
+const foodDrinkLatin = ["carō—Gen. s.", "lac—Abl. s.", "lēns—Nom. pl.", "nux—Voc. s.", "pānis—Dat. s.",
+  "radīx—Abl. pl."];
+const foodDrinkAnswers = [
+  "carnis—<em>meat, flesh</em>",
+  "lacte—<em>milk</em>",
+  "lentēs—<em>lentil</em>",
+  "nux—<em>nut</em>",
+  "pānī—<em>bread</em>",
+  "radīx—<em>root</em>"
+];
+
+const travelLatin = ["classis—Dat. s.", "iter—Nom. pl.", "nāvis—Gen. pl."];
+const travelAnswers = [
+  "classī—<em>fleet, group</em>",
+  "itinera—<em>journey, march</em>",
+  "nāvium—<em>ship, boat</em>"
+]
+
+const artScienceLatin = ["ārs—Gen. pl.", "cārmen—Nom. pl.", "lectiō—Abl. s.", "lēx—Gen. pl.", "<u>ōratiō</u>—Acc. pl.",
+  "ratiō—Abl. pl.", "scientia—Dat. s."];
+const artScienceAnswers = [
+  "artium—<em>art, craft, skill</em>",
+  "cārmina—<em>song, poem</em>",
+  "lectione—<em>reading, lesson</em>",
+  "legum—<em>law</em>",
+  "ōrātiōnēs—<em>prayer, public speech</em>",
+  "ratiōnibus—<em>plan, reason, calculation</em>"
+];
+
+const abstractLatin = ["amor—Gen. s.", "clāmor—Dat. pl.", "color—Acc s.", "<u>error</u>—Abl. pl.", "favor—Voc. s.",
+  "genus—Nom pl.", "<u>honor</u>—Gen. pl.", "<u>horror</u>—Dat. s.", "lābor—Acc. pl.", "mōrs—Gen. s.", "nōmen—Dat. pl.",
+  "pāx—Acc. s.", "<u>terror</u>—Nom. pl.", "timor—Gen. pl."];
 const abstractAnswers = [
-  "amīcitiās—<em>friendship</em>",
-  "angustiae—<em>narrowness; difficulties (pl.)</em>",
-  "audāciīs—<em>boldness, daring</em>",
-  "auxilia—<em>help assistance; reinforcement troops (pl.)</em>",
-  "beneficiī—<em>benefit, kindness</em>",
-  "cūrās—<em>care, concern</em>",
-  "decentiam—<em>decency, suitability</em>",
-  "gaudia—<em>joy, gladness</em>",
-  "grātia—<em>grace; thanks (pl.)</em>",
-  "imperiō—<em>authority, empire</em>",
-  "laetitiae—<em>happiness</em>",
-  "licentiam—<em>license, liberty</em>",
-  "miseriīs—<em>misery, sadness, wretchedness</em>",
-  "modō—<em>method, manner, way</em>",
-  "studiīs—<em>enthusiasm, zeal</em>"
+  "amōris—<em>love</em>",
+  "clāmōribus—<em>shouting, noise</em>",
+  "colōrem—<em>color</em>",
+  "errōribus—<em>error, wandering</em>",
+  "favor—<em>favor</em>",
+  "genera—<em>kind, type</em>",
+  "honōrum—<em>honor</em>",
+  "horrōrī—<em>horror, trembling</em>",
+  "lābōrēs—<em>labor, work, suffering</em>",
+  "mortis—<em>death</em>",
+  "nōminibus—<em>(family) name</em>",
+  "pācem—<em>peace</em>",
+  "terrōrēs—<em>terror, fright</em>",
+  "timōrum—<em>fear</em>"
 ];
 
 const miscellaneousLatin = ["forma—Gen. s.", "numerus—Voc. s.", "pugna—Nom. pl.", "responsum—Acc. s."];
