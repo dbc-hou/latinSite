@@ -194,6 +194,7 @@ const abstractAnswers = [
   "<em>fear</em>—<strong>timōrum</strong>"
 ];
 
+let j = 1;
 let peopleLength = peopleLatin.length;
 let divinitiesLength = divinitiesLatin.length;
 let nhaLength = nhaLatin.length;
@@ -209,7 +210,7 @@ let abstractLength = abstractLatin.length;
 function displayPeople() {
   let html = `<ol style="1" start="1">`;
   let iteration = "";
-  let j = 1;
+  // let j = 1;
   for (let i = 0; i < peopleLength; i++) {
     iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
     iteration += `<span id="noun-span-${j}" class="col-4">${peopleLatin[i]}</span>`;
@@ -223,7 +224,7 @@ function displayPeople() {
 }
 
 function displayDivinities() {
-  let j = peopleLength + 1;
+  // let j = peopleLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < divinitiesLength; i++) {
@@ -240,7 +241,7 @@ function displayDivinities() {
 
 function displayNHA() {
   let iteration = "";
-  let j = peopleLength + divinitiesLength + 1;
+  // let j = peopleLength + divinitiesLength + 1;
   let html = `<ol style="1" start="${j}">`;
   for (let i = 0; i < nhaLength; i++) {
     iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
@@ -255,7 +256,7 @@ function displayNHA() {
 }
 
 function displayPlaces() {
-  let j = peopleLength + divinitiesLength + nhaLength + 1;
+  // let j = peopleLength + divinitiesLength + nhaLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < placesLength; i++) {
@@ -271,7 +272,7 @@ function displayPlaces() {
 }
 
 function displayBuildings() {
-  let j = peopleLength + divinitiesLength + nhaLength + placesLength + 1;
+  // let j = peopleLength + divinitiesLength + nhaLength + placesLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < buildingsLength; i++) {
@@ -287,7 +288,7 @@ function displayBuildings() {
 }
 
 function displayCommonObjects() {
-  let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength + 1;
+  // let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < commonObjectsLength; i++) {
@@ -303,7 +304,7 @@ function displayCommonObjects() {
 }
 
 function displayBodyMind() {
-  let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength + commonObjectsLength + 1;
+  // let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength + commonObjectsLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < bodyMindLength; i++) {
@@ -319,7 +320,7 @@ function displayBodyMind() {
 }
 
 function displayFoodDrink() {
-  let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength + commonObjectsLength + bodyMindLength + 1;
+  // let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength + commonObjectsLength + bodyMindLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < foodDrinkLength; i++) {
@@ -335,8 +336,8 @@ function displayFoodDrink() {
 }
 
 function displayTravel() {
-  let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength
-    + commonObjectsLength + bodyMindLength + foodDrinkLength + 1;
+  // let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength
+  //   + commonObjectsLength + bodyMindLength + foodDrinkLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < travelLength; i++) {
@@ -352,8 +353,8 @@ function displayTravel() {
 }
 
 function displayArtScience() {
-  let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength
-    + commonObjectsLength + bodyMindLength + foodDrinkLength + travelLength + 1;
+  // let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength
+  //   + commonObjectsLength + bodyMindLength + foodDrinkLength + travelLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < artScienceLength; i++) {
@@ -369,8 +370,8 @@ function displayArtScience() {
 }
 
 function displayAbstract() {
-  let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength
-    + commonObjectsLength + bodyMindLength + foodDrinkLength + travelLength + artScienceLength + 1;
+  // let j = peopleLength + divinitiesLength + nhaLength + placesLength + buildingsLength
+  //   + commonObjectsLength + bodyMindLength + foodDrinkLength + travelLength + artScienceLength + 1;
   let html = `<ol style="1" start="${j}">`;
   let iteration = "";
   for (let i = 0; i < abstractLength; i++) {
