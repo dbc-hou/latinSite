@@ -8,7 +8,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="../js/jquery.js"></script>
     <script src="../js/toc.js"></script>
-    <script src="../js/review2adjectives.js"></script>
+    <script src="../js/review3adjectives.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -29,11 +29,12 @@
       </div>
 
       <h3>Vocabulary—Adjectives</h3>
-      <p>Give the basic meanings of each. Then give the correct form(s) to agree with the noun to the right of each
-        adjective. (We've made <strong>Thrāx</strong> especially easy.)</p>
-      <p>Those marked with (2) have at least two correct forms to agree with them. Some forms can represent multiple
-        combinations of case and number, and yet just one adjective form may agree with them all—<em>e.g.</em>, #12.
-        Most of the adjective forms will have the same endings as the nouns—but not all of them!</p>
+      <p>For each adjective listed, give:</p>
+      <ul><li>the basic English meanings;</li>
+        <li>the adverbial form when requested (indicated by (adv.);</li>
+        <li>the correct form to agree with the noun to its right;</li>
+        <li>and, if possible, change that form to the superlative degree.</li>
+      </ul>
       <p>One last note: three of the nouns are uter gender in this text, but masculine in standard Latin dictionaries.
         In the case of any gender ambiguity, see if you can supply both the masculine and feminine forms.</p>
 
@@ -50,15 +51,14 @@
     </div>
   </div>
 </div>
-<script>
-  $(".reveal-vocab").click(function () {
-    var buttonId = $(this).attr("id");
-    var revealNum = buttonId.substring(6);
-    var vocabNum = "vocab" + revealNum;
-    console.log(vocabNum);
-    $("#" + vocabNum).toggle();
-  });
+<!--<script>-->
+<!--  $(".reveal-vocab").click(function () {-->
+<!--    var buttonId = $(this).attr("id");-->
+<!--    var revealNum = buttonId.substring(6);-->
+<!--    var answerNum = "answer-div-" + revealNum;-->
+<!--    $("#" + answerNum).toggle();-->
+<!--  });-->
 
-</script>
+<!--</script>-->
 </body>
 </html>
