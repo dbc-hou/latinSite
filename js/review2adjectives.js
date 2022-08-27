@@ -2,12 +2,12 @@ const adjectivesLatin = ["amīcus/-a/-um", "angustus/-a/-um", "antīquus/-a/-um"
   "benīgnus/-a/-um", "bovīnus/-a/-um", "Britānnus/-a/-um", "cervīnus/-a/-um", "Dācus/-a/-um", "equīnus/-a/-um",
   "Eurōpaeus/-a/-um", "Gallus/-a/-um", "Germānus/-a/-um", "Graecus/-a/-um", "Helvētius/-a/-um", "Hispānus/-a/-um",
   "Illyrius/-a/-um", "inimīcus/-a/-um", "lātus/-a/-um", "longinquus/-a/-um",
-  "longus/-a/-um", "novus/-a/-um", "porcīnus/-a/-um", "propinquus/-a/-um", "pulcher/-chra/-chrum",
+  "longus/-a/-um", "lupīnus/-a/-um", "novus/-a/-um", "propinquus/-a/-um", "pulcher/-chra/-chrum",
   "Sardus/-a/-um", "Siculus/-a/-um", "suus/-a/-um", "taurīnus/-a/-um", "Thrāx", "vaccīnus/-a/-um", "validus/-a/-um"];
 
 const adjectivesAgreeWith = ["imperium", "gladiō", "amīcitiam", "puer (2)", "nautam", "nūntī (2)", "incolārum",
   "populōs", "fīliās", "auxilia", "deīs", "patriae", "silvārum", "portīs", "aquilā", "lectōrum", "rēgīna",
-  "responsīs", "scūtum", "porcō", "locī", "sagittīs", "servābus", "magistrōs", "pugnae", "asinōs", "decentiā",
+  "responsīs", "scūtum", "lupō", "locī", "sagittīs", "magistrōs", "servābus", "pugnae", "asinōs", "decentiā",
   "beneficī", "angustiārum", "scribae (2)", "pecūnia", "dōna", "cerve"]
 
 const adjectivesAnswers = [
@@ -33,8 +33,8 @@ const adjectivesAnswers = [
   "<em>wide, broad</em>—<strong>lātō</strong>",
   "<em>far away</em>—<strong>longinquī</strong>",
   "<em>long</em>—<strong>longīs</strong>",
+  "<em>wolf-like</em>—<strong>lupīnōs</strong>",
   "<em>new, strange</em>—<strong>novīs</strong>",
-  "<em>pig-like</em>—<strong>porcīnōs</strong>",
   "<em>nearby, close (to)</em>—<strong>propinquae</strong>",
   "<em>beautiful, handsome</em>—<strong>pulchrōs</strong>",
   "<em>Sardinian</em>—<strong>Sardā</strong>",

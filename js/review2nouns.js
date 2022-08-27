@@ -12,7 +12,7 @@ const nhaAnswers = [
   "aquīlīs—<em>eagle</em>",
   "asinī/-ae—<em>donkey, ass</em>",
   "cerve/-a—<em>stag/doe</em>",
-  "porcōs/-ās—<em>hog/sow</em>"
+  "lupōs/-ās—<em>wolf</em>"
 ];
 
 const placesLatin = ["Britānnia—Abl. s.", "Dācia—Acc. s.", "Eurōpa—Dat. s.", "Gallia—Nom. pl.", "Germānia—Voc. s.",
