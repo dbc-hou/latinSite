@@ -234,7 +234,7 @@ const adjectivesReview3 = [
     inflectedForm: "humilium",
     superlativeForm: "humillimārum"},
   {entry: "īnfēlīx, īnfēlīcis",
-    agreesWith: "stomache",
+    agreesWith: "lupe",
     adverbForm: "īnfēlīciter",
     meanings: "unhappy, unlucky",
     inflectedForm: "īnfēlīx",
