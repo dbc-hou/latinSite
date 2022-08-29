@@ -109,6 +109,10 @@ blockquote {
   color: black;
 }
 
+.volume {
+  overflow: scroll;
+}
+
 .form-check:hover, .volume:hover, .chapter:hover {
   background-color: purple;
   color: gold;
@@ -176,6 +180,11 @@ blockquote {
 .no-border-table {
   border: none;
 }
+
+.sublist {
+  overflow-y: scroll;
+}
+
 /*Elements by ID*/
 #intro-parts, #vol-i-parts, #vol-ii-parts, #vol-iii-parts, #vol-iv-parts, #vol-v-parts, #vol-vi-parts {
   display: none;
@@ -188,9 +197,7 @@ blockquote {
 
 #table-of-contents {
   position: fixed;
-  /*left: 1em;*/
-  top: 5em;
-  /*width: 300px; Don't use fixed width in conjunction with boostrap columns, silly boy!*/
+  margin-top: 5em;
 }
 
 #main-text {
@@ -234,6 +241,10 @@ blockquote {
 
 #gender-box {
   display: none;
+}
+
+#content-links {
+  overflow: scroll;
 }
 
 
