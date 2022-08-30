@@ -11,7 +11,7 @@ function tableOfContents() {
 }
 
 function introLinks() {
-  return `<div id="intro-div"><li class="list-group-item volume"><a id="intro" class="volume-link" href="#" onclick="$('#intro-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Introduction</a>
+  return `<div id="intro-div"><li class="list-group-item volume" href="#" onclick="$('#intro-parts').slideToggle('slow')">Introduction
   <div id="intro-list-div" style="overflow-y: scroll"><ul id="intro-parts" class="list-group sublist">
     <li id="intro-prae" class="list-group-item pl-2 chapter"><a id="intro-prae-link" class="chapter-link" href="IntroPrae.html">Praelūdium</a></li>
     <li id="intro-a" class="list-group-item pl-2 chapter"><a id="intro-a-link" class="chapter-link" href="IntroA.html">A. Why Latin?</strong></li>
@@ -28,7 +28,7 @@ function introLinks() {
 }
 
 function volILinks() {
-  return `<div id="vol-i-div"><li class="list-group-item volume"><a id="vol-i" class="volume-link" href="#" onclick="$('#vol-i-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Volūmen I</a>
+  return `<div id="vol-i-div"><li class="list-group-item volume" onclick="$('#vol-i-parts').slideToggle('slow')">Volūmen I
     <div id="vol-i-list-div" style="overflow-y: auto"><ul id="vol-i-parts" class="list-group sublist">
       <li id="i-prae" class="list-group-item pl-2 chapter"><a id="vol-i-prae-link" class="chapter-link" href="PraeludiumI.html">Praelūdium I</a></li>
       <li id="lesson01" class="list-group-item pl-2 chapter"><a id="lesson-i-link" class="chapter-link" href="LessonI.html">I. Famīliae Rōmānae</a></li>
@@ -48,7 +48,7 @@ function volILinks() {
 }
 
 function volIILinks() {
-  return `<li class="list-group-item volume"><a id="vol-ii" class="volume-link" href="#" onclick="$('#vol-ii-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Volūmen II</a>
+  return `<li class="list-group-item volume" onclick="$('#vol-ii-parts').slideToggle('slow')">Volūmen II
     <ul id="vol-ii-parts" class="list-group sublist">
       <li id="ii-prae" class="list-group-item pl-2 chapter"><a id="vol-ii-prae-link" class="chapter-link" href="PraeludiumII.html">Praelūdium II</a></li>
       <li id="lesson13" class="list-group-item pl-2 chapter"><a id="lesson-xiii-link" class="chapter-link" href="LessonXIII.html">XIII. Accompaniment</a></li>
@@ -68,7 +68,7 @@ function volIILinks() {
 }
 
 function volIIILinks() {
-  return `<li class="list-group-item volume"><a id="vol-iii" class="volume-link" href="#" onclick="$('#vol-iii-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Volūmen III</a>
+  return `<li class="list-group-item volume" onclick="$('#vol-iii-parts').slideToggle('slow')">Volūmen III
     <ul id="vol-iii-parts" class="list-group sublist">
       <li id="iii-prae" class="list-group-item pl-2 chapter"><a id="vol-i-prae-link" class="chapter-link" href="PraeludiumIII.html">Praelūdium III</a></li>
       <li id="lesson25" class="list-group-item pl-2 chapter"><a id="lesson-xxv-link" class="chapter-link" href="LessonXXV.html">XXV. Colōrēs</a></li>
@@ -88,7 +88,7 @@ function volIIILinks() {
 }
 
 function volIVLinks() {
-  return `<li class="list-group-item volume"><a id="vol-iv" class="volume-link" href="#" onclick="$('#vol-iv-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Volūmen IV</a>
+  return `<li class="list-group-item volume" onclick="$('#vol-iv-parts').slideToggle('slow')">Volūmen IV
     <ul id="vol-iv-parts" class="list-group sublist">
       <li id="iv-prae-a" class="list-group-item pl-2 chapter"><a id="vol-iv-prae-link-a" class="chapter-link" href="PraeludiumIVA.html">Praelūdium IV: Principal Parts of Verbs</a></li>
       <li id="iv-prae-b" class="list-group-item pl-2 chapter"><a id="vol-iv-prae-link-b" class="chapter-link" href="PraeludiumIVB.html">Praelūdium IV: Verbs into Nouns</a></li>
@@ -111,7 +111,7 @@ function volIVLinks() {
 }
 
 function volVLinks() {
-  return `<li class="list-group-item volume"><a id="vol-v" class="volume-link" href="#" onclick="$('#vol-v-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Volūmen V</a>
+  return `<li class="list-group-item volume" onclick="$('#vol-v-parts').slideToggle('slow')">Volūmen V
     <ul id="vol-iv-parts" class="list-group sublist">
       <li id="v-prae" class="list-group-item pl-2 chapter"><a id="vol-v-prae-link" class="chapter-link" href="PraeludiumV.html">Praelūdium V</a></li>
       <li id="lesson49" class="list-group-item pl-2 chapter"><a id="lesson-xlix-link" class="chapter-link" href="LessonXLIX.html">XLIX. Timely Nouns</a></li>
@@ -131,7 +131,7 @@ function volVLinks() {
 }
 
 function volVILinks() {
-  return `<li class="list-group-item volume"><a id="vol-vi" class="volume-link" href="#" onclick="$('#vol-vi-parts').slideToggle('slow')" style="color: black" onmouseover="this.css('color','gold')">Volūmen VI</a>
+  return `<li class="list-group-item volume" onclick="$('#vol-vi-parts').slideToggle('slow')">Volūmen VI
     <ul id="vol-vi-parts" class="list-group sublist">
       <li id="vi-prae" class="list-group-item pl-2 chapter"><a id="vol-vi-prae-link" class="chapter-link" href="PraeludiumVI.html">Praelūdium VI</a></li>
       <li id="lesson61" class="list-group-item pl-2 chapter"><a id="lesson-lxi-link" class="chapter-link" href="LessonLXI.html">LXI. Adjectives in Review</a></li>

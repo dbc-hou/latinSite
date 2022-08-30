@@ -109,6 +109,11 @@ blockquote {
   color: black;
 }
 
+.volume:hover {
+  background-color: purple;
+  color: gold;
+}
+
 .volume {
   overflow: scroll;
 }
@@ -191,13 +196,17 @@ blockquote {
   /*padding-left: 2em;*/
 }
 
+#intro-div:hover, vol-i-div:hover, vol-ii-div:hover, vol-iii-div:hover, vol-iv-div:hover, vol-v-div:hover, vol-vi-div:hover {
+  color: gold;
+}
 /*#content-row {*/
 /*  margin-top: 5em;*/
 /*}*/
 
 #table-of-contents {
-  position: fixed;
+  position: absolute;
   margin-top: 5em;
+  overflow-y: scroll;
 }
 
 #main-text {
@@ -247,4 +256,6 @@ blockquote {
   overflow: scroll;
 }
 
-
+#list-group-item:hover {
+  color: gold;
+}
