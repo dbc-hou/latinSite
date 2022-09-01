@@ -190,6 +190,12 @@ blockquote {
   overflow-y: scroll;
 }
 
+.conj-subhead {
+  background-color: gold;
+  color: purple;
+  text-align: center;
+}
+
 /*Elements by ID*/
 #intro-parts, #vol-i-parts, #vol-ii-parts, #vol-iii-parts, #vol-iv-parts, #vol-v-parts, #vol-vi-parts {
   display: none;
