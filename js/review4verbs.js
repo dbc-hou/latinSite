@@ -34,6 +34,11 @@ const verbsReview4 = [
     thirdPart: "clausī",
     supine: "clausum",
     meanings: "close, shut"},
+  {entry: "cōgō",
+    infinitive: "cōgere",
+    thirdPart: "coēgī",
+    supine: "coāctum",
+    meanings: "gather, assemble, drive; force"},
   {entry: "crēscō",
     infinitive: "crēscere",
     thirdPart: "crēvī",
@@ -310,7 +315,7 @@ function displayVerbs() {
     iteration += `${verbsReview4[i].infinitive}, `;
     iteration += `${verbsReview4[i].thirdPart}, `;
     iteration += `${verbsReview4[i].supine}</strong>`;
-    iteration += `—<em>${verbsReview4[i].meanings}</em></span>`;
+    iteration += ` — <em>${verbsReview4[i].meanings}</em></span>`;
     iteration += `</div></li><hr/>`;
     }
     j++;
