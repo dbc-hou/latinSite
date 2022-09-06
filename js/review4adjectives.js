@@ -190,7 +190,7 @@ const adjectivesReview4 = [
   {entry: "vernālis/-e",
     comparative: "vernālior",
     superlative: "vernālissimus",
-    meanings: "springlike, related to springtime"},
+    meanings: "springlike, related to springtime"}
 ]
 
 let adjectivesLength = adjectivesReview4.length;
