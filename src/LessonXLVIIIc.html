@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson XLVIII: Recēnsus IV</title>
+    <link rel="stylesheet" href="../css/latin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/toc.js"></script>
+    <script src="../js/review4misc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header id="site-title" class="text-center col-12">
+  <h1>LATIN FOR THE END OF THE WORLD</h1>
+</header>
+<div id="main-container" class="container">
+  <div id="content-row" class="row d-flex justify-items-center">
+    <div id="table-of-contents" class="col-3">
+      <ul id="content-links" class="list-group">
+        <script>document.getElementById("content-links").innerHTML = tableOfContents();</script>
+      </ul>
+    </div>
+    <div id="main-text" class="col-9" style="background-color: beige; color: purple">
+      <div id="previous-next-top" class="row justify-content-between mb-4">
+        <td><button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIa.html"><--Previous</a></button>
+        <td><button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIc.html">Next--></a></button>
+      </div>
+
+      <h3>Exercise XLVIII.C: Grammar and Syntax—Nouns and Ajectives</h3>
+      <h4>Cases and Functions</h4>
+      <p>First, fill the blank with the correct case for the function specified. (<strong><u>SPOILER:</u></strong>
+      <em>About half of them will be Ablative!</em>)</p>
+      <p>Then, in the second column, fill in the correct endings for the nouns and adjectives to reflect that function.
+      Some of them will have (s.) or (pl.) indicated; for others, only either singular or plural forms will make sense.</p>
+      <table id="case-function" style="width: 100%">
+        <tbody>
+        <tr>
+          <td>1. <select id="select1"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> time when</td>
+          <td><strong>Īd<input type="text" size="5"> Mārti<input type="text" size="5"><br/>
+            medi<input type="text" size="5"> noct<input type="text" size="5"></strong></td>
+          <td><button id="reveal1" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+            <tr><td style="text-align: right"><span id="answer1a" style="display: none; text-align: right">Ablative:</span></td>
+              <td><span id="answer1b" style="display: none; font-weight: bold">Īd<u>ibus</u> Mārti<u>īs</u></span><br/>
+            <span id="answer1c" style="display: none; font-weight: bold">medi<u>ā</u> noct<u>e</u></span></td>
+        </tr>
+        <tr>
+          <td>2. partitive <select id="select2"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select></td>
+          <td><strong>septem crīmin<input type="text" size="5"> vestr<input type="text" size="5"><br/>
+            partēs cohort<input type="text" size="5"> quīnt<input type="text" size="5"></strong></td>
+          <td><button id="reveal2" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer2a" style="display: none; text-align: right">Genitive:</span></td>
+            <td><span id="answer2b" style="display: none; font-weight: bold">septem crīmin<u>um</u> vestr<u>ōrum</u></span><br/>
+            <span id="answer2c" style="display: none; font-weight: bold">partēs cohort<u>is</u> quīnt<u>ae</u></span></td>
+        </tr>
+        <tr>
+          <td>3. <select id="select3"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> of manner</td>
+          <td><strong>māxim<input type="text" size="5"> crūdēlitāt<input type="text" size="5"><br/>
+            ingentiōr<input type="text" size="5"> clēmenti<input type="text" size="5"></strong></td>
+          <td><button id="reveal3" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer3a" style="display: none; text-align: right">Ablative:</span></td>
+          <td><span id="answer3b" style="display: none; font-weight: bold">māxim<u>ā</u> crūdelitāt<u>e</u></span><br/>
+            <span id="answer3c" style="display: none; font-weight: bold">ingentiōr<u>e</u> clēmenti<u>ā</u></span></td>
+        </tr>
+        <tr>
+          <td>4. <select id="select4"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> with adjectives</td>
+          <td><strong>māgis idōnea iecor<input type="text" size="5"> tu<input type="text" size="5"><br/>
+            hostīlēs gent<input type="text" size="5"> rūrāl<input type="text" size="5"> (pl.)</strong></td>
+          <td><button id="reveal4" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer4a" style="display: none; text-align: right">Dative:</span></td>
+          <td><span id="answer4b" style="display: none; font-weight: bold">māgis idōnea iecor<u>ī</u> tu<u>ō</u></span><br/>
+            <span id="answer4c" style="display: none; font-weight: bold">hostīlēs gent<u>ibus</u> rūrāl<u>ibus</u></span></td>
+        </tr>
+        <tr>
+          <td>5. <select id="select5"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> of personal agent</td>
+          <td><strong>ab uxōr<input type="text" size="5"> me<input type="text" size="5"></strong> (s.)<br/>
+            <strong>ā nostr<input type="text" size="5"> novem fēl<input type="text" size="5"></strong></td>
+          <td><button id="reveal5" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer5a" style="display: none; text-align: right">Ablative:</span></td>
+          <td><span id="answer5b" style="display: none; font-weight: bold">ab uxōr<u>e</u> me<u>ā</u></span><br/>
+            <span id="answer5c" style="display: none; font-weight: bold">ā nostr<u>īs</u> novem fēl<u>ibus</u></span></td>
+        </tr>
+        <tr>
+          <td>6. <select id="select6"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> duration of time</td>
+          <td><strong>tr<input type="text" size="5"> hōr<input type="text" size="5"></strong> (s.)<br/>
+            <strong>pauc<input type="text" size="5"> mēns<input type="text" size="5"></strong></td>
+          <td><button id="reveal6" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer6a" style="display: none; text-align: right">Accusative:</span></td>
+          <td><span id="answer6b" style="display: none; font-weight: bold">tr<u>ēs</u> hōr<u>ās</u></span><br/>
+            <span id="answer6c" style="display: none; font-weight: bold">pauc<u>ōs</u> mēns<u>ēs</u></span></td>
+        </tr>
+        <tr>
+          <td>7. objective <select id="select7"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select></td>
+          <td><strong>timor diāri<input type="text" size="5"> oper<input type="text" size="5"></strong> (pl.)<br/>
+            <strong>grātiā consili<input type="text" size="5"> meliōr<input type="text" size="5"> (s.)</strong></td>
+          <td><button id="reveal7" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer7a" style="display: none; text-align: right">Genitive:</span></td>
+          <td><span id="answer7b" style="display: none; font-weight: bold">timor diāri<u>ōrum</u> oper<u>um</u></span><br/>
+            <span id="answer7c" style="display: none; font-weight: bold">grātiā consili<u>ī</u> meliōr<u>is</u></span></td>
+        </tr>
+        <tr>
+          <td>8. <select id="select8"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> of comparison</td>
+          <td><strong>cucurrit celerius leōn<input type="text" size="5"></strong> (s.)<br/>
+            <strong>fundus tuus maior me<input type="text" size="5"> est</strong></td>
+          <td><button id="reveal8" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer8a" style="display: none; text-align: right">Ablative:</span></td>
+          <td><span id="answer8b" style="display: none; font-weight: bold">cucurrit celerius leōn<u>e</u></span><br/>
+            <span id="answer8c" style="display: none; font-weight: bold">fundus tuus maior me<u>ō</u> est</span></td>
+        </tr>
+        <tr>
+          <td>9. <select id="select9"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> object of certain verbs</td>
+          <td><strong>legiōn<input type="text" size="5"> octāv<input type="text" size="5"> praefuit<br/>
+            cīv<input type="text" size="5"> mult<input type="text" size="5"> nōn placuerat</strong></td>
+          <td><button id="reveal9" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer9a" style="display: none; text-align: right">Ablative:</span></td>
+          <td><span id="answer9b" style="display: none; font-weight: bold">legiōn<u>ī</u> octāv<u>ae</u> praefuit</span><br/>
+            <span id="answer9c" style="display: none; font-weight: bold">cīv<u>ibus</u> mult<u>īs</u> nōn placuerat</span></td>
+        </tr>
+        <tr>
+          <td>10. <select id="select10"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> of means</td>
+          <td><strong>su<input type="text" size="5"> capit<input type="text" size="5"></strong> (s.)<br/>
+            <strong>lēg<input type="text" size="5"> iūr<input type="text" size="5">que</strong> (pl.)</td>
+          <td><button id="reveal10" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer10a" style="display; text-align: right: none">Ablative:</span></td>
+          <td><span id="answer10b" style="display: none; font-weight: bold">su<u>ō</u> capit<u>e</u></span><br/>
+            <span id="answer10c" style="display: none; font-weight: bold">lēg<u>ibus</u> iūr<u>ibus</u>que</span></td>
+        </tr>
+        <tr>
+          <td>11. <select id="select11"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> time within which</td>
+          <td><strong>pauc<input type="text" size="5"> di<input type="text" size="5"><br/>
+            un<input type="text" size="5"> hiem<input type="text" size="5"></strong></td>
+          <td><button id="reveal11" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer11a" style="display: none; text-align: right">Ablative:</span></td>
+          <td><span id="answer11b" style="display: none; font-weight: bold">pauc<u>īs</u> di<u>ēbus</u></span><br/>
+            <span id="answer11c" style="display: none; font-weight: bold">hiem<u>ā</u> hiem<u>e</u></span></td>
+        </tr>
+        <tr>
+          <td>12. <select id="select12"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> subject of infinitive</td>
+          <td><strong>sēnsī tu<input type="text" size="5"> sorōr<input type="text" size="5"> adesse</strong> (s.)<br/>
+            <strong>dīxistī fīli<input type="text" size="5"> ēsūrīvisse</strong> (pl.)</td>
+          <td><button id="reveal12" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer12a" style="display: none; text-align: right">Accusative:</span></td>
+          <td><span id="answer12b" style="display: none; font-weight: bold">sēnsī tu<u>am</u> sorōr<u>em</u> adesse</span><br/>
+            <span id="answer12c" style="display: none; font-weight: bold">dīxistī fīli<u>ās/ōs</u> ēsūrīvisse</span></td>
+        </tr>
+        <tr>
+          <td>13. <select id="select13"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> degree of difference</td>
+          <td><strong>mēnsis du<input type="text" size="5"> di<input type="text" size="5"> longior est<br/>
+            fratre brevior ūn<input type="text" size="5"> ped<input type="text" size="5"> sum</strong></td>
+          <td><button id="reveal13" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer13a" style="display: none; text-align: right">Ablative:</span></td>
+          <td><span id="answer13b" style="display: none; font-weight: bold">mēnsis du<u>ōbus</u> mēns<u>ibus</u> longior est</span><br/>
+            <span id="answer13c" style="display: none; font-weight: bold">fratre brevior ūn<u>ō</u> ped<u>e</u> sum</span></td>
+        </tr>
+        <tr>
+          <td>14. <select id="select14a"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> or <select id="select14b"><option>Case:</option><option>Ablative</option><option>Accusative</option><option>Dative</option><option>Genitive</option>
+          </select> of description (2 possible)</td>
+          <td><strong>optim<input type="text" size="5"> salūbritāt<input type="text" size="5"></strong><br/>
+            or <strong>optim<input type="text" size="5"> salūbritāt<input type="text" size="5"></strong></td>
+          <td><button id="reveal14" class="btn btn-outline-dark reveal-answer">Answer</button></td></tr>
+        <tr><td style="text-align: right">
+            <span id="answer14a" style="display: none">Genitive or Ablative:</span></td>
+          <td><span id="answer14b" style="display: none; font-weight: bold">optim<u>ae</u> salūbritāt<u>is</u></span><br/>
+            <span id="answer14c" style="display: none; font-weight: bold">optim<u>ā</u> salūbritāt<u>e</u></span></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div id="previous-next-bottom" class="row justify-content-between mb-4">
+        <td><button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIa.html"><--Previous</a></button>
+        <td><button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIc.html">Next--></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(".reveal-answer").click(function () {
+    var buttonId = $(this).attr("id");
+    var revealNum = buttonId.substring(6);
+    var answerNumA = "answer" + revealNum + "a";
+    var answerNumB = "answer" + revealNum + "b";
+    var answerNumC = "answer" + revealNum + "c";
+    $("#" + answerNumA).toggle();
+    $("#" + answerNumB).toggle();
+    $("#" + answerNumC).toggle();
+  });
+</script>
+</body>
+</html>

@@ -114,12 +114,12 @@ function displayMisc() {
   let iteration = "";
 
   for (let i = 0; i < miscLength; i++) {
-    iteration += `<div id="adjective-item-${j}" class="container-flex"><li id="li-${j}">`;
+    iteration += `<div id="misc-item-${j}" class="container-flex"><li id="li-${j}">`;
     iteration += `<div id="top-row-${j}" class="row">`
     iteration += `<span id="latin-span-${j}" style="width: 20%; margin-left: 20px"><strong>${miscReview4[i].entry}</strong></span>`;
-    iteration += `<input id="translation${j} type="text" style="height: 30px"> `
+    iteration += `<input id="translation${j} type="text"><br/>`
     iteration += `<button id="reveal${j}" class="reveal-answer btn btn-outline-dark mt-2" onclick="$('#answer${j}').toggle()">Answer</button> `
-    iteration += `<span id="answer${j}" style="display: none"><em>${miscReview4[i].meanings}</em> (${miscReview4[i].partOfSpeech})</span>`;
+    iteration += `<span id="answer${j}" style="display: none; margin-left: 1em"><em>${miscReview4[i].meanings}</em> (${miscReview4[i].partOfSpeech})</span>`;
     iteration += `</div></li><hr/>`;
     }
     j++;
