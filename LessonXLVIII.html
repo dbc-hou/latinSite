@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson XLVIII: Recēnsus IV</title>
+    <link rel="stylesheet" href="css/latin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header id="site-title" class="text-center col-12">
+  <h1>LATIN FOR THE END OF THE WORLD</h1>
+</header>
+<div id="main-container" class="container">
+  <div id="content-row" class="row d-flex justify-items-center">
+    <div id="table-of-contents" class="col-3">
+      <ul id="content-links" class="list-group">
+        <script>document.getElementById("content-links").innerHTML = tableOfContents();</script>
+      </ul>
+    </div>
+    <div id="main-text" class="col-8" style="background-color: beige; color: purple">
+      <div id="previous-next-top" class="row justify-content-between mb-4">
+        <button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXXXV.html"><<-Previous</a></button>
+        <button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXXXVIa.html">Next->></a></button>
+      </div>
+      <h2>XLVIII. Recēnsus IV</h2>
+      <p>Including words in the Introduction, you now have more than 400 Latin words in your vocabulary. With the power of prepositional prefixes, you could probably claim an additional 100. In other words, you are just getting started, but you have made a pretty good start!</p>
+      <ol type="A">
+        <li><a href="LessonXLVIIIa.html">Verbs, Nouns, and Adjectives</a></li>
+        <li><a href="LessonXLVIIIb.html">Miscellaneous Vocabulary</a></li>
+        <li><a href="LessonXLVIIIc.html">Grammar and Syntax—Nouns and Adjectives</a></li>
+        <li><a href="LessonXLVIIId.html">Grammar and Syntax—Verbs</a></li>
+        <li><a href="LessonXLVIIIe.html">Adjective and Adverb Mutations</a></li>
+        <li><a href="LessonXLVIIIf.html">Match the Derivatives, Supine Stem Edition</a></li>
+      </ol>
+
+      <div id="previous-next-bottom" class="row justify-content-between mb-4">
+        <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXLVII.html"><<-Previous</a></button>
+        <button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIa.html">Next->></a></button>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(".reveal-vocab").click(function () {
+    var buttonId = $(this).attr("id");
+    var revealNum = buttonId.substring(6);
+    var vocabNum = "vocab" + revealNum;
+    console.log(vocabNum);
+    $("#" + vocabNum).toggle();
+  });
+
+  $(".reveal-grammar").click(function () {
+    var buttonId = $(this).attr("id");
+    var revealNum = buttonId.substring(7);
+    var grammarNum = "grammar" + revealNum;
+    console.log(grammarNum);
+    $("#" + grammarNum).toggle();
+  });
+
+  function showFullDeclension(start) {
+    for (i = start;i <= start + 10;i++) {
+      $("#grammar" + i).show();
+    }
+  }
+
+  function checkMatching(start) {
+    var j = 0;
+    for (i = start;i <= start + 14; i++) {
+      if ($("#match" + i).val().toUpperCase() !== $("#check" + i).text()) {
+        $("#match" + i).css("background-color","red");
+        j++;
+      } else {
+        $("#match" + i).css("background-color","white");
+      }
+    }
+    if (j === 0) {
+      document.getElementById("check-matching-" + start).innerText = "All Correct!"
+      // $("#check-matching-" + start).innerText("All Correct!")
+    }
+  }
+</script>
+</body>
+</html>

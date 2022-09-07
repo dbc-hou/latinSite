@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson XXXVI: Recēnsus III</title>
+    <link rel="stylesheet" href="css/latin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="js/review3adjectives.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header id="site-title" class="text-center col-12">
+  <h1>LATIN FOR THE END OF THE WORLD</h1>
+</header>
+<div id="main-container" class="container">
+  <div id="content-row" class="row d-flex justify-items-center">
+    <div id="table-of-contents" class="col-3">
+      <ul id="content-links" class="list-group">
+        <script>document.getElementById("content-links").innerHTML = tableOfContents();</script>
+      </ul>
+    </div>
+    <div id="main-text" class="col-9" style="background-color: beige; color: purple">
+      <div id="previous-next-top" class="row justify-content-between mb-4">
+        <button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXXXVIa.html"><<-Previous</a></button>
+        <button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXXXVIc.html">Next->></a></button>
+      </div>
+
+      <h3>Vocabulary—Adjectives</h3>
+      <p>For each adjective listed, give:</p>
+      <ul><li>the basic English meanings;</li>
+        <li>the adverbial form when requested (indicated by (adv.);</li>
+        <li>the correct form to agree with the noun to its right;</li>
+        <li>and, if possible, change that form to the superlative degree.</li>
+      </ul>
+      <p>One last note: three of the nouns are uter gender in this text, but masculine in standard Latin dictionaries.
+        In the case of any gender ambiguity, see if you can supply both the masculine and feminine forms.</p>
+
+      <div id="adjectives" style="width: 100%;">
+        <script>
+          document.getElementById("adjectives").innerHTML = displayAdjectives();
+        </script>
+      </div>
+
+      <div id="previous-next-bottom" class="row justify-content-between mb-4">
+        <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXXXVIa.html"><<-Previous</a></button>
+        <button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXXXVIc.html">Next->></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<script>-->
+<!--  $(".reveal-vocab").click(function () {-->
+<!--    var buttonId = $(this).attr("id");-->
+<!--    var revealNum = buttonId.substring(6);-->
+<!--    var answerNum = "answer-div-" + revealNum;-->
+<!--    $("#" + answerNum).toggle();-->
+<!--  });-->
+
+<!--</script>-->
+</body>
+</html>

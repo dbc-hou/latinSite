@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson XXIV: Recēnsus II</title>
+    <link rel="stylesheet" href="css/latin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header id="site-title" class="text-center col-12">
+  <h1>LATIN FOR THE END OF THE WORLD</h1>
+</header>
+<div id="main-container" class="container">
+  <div id="content-row" class="row d-flex justify-items-center">
+    <div id="table-of-contents" class="col-3">
+      <ul id="content-links" class="list-group">
+        <script>document.getElementById("content-links").innerHTML = tableOfContents();</script>
+      </ul>
+    </div>
+    <div id="main-text" class="col-9" style="background-color: beige; color: purple">
+      <div id="previous-next-top" class="row justify-content-between mb-4">
+        <button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXXIVg.html"><<-Previous</a></button>
+        <button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXIVi.html">Next->></a></button>
+      </div>
+
+      <h3>Match the Derivatives</h3>
+      <p>In each set, match each English derivative from Latin on the left with its approximate meaning on the right, one to one.</p>
+
+      <h4>Set I</h4>
+      <button id="check-matching-1" class="check-matching btn btn-outline-dark mb-1" onclick="checkMatching(1,10)">Check Answers</button>
+      <table style="border: none; width: 100%"><tbody>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match1" style="width: 30px"><span id="check1" class="matching">E</span></td>
+        <td style="width: 20%">1. convalesce</td>
+        <td style="width: 70%">A. easily pleased</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match2" style="width: 30px"><span id="check2" class="matching">H</span></td>
+        <td style="width: 20%">2. conformity</td>
+        <td style="width: 70%">B. a group that breathes (whispers) together</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match3" style="width: 30px"><span id="check3" class="matching">A</span></td>
+        <td style="width: 20%">3. complacent</td>
+        <td style="width: 70%">C. grieving with another</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match4" style="width: 30px"><span id="check4" class="matching">C</span></td>
+        <td style="width: 20%">4. condolence</td>
+        <td style="width: 70%">D. a person from the same homeland</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match5" style="width: 30px"><span id="check5" class="matching">I</span></td>
+        <td style="width: 20%">5. computation</td>
+        <td style="width: 70%">E. grow stronger or healthier</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match6" style="width: 30px"><span id="check6" class="matching">B</span></td>
+        <td style="width: 20%">6. conspiracy</td>
+        <td style="width: 70%">F. fulfilled</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match7" style="width: 30px"><span id="check7" class="matching">F</span></td>
+        <td style="width: 20%">7. complete</td>
+        <td style="width: 70%">G. placing people or objects together</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match8" style="width: 30px"><span id="check8" class="matching">G</span></td>
+        <td style="width: 20%">8. collocation</td>
+        <td style="width: 70%">H. appearing the same as or similar to others</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match9" style="width: 30px"><span id="check9" class="matching">L</span></td>
+        <td style="width: 20%">9. commiserate</td>
+        <td style="width: 70%">I. assemblance of thoughts</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match10" style="width: 30px"><span id="check10" class="matching">D</span></td>
+        <td style="width: 20%">10. compatriot</td>
+        <td style="width: 70%">L. express sympathy with another's sadness</td></tr>
+
+      </tbody></table>
+
+      <h4>Set II</h4>
+      <button id="check-matching-16" class="check-matching btn btn-outline-dark mb-1" onclick="checkMatching(16, 15)">Check Answers</button>
+      <table style="border: none; width: 100%"><tbody>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match16" style="width: 30px"><span id="check16" class="matching">H</span></td>
+        <td style="width: 20%">11. denunciation</td>
+        <td style="width: 70%">A. a person lacking strength</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match17" style="width: 30px"><span id="check17" class="matching">I</span></td>
+        <td style="width: 20%">12. dispute </td>
+        <td style="width: 70%">B. filled to capacity (with)</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match18" style="width: 30px"><span id="check18" class="matching">M</span></td>
+        <td style="width: 20%">13. novice</td>
+        <td style="width: 70%">C. entryway</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match19" style="width: 30px"><span id="check19" class="matching">P</span></td>
+        <td style="width: 20%">14. appellation</td>
+        <td style="width: 70%">D. ponder</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match20" style="width: 30px"><span id="check20" class="matching">N</span></td>
+        <td style="width: 20%">15. abnegate</td>
+        <td style="width: 70%">E. slave-like in behavior</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match21" style="width: 30px"><span id="check21" class="matching">Q</span></td>
+        <td style="width: 20%">16. innumerable</td>
+        <td style="width: 70%">F. nearness</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match22" style="width: 30px"><span id="check22" class="matching">O</span></td>
+        <td style="width: 20%">17. reticent</td>
+        <td>G. harmful</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match23" style="width: 30px"><span id="check23" class="matching">F</span></td>
+        <td style="width: 20%">18. propinquity</td>
+        <td style="width: 70%">H. announcement of rejection or scorn</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match24" style="width: 30px"><span id="check24" class="matching">A</span></td>
+        <td style="width: 20%">19. invalid</td>
+        <td style="width: 70%">I. thinking different or reaching different conclusions</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match25" style="width: 30px"><span id="check25" class="matching">C</span></td>
+        <td style="width: 20%">20. portal</td>
+        <td style="width: 70%">L. talk someone out of</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match26" style="width: 30px"><span id="check26" class="matching">D</span></td>
+        <td style="width: 20%">21. cogitate</td>
+        <td style="width: 70%">M. someone new to a practice or subject</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match27" style="width: 30px"><span id="check27" class="matching">G</span></td>
+        <td style="width: 20%">22. noxious</td>
+        <td style="width: 70%">N. relinquish, deny claim to</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match28" style="width: 30px"><span id="check28" class="matching">L</span></td>
+        <td style="width: 20%">23. dissuade</td>
+        <td style="width: 70%">O. reluctant to speak</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match29" style="width: 30px"><span id="check29" class="matching">E</span></td>
+        <td style="width: 20%">24. servile</td>
+        <td style="width: 70%">P. name by which one is called</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match30" style="width: 30px"><span id="check30" class="matching">B</span></td>
+        <td style="width: 20%">25. replete</td>
+        <td style="width: 70%">Q. beyond one's ability to count</td></tr>
+      </tbody></table>
+
+      <h4>Set III</h4>
+      <button id="check-matching-31" class="check-matching btn btn-outline-dark mb-1" onclick="checkMatching(31, 15)">Check Answers</button>
+      <table style="border: none; width: 100%"><tbody>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match31" style="width: 30px"><span id="check31" class="matching">P</span></td>
+        <td style="width: 20%">26. augment</td>
+        <td style="width: 70%">A. unwelcoming, unfriendly</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match32" style="width: 30px"><span id="check32" class="matching">C</span></td>
+        <td style="width: 20%">27. preternatural</td>
+        <td style="width: 70%">B. ask a series of questions</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match33" style="width: 30px"><span id="check33" class="matching">L</span></td>
+        <td style="width: 20%">28. imperious</td>
+        <td style="width: 70%">C. exceeding what is normal</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match34" style="width: 30px"><span id="check34" class="matching">F</span></td>
+        <td style="width: 20%">29. potable</td>
+        <td style="width: 70%">D. approaching a practice or subject with enthusiasm</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match35" style="width: 30px"><span id="check35" class="matching">N</span></td>
+        <td style="width: 20%">30. desperate</td>
+        <td style="width: 70%">E. beauty</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match36" style="width: 30px"><span id="check36" class="matching">O</span></td>
+        <td style="width: 20%">31. ingratiate</td>
+        <td style="width: 70%">F. safe for drinking</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match37" style="width: 30px"><span id="check37" class="matching">Q</span></td>
+        <td style="width: 20%">32. insuperable</td>
+        <td style="width: 70%">G. having width greater than length or height</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match38" style="width: 30px"><span id="check38" class="matching">M</span></td>
+        <td style="width: 20%">33. gaudy</td>
+        <td style="width: 70%">H. not permitted</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match39" style="width: 30px"><span id="check39" class="matching">A</span></td>
+        <td style="width: 20%">34. inimical</td>
+        <td style="width: 70%">I. ancient times</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match40" style="width: 30px"><span id="check40" class="matching">G</span></td>
+        <td style="width: 20%">35. oblate</td>
+        <td style="width: 70%">L. having a commanding presence</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match41" style="width: 30px"><span id="check41" class="matching">E</span></td>
+        <td style="width: 20%">36. pulchritude</td>
+        <td style="width: 70%">M. joyously ornate</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match42" style="width: 30px"><span id="check42" class="matching">D</span></td>
+        <td style="width: 20%">37. studious</td>
+        <td style="width: 70%">N. without hope</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match43" style="width: 30px"><span id="check43" class="matching">I</span></td>
+        <td style="width: 20%">38. antiquity</td>
+        <td style="width: 70%">O. get in someone's good graces</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match44" style="width: 30px"><span id="check44" class="matching">H</span></td>
+        <td style="width: 20%">39. illicit</td>
+        <td style="width: 70%">P. increase in size or influence</td></tr>
+      <tr>
+        <td style="width: 10%"><input type="text" id="match45" style="width: 30px"><span id="check45" class="matching">B</span></td>
+        <td style="width: 20%">40. interrogate</td>
+        <td style="width: 70%">Q. unable to be defeated or surmounted</td></tr>
+      </tbody></table>
+      <div id="previous-next-bottom" class="row justify-content-between mb-4">
+        <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXXIVg.html"><<-Previous</a></button>
+        <button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXXIVi.html">Next->></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+  function checkMatching(start,howMany) {
+    var j = 0;
+    for (i = start;i <= start + howMany - 1; i++) {
+      if ($("#match" + i).val().toUpperCase() !== $("#check" + i).text()) {
+        $("#match" + i).css("background-color","red");
+        j++;
+      } else {
+        $("#match" + i).css("background-color","white");
+      }
+    }
+    if (j === 0) {
+      document.getElementById("check-matching-" + start).innerText = "All Correct!"
+      // $("#check-matching-" + start).innerText("All Correct!")
+    }
+  }
+</script>
+</body>
+</html>

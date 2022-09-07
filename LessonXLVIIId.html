@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson XLVIII: Recēnsus IV</title>
+    <link rel="stylesheet" href="css/latin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="js/review4misc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header id="site-title" class="text-center col-12">
+  <h1>LATIN FOR THE END OF THE WORLD</h1>
+</header>
+<div id="main-container" class="container">
+  <div id="content-row" class="row d-flex justify-items-center">
+    <div id="table-of-contents" class="col-3">
+      <ul id="content-links" class="list-group">
+        <script>document.getElementById("content-links").innerHTML = tableOfContents();</script>
+      </ul>
+    </div>
+    <div id="main-text" class="col-9" style="background-color: beige; color: purple">
+      <div id="previous-next-top" class="row justify-content-between mb-4">
+        <td><button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIc.html"><--Previous</a></button>
+        <td><button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIe.html">Next--></a></button>
+      </div>
+
+      <h3>Grammar and Syntax—Verbs</h3>
+      <h4>Synopses: Active Voice Only</h4>
+      <p>Rather than have you conjugate verbs completely in all six tenses, for each column below write a synopsis,
+        a cross-section of the conjugation: the forms of the six tenses for a single subject (person-number conjugation),
+        plus the perfect active infinitive (<em>to have <u>verb</u>ed</em>) for each verb.</p>
+      <p>There is no need to include the passive-voice forms; however, you can practice in your head converting active to passive in the present system.</p>
+      <p>This is somewhat repetitious, but in a way that will build your confidence in conjugating.</p>
+
+      <table><thead>
+      <tr><td></td>
+        <td>gregāre (I)<br>
+          <button id="gregare" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+        <td>lucēre (thou)<br>
+          <button id="lucere" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+        <td>edere (he)<br>
+          <button id="edere" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+      </tr></thead>
+      <tbody>
+      <tr><td><strong><em>Present</em></strong></td>
+        <td><input id="iherd" type="text" size="12"><br>
+          <span id="gregare1" style="display: none"><strong>gregō</strong></span></td>
+        <td><input id="youshine" type="text" size="12"><br>
+          <span id="lucere1" style="display: none"><strong>lucēs</strong></span></td>
+        <td><input id="heeats" type="text" size="12"><br>
+          <span id="edere1" style="display: none"><strong>edit</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Imperfect</em></strong></td>
+        <td><input id="iwasherding" type="text" size="12"><br>
+          <span id="gregare2" style="display: none"><strong>gregābam</strong></span></td>
+        <td><input id="youwereshining" type="text" size="12"><br>
+          <span id="lucere2" style="display: none"><strong>lucēbās</strong></span></td>
+        <td><input id="hewaseating" type="text" size="12"><br>
+          <span id="edere2" style="display: none"><strong>edēbat</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Future</em></strong></td>
+        <td><input id="ishallherd" type="text" size="12"><br>
+          <span id="gregare3" style="display: none"><strong>gregābō</strong></span></td>
+        <td><input id="youwillshine" type="text" size="12"><br>
+          <span id="lucere3" style="display: none"><strong>lucēbis</strong></span></td>
+        <td><input id="hewilleat" type="text" size="12"><br>
+          <span id="edere3" style="display: none"><strong>edet</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Perfect</em></strong></td>
+        <td><input id="iherded" type="text" size="12"><br>
+          <span id="gregare4" style="display: none"><strong>gregāvī</strong></span></td>
+        <td><input id="youshone" type="text" size="12"><br>
+          <span id="lucere4" style="display: none"><strong>lucuistī</strong></span></td>
+        <td><input id="heate" type="text" size="12"><br>
+          <span id="edere4" style="display: none"><strong>ēdit</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Pluperfect</em></strong></td>
+        <td><input id="ihadherded" type="text" size="12"><br>
+          <span id="gregare5" style="display: none"><strong>gregāveram</strong></span></td>
+        <td><input id="youhadshone" type="text" size="12"><br>
+          <span id="lucere5" style="display: none"><strong>lucuerās</strong></span></td>
+        <td><input id="hehadeaten" type="text" size="12"><br>
+          <span id="edere5" style="display: none"><strong>ēderat</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Future Perfect</em></strong></td>
+        <td><input id="ishallhaveherded" type="text" size="12"><br>
+          <span id="gregare6" style="display: none"><strong>gregāverō</strong></span></td>
+        <td><input id="youwillhaveshone" type="text" size="12"><br>
+          <span id="lucere6" style="display: none"><strong>lucueris</strong></span></td>
+        <td><input id="hewillhaveeaten" type="text" size="12"><br>
+          <span id="edere6" style="display: none"><strong>ēderit</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Perf. Act. Infinitive</em></strong></td>
+        <td><input id="tohaveherded" type="text" size="12"><br>
+          <span id="gregare7" style="display: none"><strong>gregāvisse</strong></span></td>
+        <td><input id="tohaveshone" type="text" size="12"><br>
+          <span id="lucere7" style="display: none"><strong>lucuisse</strong></span></td>
+        <td><input id="tohaveeaten" type="text" size="12"><br>
+          <span id="edere7" style="display: none"><strong>ēdisse</strong></span></td>
+      </tr></tbody></table>
+
+      <table><thead>
+      <tr><td></td>
+        <td>trādere (we)<br>
+          <button id="tradere" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+        <td>scīre (ye)<br>
+          <button id="scire" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+        <td>capere (they)<br>
+          <button id="capere" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+      </thead></tr>
+      <tbody><tr>
+        <td><strong><em>Present</em></strong></td>
+        <td><input id="wesurrender" type="text" size="12"><br>
+          <span id="tradere1" style="display: none"><strong>trādimus</strong></span></td>
+        <td><input id="yallknow" type="text" size="12"><br>
+          <span id="scire1" style="display: none"><strong>scītis</strong></span></td>
+        <td><input id="theytake" type="text" size="12"><br>
+          <span id="capere1" style="display: none"><strong>capiunt</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Imperfect</em></strong></td>
+        <td><input id="weweresurrendering" type="text" size="12"><br>
+          <span id="tradere2" style="display: none"><strong>trādēbāmus</strong></span></td>
+        <td><input id="yallusedtoknow" type="text" size="12"><br>
+          <span id="scire2" style="display: none"><strong>sciēbātis</strong></span></td>
+        <td><input id="theyweretaking" type="text" size="12"><br>
+          <span id="capere2" style="display: none"><strong>capiēbant</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Future</em></strong></td>
+        <td><input id="wewillsurrender" type="text" size="12"><br>
+          <span id="tradere3" style="display: none"><strong>trādēmus</strong></span></td>
+        <td><input id="yallwillknow" type="text" size="12"><br>
+          <span id="scire3" style="display: none"><strong>sciētis</strong></span></td>
+        <td><input id="theywilltake" type="text" size="12"><br>
+          <span id="capere3" style="display: none"><strong>capient</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Perfect</em></strong></td>
+        <td><input id="wesurrendered" type="text" size="12"><br>
+          <span id="tradere4" style="display: none"><strong>trādidimus</strong></span></td>
+        <td><input id="yallknew" type="text" size="12"><br>
+          <span id="scire4" style="display: none"><strong>scīvistis</strong></span></td>
+        <td><input id="theytook" type="text" size="12"><br>
+          <span id="capere4" style="display: none"><strong>cēpērunt</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Pluperfect</em></strong></td>
+        <td><input id="wehadsurrendered" type="text" size="12"><br>
+          <span id="tradere5" style="display: none"><strong>trādiderāmus</strong></span></td>
+        <td><input id="yallhadknown" type="text" size="12"><br>
+          <span id="scire5" style="display: none"><strong>scīverātis</strong></span></td>
+        <td><input id="theyhadtaken" type="text" size="12"><br>
+          <span id="capere5" style="display: none"><strong>cēperant</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Future Perfect</em></strong></td>
+        <td><input id="weshallhavesurrendered" type="text" size="12"><br>
+          <span id="tradere6" style="display: none"><strong>trādiderimus</strong></span></td>
+        <td><input id="yallwillhaveknown" type="text" size="12"><br>
+          <span id="scire6" style="display: none"><strong>scīvieritis</strong></span></td>
+        <td><input id="theywillhavetaken" type="text" size="12"><br>
+          <span id="capere6" style="display: none"><strong>cēperint</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Perf. Act. Infinitive</em></strong></td>
+        <td><input id="tohavesurrendered" type="text" size="12"><br>
+          <span id="tradere7" style="display: none"><strong>trādidisse</strong></span></td>
+        <td><input id="tohaveknown" type="text" size="12"><br>
+          <span id="scire7" style="display: none"><strong>scīvisse</strong></span></td>
+        <td><input id="tohavetaken" type="text" size="12"><br>
+          <span id="capere7" style="display: none"><strong>cēpisse</strong></span></td>
+      </tr></tbody></table>
+
+      <table><thead>
+      <tr><td></td>
+        <td>posse (I)<br>
+          <button id="posse" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+        <td>pluere (it)<br>
+          <button id="pluere" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+        <td>ferre (she)<br>
+          <button id="ferre" class="btn btn-warning btn-outline-dark reveal-answer">Show</button></td>
+      </tr></thead>
+      <tbody><tr><td><strong><em>Present</em></strong></td>
+        <td><input id="ican" type="text" size="12"><br>
+          <span id="posse1" style="display: none"><strong>possum</strong></span></td>
+        <td><input id="itisraining" type="text" size="12"><br>
+          <span id="pluere1" style="display: none"><strong>pluit</strong></span></td>
+        <td><input id="shebears" type="text" size="12"><br>
+          <span id="ferre1" style="display: none"><strong>fert</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Imperfect</em></strong></td>
+        <td><input id="iwasable" type="text" size="12"><br>
+          <span id="posse2" style="display: none"><strong>poteram</strong></span></td>
+        <td><input id="itwasraining" type="text" size="12"><br>
+          <span id="pluere2" style="display: none"><strong>pluēbat</strong></span></td>
+        <td><input id="shewasbearing" type="text" size="12"><br>
+          <span id="ferre2" style="display: none"><strong>ferēbat</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Future</em></strong></td>
+        <td><input id="iwillbeable" type="text" size="12"><br>
+          <span id="posse3" style="display: none"><strong>poterō</strong></span></td>
+        <td><input id="itwillrain" type="text" size="12"><br>
+          <span id="pluere3" style="display: none"><strong>pluet</strong></span></td>
+        <td><input id="shewillbear" type="text" size="12"><br>
+          <span id="ferre3" style="display: none"><strong>feret</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Perfect</em></strong></td>
+        <td><input id="icould" type="text" size="12"><br>
+          <span id="posse4" style="display: none"><strong>potuī</strong></span></td>
+        <td><input id="itrained" type="text" size="12"><br>
+          <span id="pluere4" style="display: none"><strong>plūvit</strong></span></td>
+        <td><input id="shebore" type="text" size="12"><br>
+          <span id="ferre4" style="display: none"><strong>tulit</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Pluperfect</em></strong></td>
+        <td><input id="ihadbeenable" type="text" size="12"><br>
+          <span id="posse5" style="display: none"><strong>potueram</strong></span></td>
+        <td><input id="ithadrained" type="text" size="12"><br>
+          <span id="pluere5" style="display: none"><strong>plūverat</strong></span></td>
+        <td><input id="shehadborne" type="text" size="12"><br>
+          <span id="ferre5" style="display: none"><strong>tulerat</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Future Perfect</em></strong></td>
+        <td><input id="ishallhavebeenable" type="text" size="12"><br>
+          <span id="posse6" style="display: none"><strong>potuerō</strong></span></td>
+        <td><input id="itwillhaverained" type="text" size="12"><br>
+          <span id="pluere6" style="display: none"><strong>plūverit</strong></span></td>
+        <td><input id="shewillhaveborne" type="text" size="12"><br>
+          <span id="ferre6" style="display: none"><strong>tulerit</strong></span></td>
+      </tr>
+      <tr><td><strong><em>Perf. Act. Infinitive</em></strong></td>
+        <td><input id="tohavebeenable" type="text" size="12"><br>
+          <span id="posse7" style="display: none"><strong>potuisse</strong></span></td>
+        <td><input id="tohaverained" type="text" size="12"><br>
+          <span id="pluere7" style="display: none"><strong>plūvisse</strong></span></td>
+        <td><input id="tohaveborne" type="text" size="12"><br>
+          <span id="ferre7" style="display: none"><strong>tulisse</strong></span></td>
+      </tr></tbody></table>
+
+      <div id="previous-next-bottom" class="row justify-content-between mb-4">
+        <td><button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIc.html"><--Previous</a></button>
+        <td><button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXLVIIIe.html">Next--></a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(".reveal-answer").click(function () {
+    var buttonId = $(this).attr("id");
+    for (let i = 0; i <= 7; i++) {
+      $("#" + buttonId + i).toggle();
+    }
+  });
+</script>
+</body>
+</html>
