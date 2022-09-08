@@ -29,6 +29,43 @@
       </div>
 
       <h3>Vocabulary—Verbs (Infinitive Forms)</h3>
+      <button type="button" class="btn btn-warning" id="launch-flashcards" data-toggle="modal" data-target="#myModal">
+        Flashcards</button>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Review II Verb Flashcards</h4>
+            </div>
+            <div class="modal-body">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div id="slide1" class="item active">
+                    <script>
+                      let randomizedVerbs = shuffle(verbsLatin);
+                      document.getElementById("slide1").innerHTML = "<h1>" + randomizedVerbs[0] + "</h1>";
+                      generateSlides();
+                    </script>
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <p>Give the basic meaning (or meanings) of each infinitive.</p>
       <div id="verbs" style="width: 100%;">
         <script>
@@ -50,6 +87,14 @@
     console.log(vocabNum);
     $("#" + vocabNum).toggle();
   });
+
+  function generateSlides() {
+    let html = "";
+    for (let i = 2; i < randomizedVerbs.length; i++) {
+      html += `<div id="${i}" class="item"><h1>${randomizedVerbs[i-1]}</h1>`;
+    }
+    return html;
+  }
 
 </script>
 </body>
