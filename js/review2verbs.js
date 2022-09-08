@@ -63,8 +63,8 @@ const conjForms = [
 const verbsAnswers = [
   "<strong>abestis</strong>, <em>y'all are absent</em>, I",
   "<strong>aderam</strong>, <em>I was present</em>, I",
-  "<strong>appellantur</strong>, <em>they are called/named, T</em>",
-  "<strong>appropinquābis</strong>, <em>you will approach, T</em>",
+  "<strong>appellantur</strong>, <em>they are called/named</em>, T",
+  "<strong>appropinquābis</strong>, <em>you will approach</em>, T",
   "<strong>audēbāmus</strong>, <em>we were daring</em>, I",
   "<strong>augētur</strong>, <em>it is increased</em>, T",
   "<strong>cēlābimur</strong>, <em>we shall hide</em>, T",
@@ -72,22 +72,22 @@ const verbsAnswers = [
   "<strong>cogitābātur</strong>, <em>it was (being) thought</em>, I",
   "<strong>cūrābor</strong>, <em>I shall be cared for</em>, T",
   "<strong>decet</strong>, <em>it is proper</em>, I",
-  "<strong>dolēmus</strong>, <em>we hurt/grieve</em>, I + T",
+  "<strong>dolēmus</strong>, <em>we hurt/grieve</em>, I+T",
   "<strong>dōnāris</strong>, <em>you are given/granted</em>, T",
   "<strong>favēbant</strong>, <em>they were favoring</em>, D",
   "<strong>formābiminī</strong>, <em>y'all will form</em>, T",
   "<strong>gaudēbunt</strong>, <em>they will rejoice</em>, I",
-  "<strong>horrēs</strong>, <em>you tremble/shiver</em>, I + T",
+  "<strong>horrēs</strong>, <em>you tremble/shiver</em>, I+T",
   "<strong>imperābitis</strong>, <em>y'all will command</em>, D",
   "<strong>intersumus</strong>, <em>we are between</em>, I",
   "<strong>iubēbātur</strong>, <em>it was (being) ordered</em>, T",
-  "<strong>iūrābitur</strong>, <em>it shall be sworn</em>, I + T",
+  "<strong>iūrābitur</strong>, <em>it shall be sworn</em>, I+T",
   "<strong>lavāminī</strong>, <em>y'all are washed</em>, T",
   "<strong>licēbat</strong>, <em>it was permitted</em>, I",
-  "<strong>locābar</strong>, <em>I was (being) placed, T</em>",
+  "<strong>locābar</strong>, <em>I was (being) placed</em>, T",
   "<strong>nēcābimus</strong>, <em>we shall kill</em>, T",
   "<strong>negant</strong>, <em>they deny</em>, T",
-  "<strong>nocēbuntur</strong>, <em>they will be harmed/em>, T<",
+  "<strong>nocēbuntur</strong>, <em>they will be harmed</em>, T",
   "<strong>nōmināmur</strong>, <em>we are nominated</em>, T",
   "<strong>novābuntur</strong>, <em>they will be renewed</em>, T",
   "<strong>numerābantur</strong>, <em>they were being counted</em>, T",
@@ -98,18 +98,18 @@ const verbsAnswers = [
   "<strong>pleō</strong>, <em>I fill</em>, T",
   "<strong>potābās</strong>, <em>you were drinking</em>, T",
   "<strong>praeerant</strong>, <em>they were in charge</em>, D",
-  "<strong>properābimus</strong>, <em>we shall hurry</em>, I + T",
-  "<strong>putātur</strong>, <em>it is thought</em>, I + T",
+  "<strong>properābimus</strong>, <em>we shall hurry</em>, I+T",
+  "<strong>putātur</strong>, <em>it is thought</em>, I+T",
   "<strong>respondēbās</strong>, <em>you were responding</em>, I",
   "<strong>rogābāris</strong>, <em>you were (being) asked</em>, T",
   "<strong>solēmus</strong>, <em>we are accustomed</em>, I",
   "<strong>spērābit</strong>, <em>he/she will hope</em>, I",
-  "<strong>spīrābam</strong>, <em>I was breathing</em>, I + T",
+  "<strong>spīrābam</strong>, <em>I was breathing</em>, I+T",
   "<strong>studēbunt</strong>, <em>they will be enthused (about)</em>, D",
   "<strong>suādētis</strong>, <em>y'all persuade</em>, D",
   "<strong>superāmur</strong>, <em>we are overcome</em>, T",
   "<strong>tacēbat</strong>, <em>he/she was (being) silent</em>, I",
-  "<strong>temptābāmur</strong>, <em>we were (being) tried</em>, t",
+  "<strong>temptābāmur</strong>, <em>we were (being) tried</em>, T",
   "<strong>valēbis</strong>, <em>you will fare well</em>, I",
   "<strong>vetātur</strong>, <em>it is forbidden</em>, T",
   "<strong>vulnerantur</strong>, <em>they are wounded</em>, T"
@@ -122,10 +122,13 @@ function displayVerbs() {
   let iteration = "";
   let j = 1;
   for (let i = 0; i < verbsLength; i++) {
-    iteration += `<li><div class="row" id="li-${j}" style="width: 100%; height: 50px">`;
-    iteration += `<span id="verb-span-${j}" class="col-5">${verbsLatin[i]}—${conjForms[i]}</span>`;
-    iteration += `<span id="button-span-${j}" class="col-1"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark">--></button></span>`;
-    iteration += `<span id="vocab${j}" class="vocab-span col-5">${verbsAnswers[i]}</span></li>`;
+    iteration += `<li>`;
+    iteration += `<span id="verb-span-${j}" class="col-5">${verbsLatin[i]}—${conjForms[i]}</span><br/>`;
+    iteration += `<span id="input-span-${j}"><input id="form-${j}" type="text" size="12" placeholder="(form)"> `
+    iteration += `<input id="translation-${j}" type="text" size="20" placeholder="(translated form)"> `
+    iteration += `<input id="verbtype" type="text" size="5" placeholder="(type)"></span>`
+    iteration += `<span id="button-span-${j}" class="col-2"><button id="reveal${j}" class="reveal-vocab btn btn-outline-dark col-2">Answer</button></span><br/>`;
+    iteration += `<span id="vocab${j}" class="vocab-span col-5">${verbsAnswers[i]}</span></li><hr/>`;
     j++;
   }
   html += iteration;
@@ -142,4 +145,14 @@ function shuffle(array) {
   }
   return k;
 }
+
+function generateSlides() {
+  let html = "";
+  let verbArray = shuffle(verbsLatin)
+  for (let i = 2; i <= verbArray.length; i++) {
+    html += `<div id="${i}" class="item"><h1>${verbArray[i-1]}</h1></div>`;
+  }
+  return html;
+}
+
 
