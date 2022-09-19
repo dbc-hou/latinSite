@@ -15,7 +15,8 @@
 <header id="site-title" class="text-center col-12">
   <h1>LATIN FOR THE END OF THE WORLD</h1>
 </header>
-<div id="main-container" class="container">
+
+
   <div id="content-row" class="row d-flex justify-items-center">
     <div id="table-of-contents" class="col-3">
       <ul id="content-links" class="list-group">
@@ -27,6 +28,10 @@
         <button id="previous-top" class="btn btn-outline-dark col-4"><a href="LessonXXIVa.html"><<-Previous</a></button>
         <button id="next-top" class="btn btn-outline-dark col-4"><a href="LessonXXIVc.html">Next->></a></button>
       </div>
+      <button type="button" class="btn btn-warning" id="launch-flashcards" data-toggle="modal" data-target="#myModal"
+        onclick="$('#myModal').toggle()">
+        Flashcards</button>
+      <div id="main-container" class="container">
 
       <h3>Vocabulary—Verbs (Infinitive Forms)</h3>
       <p>For each verb give the following:</p>
@@ -38,7 +43,7 @@
             <li><strong>D</strong> for verbs that take Dative objects</li>
             <li><strong>I</strong> for intransitive verbs</li>
             <li><strong>T</strong> for transitive verbs</li>
-            <li><strong>I + T</strong> for verbs that can be either intransitive or transitive</li>
+            <li><strong>I+T</strong> for verbs that can be either intransitive or transitive</li>
           </ul></li>
       </ul>
       <div id="verbs" style="width: 100%;">
@@ -49,6 +54,42 @@
       <div id="previous-next-bottom" class="row justify-content-between mb-4">
         <button id="previous-bottom" class="btn btn-outline-dark col-4"><a href="LessonXXIVa.html"><<-Previous</a></button>
         <button id="next-bottom" class="btn btn-outline-dark col-4"><a href="LessonXXIVc.html">Next->></a></button>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Review II Verb Flashcards</h4>
+            </div>
+            <div class="modal-body">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                <!--Wrapper for slides-->
+                <div id="carousel-inner" class="carousel-inner" role="listbox">
+                  <div id="slide1" class="item active">
+                    <script>
+                      let randomizedVerbs = shuffle(verbsLatin);
+                      let firstSlide = document.getElementById("slide1");
+                      let inner = document.getElementById("carousel-inner");
+                      inner.innerHTML = "<h1>" + randomizedVerbs[0] + "</h1>" + generateSlides();
+                    </script>
+                  </div>
+                </div>
+
+                <!--Controls-->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -66,41 +107,4 @@
 </body>
 </html>
 
-<!--<button type="button" class="btn btn-warning" id="launch-flashcards" data-toggle="modal" data-target="#myModal">&ndash;&gt;-->
-  <!--        Flashcards</button>-->
-  <!--      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
-  <!--        <div class="modal-dialog" role="document">-->
-  <!--          <div class="modal-content">-->
-  <!--            <div class="modal-header">-->
-  <!--              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-  <!--              <h4 class="modal-title" id="myModalLabel">Review II Verb Flashcards</h4>-->
-  <!--            </div>-->
-  <!--            <div class="modal-body">-->
-  <!--              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
 
-  <!--                &lt;!&ndash; Wrapper for slides &ndash;&gt;-->
-  <!--                <div id="carousel-inner" class="carousel-inner" role="listbox">-->
-  <!--                  <div id="slide1" class="item active">-->
-  <!--                    <script>-->
-  <!--                      let randomizedVerbs = shuffle(verbsLatin);-->
-  <!--                      let firstSlide = document.getElementById("slide1");-->
-  <!--                      let inner = document.getElementById("carousel-inner");-->
-  <!--                      inner.innerHTML = "<h1>" + randomizedVerbs[0] + "</h1>" + generateSlides();-->
-  <!--                    </script>-->
-  <!--                  </div>-->
-  <!--                </div>-->
-
-  <!--                &lt;!&ndash; Controls &ndash;&gt;-->
-  <!--                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
-  <!--                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-  <!--                  <span class="sr-only">Previous</span>-->
-  <!--                </a>-->
-  <!--                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
-  <!--                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-  <!--                  <span class="sr-only">Next</span>-->
-  <!--                </a>-->
-  <!--              </div>-->
-  <!--            </div>-->
-  <!--          </div>-->
-  <!--        </div>-->
-  <!--      </div>
