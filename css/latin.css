@@ -64,15 +64,15 @@ li {
   padding: 0;
 }
 
-li.chapter {
-  font-size: small;
-  color: black;
-}
+/*li.chapter {*/
+/*  font-size: small;*/
+/*  color: black;*/
+/*}*/
 
-li.chapter:hover {
-  background-color: purple;
-  color: gold;
-}
+/*li.chapter:hover {*/
+/*  background-color: purple;*/
+/*  color: gold;*/
+/*}*/
 
 thead {
   background-color: purple;
@@ -100,10 +100,6 @@ blockquote {
 }
 
 /*CSS classes, including custom & Bootstrap classes*/
-.chapter:hover {
-  background-color: purple;
-  color: gold;
-}
 
 .volume-link {
   color: black;
@@ -141,7 +137,7 @@ blockquote {
   justify-items: stretch;
 }
 
-.form-check:hover, .volume:hover, .chapter:hover {
+.form-check:hover, .volume:hover {
   background-color: purple;
   color: gold;
 }
@@ -151,17 +147,22 @@ blockquote {
   left: 3em;
 }
 
-.list-group-item:hover {
-  color: gold;
-}
+/*.list-group-item:hover {*/
+/*  color: gold;*/
+/*}*/
 
-.chapter:hover {
-  font-weight: bold;
-  color: gold;
+.chapter {
+  font-size: small;
 }
 
 .chapter-link {
   color: black;
+}
+
+.chapter:hover {
+  background-color: purple;
+  color: gold;
+  font-weight: bold;
 }
 
 .chapter-link:hover {
@@ -232,7 +233,7 @@ blockquote {
 /*#intro-parts, #vol-i-parts, #vol-ii-parts, #vol-iii-parts, #vol-iv-parts, #vol-v-parts, #vol-vi-parts {*/
 /*  display: none;*/
   /*padding-left: 2em;*/
-}
+/*}*/
 
 #intro-div:hover {
   color: gold;

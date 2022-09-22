@@ -1,26 +1,13 @@
 function tableOfContents() {
-  var tocHTML = introLinks();
-  tocHTML += volILinks();
-  tocHTML += volIILinks();
-  tocHTML += volIIILinks();
-  tocHTML += volIVLinks();
-  tocHTML += volVLinks();
-  tocHTML += volVILinks();
-
-  return tocHTML;
-}
-
-function volumeLinks() {
   let html = `<div id="main-page" class="list-group-item intro"><a href="index.html">Main Page</a></div>`;
   html += `<div id="intro-div" class="list-group-item intro" onclick="fillContentsBox(introLinks());">Introduction</div>`;
-  html += `<div id="i-through-iii" class="d-flex row volume-row">`;
-  html += `<span id="vol-i-span" class="list-group-item volume"  onclick="fillContentsBox(volILinks());">I</span>`;
-  html += `<span id="vol-ii-span" class="list-group-item volume" onclick="fillContentsBox(volIILinks());">II</span>`;
-  html += `<span id="vol-iii-span" class="list-group-item volume" onclick="fillContentsBox(volIIILinks());">III</span></div>`;
-  html += `<div id="iv-through-vi" class="d-flex row volume-row">`;
-  html += `<span id="vol-iv-span" class="list-group-item volume" onclick="fillContentsBox(volIVLinks());">IV</span>`;
-  html += `<span id="vol-v-span" class="list-group-item volume" onclick="fillContentsBox(volVLinks());">V</span>`;
-  html += `<span id="vol-vi-span" class="list-group-item volume" onclick="fillContentsBox(volVILinks());">VI</span></div>`;
+  html += `<div id="i-through-vi" class="d-flex row volume-row">`;
+  html += `<span id="vol-i-span" class="volume" onclick="fillContentsBox(volILinks());">I</span>`;
+  html += `<span id="vol-ii-span" class="volume" onclick="fillContentsBox(volIILinks());">II</span>`;
+  html += `<span id="vol-iii-span" class="volume" onclick="fillContentsBox(volIIILinks());">III</span>`;
+  html += `<span id="vol-iv-span" class="volume" onclick="fillContentsBox(volIVLinks());">IV</span>`;
+  html += `<span id="vol-v-span" class="volume" onclick="fillContentsBox(volVLinks());">V</span>`;
+  html += `<span id="vol-vi-span" class="volume" onclick="fillContentsBox(volVILinks());">VI</span></div>`;
   html += `<div id="volume-contents"></div>`;
   return html
 }
@@ -28,6 +15,7 @@ function volumeLinks() {
 function fillContentsBox(contents) {
   $("#volume-contents").html(contents);
 }
+
 function introLinks() {
   return `
     <ul id="intro-parts" class="list-group sublist">
