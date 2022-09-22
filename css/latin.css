@@ -106,8 +106,16 @@ blockquote {
 }
 
 .volume {
-  width: 33%;
-  background-color: purple;
+  width: 16%;
+  background-color: gold;
+  color: purple;
+  text-align: center;
+}
+
+.volume-not-ready {
+  width: 16%;
+  background-color: gold;
+  color: darkgray;
   text-align: center;
 }
 
@@ -298,6 +306,6 @@ blockquote {
 #volume-contents {
   width: 100%;
   background-color: white;
-  height: 400px;
+  height: 300px;
   overflow-y: scroll;
 }

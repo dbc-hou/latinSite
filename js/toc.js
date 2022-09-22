@@ -9,6 +9,13 @@ function tableOfContents() {
   html += `<span id="vol-v-span" class="volume" onclick="fillContentsBox(volVLinks());">V</span>`;
   html += `<span id="vol-vi-span" class="volume" onclick="fillContentsBox(volVILinks());">VI</span></div>`;
   html += `<div id="volume-contents"></div>`;
+  html += `<div id="vii-through-xii" class="d-flex row volume-row">`;
+  html += `<span id="vol-vii-span" class="volume-not-ready" onclick="fillContentsBox('This volume is not ready yet.');">VII</span>`;
+  html += `<span id="vol-viii-span" class="volume-not-ready" onclick="fillContentsBox('This volume is not ready yet.');">VIII</span>`;
+  html += `<span id="vol-ix-span" class="volume-not-ready" onclick="fillContentsBox('This volume is not ready yet.');">IX</span>`;
+  html += `<span id="vol-x-span" class="volume-not-ready" onclick="fillContentsBox('This volume is not ready yet.');">X</span>`;
+  html += `<span id="vol-xi-span" class="volume-not-ready" onclick="fillContentsBox('This volume is not ready yet.');">XI</span>`;
+  html += `<span id="vol-xii-span" class="volume-not-ready" onclick="fillContentsBox('This volume is not ready yet.');">XII</span></div>`;
   return html
 }
 
